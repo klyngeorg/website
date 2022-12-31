@@ -1,4 +1,4 @@
-![klyngeorg/website](https://klyngeorg/assets/klynge-default-seo.jpg)
+![klyngeorg/website](https://klyngeorg.no/assets/klynge-default-seo.jpg)
 
 # Klynge Næringsforening – Website
 
