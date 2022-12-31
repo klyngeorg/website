@@ -1,38 +1,11 @@
-# create-svelte
+![klyngeorg/website](https://klyngeorg/assets/klynge-default-seo.jpg)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Klynge Næringsforening – Website
 
-## Creating a project
+We are a group of individuals with a passion for the business world, who have come together to support and encourage each other's success. We believe that by sharing our experiences and collaborating, we can all achieve our goals.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Our organization is voluntary, democratic, and open to all. We are dedicated to helping our members succeed in their business endeavors, and we hope that you will find valuable resources and information within this repository and our website.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Technology
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This website is built using Svelte. We suggest you familiarize yourself with that before getting started!
