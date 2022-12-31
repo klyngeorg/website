@@ -33,20 +33,20 @@
 		align-items: center;
 		justify-content: space-between;
 		margin: var(--space-m) 0;
-    gap: var(--space-s);
+		gap: var(--space-s);
 		font-size: var(--font-size-sm);
 	}
 
 	@media only screen and (max-width: 630px) {
 		nav {
 			flex-direction: column;
-      align-items: flex-start;
+			align-items: flex-start;
 		}
-    ul {
-      /* flex-direction: column; */
-      gap: var(--space-xs);
-      /* align-items: flex-start; */
-    }
+		ul {
+			/* flex-direction: column; */
+			gap: var(--space-xs);
+			/* align-items: flex-start; */
+		}
 	}
 
 	a {
