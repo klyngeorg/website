@@ -4,11 +4,11 @@
 
 <nav>
 	<a href="/" class="logo"><KlyngeLogo /></a>
-	<ul class="menu">
-		<li><a href="/about">Om foreningen</a></li>
+	<!-- <ul class="menu"> -->
+		<!-- <li><a href="/about">Om foreningen</a></li> -->
 		<!-- <li><a href="/contact">Aktiviteter</a></li>
 		<li class="focus"><a href="/contact">Bli medlem</a></li> -->
-	</ul>
+	<!-- </ul> -->
 </nav>
 
 <style>
@@ -43,9 +43,7 @@
 			align-items: flex-start;
 		}
 		ul {
-			/* flex-direction: column; */
 			gap: var(--space-xs);
-			/* align-items: flex-start; */
 		}
 	}
 

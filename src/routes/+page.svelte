@@ -6,12 +6,13 @@
 <main>
 	<Saos animation={'load 1s both'}>
 		<p class="headline">
-			<b>Vi hjelper hverandre å lykkes.</b><br />Det gjør vi gjennom å fremsnakke, dele erfaringer
-			og samarbeide. En forening skapt for mennesker med interesse for forretningsliv.
+			Vi er en gruppe mennesker med interesse for forretningsliv, som har kommet sammen for å støtte
+			og oppmuntre hverandres suksess. Vi tror at ved å dele våre erfaringer, nettverk og
+			samarbeide, kan vi alle nå våre mål.
 		</p>
 
 		<p>
-			<b>Vi jobber med å lage en nettside.</b> Enn så lenge, kan du ta kontakt med Bjørn Niklas på b@obj.no
+			<b>Vi jobber med å lage en nettside –</b> enn så lenge, kan du ta kontakt med Bjørn Niklas på b@obj.no
 			for å vite mer!
 		</p>
 	</Saos>
