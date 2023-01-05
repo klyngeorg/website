@@ -22,17 +22,21 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.22.0
+
       - name: Use Node LTS ✨
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies 📦️
-        run: pnpm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Lint 💅
-        run: pnpm run lint
+        run: pnpm lint
 
       # - name: Test 🧪
       #   run: yarn test --passWithNoTests
