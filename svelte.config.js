@@ -11,7 +11,7 @@ const config = {
 		imagePreprocessor({
 			inputDir: 'src/assets',
 			outputDir: 'static/assets/images',
-      publicPath: '/assets/images',
+			publicPath: '/assets/images',
 			webp: true,
 			avif: true
 		})

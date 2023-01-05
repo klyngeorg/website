@@ -1,6 +1,6 @@
 <script>
 	import Saos from 'saos';
-  import Image from 'svimg';
+	import Image from 'svimg';
 </script>
 
 <Saos animation={'load 1s both'}>

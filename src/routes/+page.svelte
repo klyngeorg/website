@@ -17,7 +17,7 @@
 		</p>
 	</Saos>
 	<Saos animation={'load 1s both'}>
-    <Image src="oslo-hero.jpg" alt="Oslo" />
+		<Image src="oslo-hero.jpg" alt="Oslo" />
 		<div class="hero">Vi er organisert som en frivillig, demokratisk åpen organisasjon.</div>
 	</Saos>
 </main>
