@@ -1,6 +1,6 @@
 <script>
 	import Saos from 'saos';
-	import heroImage from '../../assets/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg';
+  import Image from 'svimg';
 </script>
 
 <Saos animation={'load 1s both'}>
@@ -12,7 +12,7 @@
 	<p>Vår organisasjon er frivillig, demokratisk og åpen for alle.</p>
 </Saos>
 
-<img src={heroImage} alt="Oslo" />
+<Image src="priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg" alt="Oslo" />
 
 <style>
 	img {

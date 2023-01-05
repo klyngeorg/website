@@ -1,6 +1,6 @@
 <script>
 	import Saos from 'saos';
-	import osloHero from '../assets/oslo-hero.jpg';
+	import Image from 'svimg';
 </script>
 
 <main>
@@ -17,7 +17,7 @@
 		</p>
 	</Saos>
 	<Saos animation={'load 1s both'}>
-		<img src={osloHero} alt="Oslo" />
+    <Image src="oslo-hero.jpg" alt="Oslo" />
 		<div class="hero">Vi er organisert som en frivillig, demokratisk åpen organisasjon.</div>
 	</Saos>
 </main>
@@ -35,7 +35,7 @@
 		max-width: 820px;
 	}
 
-	img {
+	.image {
 		width: 100%;
 	}
 

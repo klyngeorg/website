@@ -1,0 +1,2 @@
+# Generated images should only be deployed, not stored in repo
+images/
