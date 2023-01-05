@@ -15,9 +15,6 @@
 <Image src="priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg" alt="Oslo" />
 
 <style>
-	img {
-		width: 100%;
-	}
 	p {
 		font-size: var(--font-size-lg);
 		max-width: 820px;
