@@ -39,8 +39,5 @@
 	"dependencies": {
 		"@fontsource/outfit": "^4.5.10",
 		"@sveltejs/adapter-static": "^1.0.0"
-	},
-	"resolutions": {
-		"sharp": "0.31.3"
 	}
 }
