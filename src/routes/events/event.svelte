@@ -64,7 +64,7 @@
 <style>
 	article {
 		display: grid;
-		grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr;
 		gap: var(--space-s);
 		margin: var(--space-m) 0;
 		background-color: var(--primary-muted);
@@ -72,6 +72,12 @@
 		box-shadow: 0px 0px 0px 0px rgba(100, 100, 111, 0.2);
 		transition: box-shadow 0.1s ease-in-out;
 	}
+
+  @media (max-width: 600px) {
+    article {
+      grid-template-columns: 1fr;
+    }
+  }
 
 	article:hover {
 		/* TODO: Move rgba to variable */
@@ -83,6 +89,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+    padding: var(--space-s);
 
 		background-color: var(--primary-color);
 		color: var(--primary-muted);
