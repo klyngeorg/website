@@ -1,9 +1,34 @@
-<script>
+<script lang="ts">
 	import Saos from 'saos';
 	import '@fontsource/outfit';
 	import '@fontsource/outfit/600.css';
 	import Header from '../components/header.svelte';
+  import type { WithContext, LocalBusiness } from 'schema-dts';
+  import { serializeSchema } from '../utils';
+
+  const localBusiness: WithContext<LocalBusiness> = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Klynge Næringsforening",
+    url: "https://klyngeorg.no/",
+    logo: "https://klyngeorg.no/assets/klynge-logo.svg",
+    image: "https://klyngeorg.no/assets/klynge-logo.svg",
+    telephone: "+47 95308087",
+    email: "hei@klyngeorg.no",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Myntgata 2",
+      addressLocality: "Oslo",
+      addressRegion: "Oslo",
+      postalCode: "0151",
+      addressCountry: "NO",
+    },
+  };
 </script>
+
+<svelte:head>
+	{@html serializeSchema(localBusiness)}
+</svelte:head>
 
 <div class="container">
 	<Saos animation={'load 1s both'}>
@@ -37,6 +62,7 @@
 	}
 	:global(:root) {
 		--primary-color: #344e4c;
+    --primary-muted: #f2f2f2;
 
 		--font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
