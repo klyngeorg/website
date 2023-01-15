@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-	<a href="/" class="logo"><KlyngeLogo /></a>
+	<a href="/" class="logo" aria-label="Go back to home"><KlyngeLogo /></a>
 	<!-- <ul class="menu"> -->
 	<!-- <li><a href="/about">Om foreningen</a></li> -->
 	<!-- <li><a href="/contact">Aktiviteter</a></li>
