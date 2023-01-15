@@ -45,7 +45,9 @@
 	<main>
 		<h2>{data.title}</h2>
 		<p class="location">
-			Sted: <a href={'https://www.google.com/maps/search/?api=1&query=' + data.location}>{data.location}</a>
+			Sted: <a href={'https://www.google.com/maps/search/?api=1&query=' + data.location}
+				>{data.location}</a
+			>
 		</p>
 		<p>{@html data.description.split('\n').join('<br />')}</p>
 		<p>
@@ -113,7 +115,7 @@
 		font-size: var(--font-size-sm);
 	}
 
-  a {
-    color: inherit;
-  }
+	a {
+		color: inherit;
+	}
 </style>
