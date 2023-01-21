@@ -9,7 +9,7 @@
 	</strong>
 
 	<p>
-		<em>Foreningen er helt ny</em> &mdash; foreløpig arrangerer vi kun
+		<em>Foreningen er nylig etablert</em> &mdash; foreløpig arrangerer vi kun
 		<a href="/events">månedlige møter</a>, og vi er i gang med å planlegge andre aktiviteter og
 		arrangementer.
 	</p>
