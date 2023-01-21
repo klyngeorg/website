@@ -14,6 +14,7 @@
 <style>
 	.logo {
 		max-height: 18px;
+		padding: var(--space-xs);
 	}
 
 	ul {
@@ -37,13 +38,23 @@
 		font-size: var(--font-size-m);
 	}
 
+	li a {
+		padding: var(--space-xs);
+	}
+
 	@media only screen and (max-width: 630px) {
 		nav {
 			flex-direction: column;
 			align-items: flex-start;
 		}
+
 		ul {
 			gap: var(--space-xs);
+		}
+
+		li a,
+		.logo {
+			margin-left: calc(var(--space-xs) * -1);
 		}
 	}
 

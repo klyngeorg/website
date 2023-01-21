@@ -16,7 +16,7 @@
 		"prepare": "husky install"
 	},
 	"lint-staged": {
-		"*.{js,ts,css,md,json}": "prettier --plugin-search-dir . --write",
+		"*.{js,ts,css,md,json,svelte}": "prettier --plugin-search-dir . --write",
 		"*.{js,ts}": "eslint --fix"
 	},
 	"devDependencies": {
