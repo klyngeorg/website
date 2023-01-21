@@ -21,13 +21,6 @@
 </main>
 
 <style>
-	main {
-		display: flex;
-		flex-direction: column;
-
-		gap: var(--space-m);
-	}
-
 	.headline {
 		font-size: var(--font-size-lg);
 		max-width: 820px;

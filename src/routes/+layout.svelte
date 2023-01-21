@@ -91,6 +91,13 @@
 		font-size: var(--font-size-base);
 	}
 
+  main {
+    display: flex;
+		flex-direction: column;
+
+		gap: var(--space-m);
+  }
+
 	.container {
 		animation: load 1s both;
 		max-width: 1240px;
