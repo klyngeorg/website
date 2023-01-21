@@ -1,14 +1,12 @@
-<script>
+<script lang="ts">
 	import Member from '../../../components/member.svelte';
+	import { members } from './members';
 </script>
 
 <grid>
-	<Member />
-	<Member />
-	<Member />
-	<Member />
-	<Member />
-	<Member />
+	{#each members as member}
+		<Member person={member} />
+	{/each}
 </grid>
 
 <style>
