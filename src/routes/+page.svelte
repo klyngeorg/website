@@ -1,25 +1,23 @@
 <script>
-	import Saos from 'saos';
 	import Image from 'svimg';
 </script>
 
 <main>
-	<Saos animation={'load 1s both'}>
-		<p class="headline">
-			Vi er en gruppe mennesker med interesse for forretningsliv, som har kommet sammen for å støtte
-			og oppmuntre hverandres suksess. Vi tror at ved å dele våre erfaringer, nettverk og
-			samarbeide, kan vi alle nå våre mål.
-		</p>
+	<p class="headline">
+		Vi er en gruppe mennesker med interesse for forretningsliv, som har kommet sammen for å støtte
+		og oppmuntre hverandres suksess. Vi tror at ved å dele våre erfaringer, nettverk og samarbeide,
+		kan vi alle nå våre mål.
+	</p>
 
-		<p>
-			<b>Vi jobber med å lage en nettside –</b> enn så lenge, kan du ta kontakt med Bjørn Niklas på b@obj.no
-			for å vite mer!
-		</p>
-	</Saos>
-	<Saos animation={'load 1s both'}>
+	<p>
+		<b>Vi jobber med å lage en nettside –</b> enn så lenge, kan du ta kontakt med Bjørn Niklas på b@obj.no
+		for å vite mer!
+	</p>
+
+	<div>
 		<Image src="oslo-hero.jpg" alt="Oslo" />
 		<div class="hero">Vi er organisert som en frivillig, demokratisk åpen organisasjon.</div>
-	</Saos>
+	</div>
 </main>
 
 <style>

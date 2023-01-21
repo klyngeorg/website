@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Saos from 'saos';
 	import '@fontsource/outfit';
 	import '@fontsource/outfit/600.css';
 	import Header from '../components/header.svelte';
@@ -31,27 +30,24 @@
 </svelte:head>
 
 <div class="container">
-	<Saos animation={'load 1s both'}>
-		<Header />
-	</Saos>
+	<Header />
 	<main>
 		<slot>
 			<!-- +page.svelte is rendered here -->
 		</slot>
 	</main>
-	<Saos animation={'load 1s both'}>
-		<footer>
-			<b>Klynge Næringsforening</b><br />Organisasjonsnummer: 930 334 693
-		</footer>
-	</Saos>
+	<footer>
+		<b>Klynge Næringsforening</b><br />
+		Organisasjonsnummer: 930 334 693
+	</footer>
 </div>
 
 <style>
 	@keyframes -global-load {
 		from {
 			opacity: 0.8;
-			-webkit-transform: translate3d(0, 2%, 0);
-			transform: translate3d(0, 2%, 0);
+			-webkit-transform: translate3d(0, 1%, 0);
+			transform: translate3d(0, 1%, 0);
 		}
 
 		to {
@@ -60,6 +56,7 @@
 			transform: translate3d(0, 0, 0);
 		}
 	}
+
 	:global(:root) {
 		--primary-color: #344e4c;
 		--primary-muted: #f2f2f2;
@@ -95,6 +92,7 @@
 	}
 
 	.container {
+    animation: load 1s both;
 		max-width: 1240px;
 		min-width: 320px;
 		margin: 0 auto;
