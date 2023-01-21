@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { WithContext, Person } from 'schema-dts';
 	import md5 from 'md5';
-	import { serializeSchema } from '../utils';
+	import { serializeSchema } from '../../../utils';
 	export let person: Omit<Person, '@type'>;
 
 	if (typeof person === 'string') {
@@ -14,7 +14,6 @@
 	const data: WithContext<Person> = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
-		image: 'default-avatar.jpg',
 		...person
 	};
 
@@ -24,7 +23,7 @@
 
 	const worksFor = Array.isArray(data.worksFor) ? data.worksFor : [];
 	const email = String(data.email) || '';
-	const defaultImage = encodeURIComponent('https://klyngeorg.no/assets/images/default-avatar.jpg');
+	const defaultImage = encodeURIComponent('https://klyngeorg.no/assets/default-avatar.jpg');
 	const emailHash = md5(email.toLowerCase().trim());
 	const image = `https://www.gravatar.com/avatar/${emailHash}?d=${defaultImage}&s=200`;
 	const name = [data.givenName, data.familyName].join(' ');

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Member from '../../../components/member.svelte';
+	import Member from './member.svelte';
 	import { members } from './members';
 </script>
 
