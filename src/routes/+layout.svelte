@@ -92,7 +92,7 @@
 	}
 
 	.container {
-    animation: load 1s both;
+		animation: load 1s both;
 		max-width: 1240px;
 		min-width: 320px;
 		margin: 0 auto;

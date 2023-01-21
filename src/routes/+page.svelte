@@ -31,7 +31,7 @@
 	.headline {
 		font-size: var(--font-size-lg);
 		max-width: 820px;
-    font-weight: bold;
+		font-weight: bold;
 	}
 
 	.image {
