@@ -2,40 +2,53 @@
 	import Image from 'svimg';
 </script>
 
-<main>
-	<p class="headline">
-		Vi er en gruppe mennesker med interesse for forretningsliv, som har kommet sammen for å støtte
-		og oppmuntre hverandres suksess. Vi tror at ved å dele våre erfaringer, nettverk og samarbeide,
-		kan vi alle nå våre mål.
-	</p>
+<div class="content">
+	<strong>
+		Vi er en gruppe mennesker som har kommet sammen for å støtte og oppmuntre hverandres suksess.
+		Ved å dele våre erfaringer, nettverk og samarbeide, kan vi nå våre mål.
+	</strong>
 
 	<p>
-		<b>Vi jobber med å lage en nettside –</b> enn så lenge, kan du ta kontakt med Bjørn Niklas på b@obj.no
-		for å vite mer!
+		<em>Foreningen er helt ny</em>, foreløpig arrangerer vi kun
+		<a href="/events">månedlige møter</a>, og vi er i gang med å planlegge andre aktiviteter og
+		arrangementer.
 	</p>
+	<p>
+		Om du er nysjerrig, ta kontakt med oss på <a href="mailto:hei@klyngeorg.no">hei@klyngeorg.no</a>
+	</p>
+</div>
 
-	<div>
-		<Image src="oslo-hero.jpg" alt="Oslo" />
-		<div class="hero">Vi er organisert som en frivillig, demokratisk åpen organisasjon.</div>
-	</div>
-</main>
+<div class="hero">
+	<Image class="oslo-hero" src="oslo-hero.jpg" alt="Oslo" />
+	<p>Vi er organisert som en frivillig, demokratisk åpen organisasjon.</p>
+</div>
 
 <style>
-	.headline {
-		font-size: var(--font-size-lg);
+	.content {
 		max-width: 820px;
-		font-weight: bold;
+		margin-top: var(--space-xl);
+		margin-bottom: var(--space-xl);
 	}
 
-	.image {
-		width: 100%;
+	strong {
+		font-size: var(--font-size-lg);
+		font-weight: bold;
 	}
 
 	.hero {
 		background-color: var(--primary-color);
-		color: white;
-		font-size: var(--font-size-md);
+		border-radius: 16px;
+	}
+
+	:global(.oslo-hero) {
+		border-radius: 16px 16px 0 0;
+	}
+
+	.hero p {
+		color: var(--muted-color);
 		padding: var(--space-xl);
+		font-size: var(--font-size-md);
 		text-align: center;
+		margin: 0;
 	}
 </style>

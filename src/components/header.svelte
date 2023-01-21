@@ -6,7 +6,7 @@
 	<a href="/" class="logo" aria-label="Go back to home"><KlyngeLogo /></a>
 	<ul class="menu">
 		<!-- <li><a href="/about">Om foreningen</a></li> -->
-		<li><a href="/events">Aktiviteter</a></li>
+		<li><a href="/events">Aktiviteter →</a></li>
 		<!-- <li class="focus"><a href="/contact">Bli medlem</a></li> -->
 	</ul>
 </nav>
@@ -34,7 +34,7 @@
 		justify-content: space-between;
 		margin: var(--space-m) 0;
 		gap: var(--space-s);
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-m);
 	}
 
 	@media only screen and (max-width: 630px) {

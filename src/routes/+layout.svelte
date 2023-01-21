@@ -64,7 +64,10 @@
 
 	:global(:root) {
 		--primary-color: #344e4c;
-		--primary-muted: #f2f2f2;
+		--muted-color: #e8f2f1;
+		--light-bg-color: #fff;
+		--fade-y-color: rgba(26, 40, 39, 0.25);
+		--fade-x-color: rgba(26, 40, 39, 0.3);
 
 		--font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -85,7 +88,16 @@
 		--space-3xl: clamp(6.75rem, calc(6.49rem + 1.3vw), 7.5rem);
 	}
 
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--primary-color: #f2f2f2;
+			--muted-color: #1a2827;
+			--light-bg-color: #1a2827;
+		}
+	}
+
 	:global(body) {
+		background-color: var(--muted-color);
 		font-family: 'Outfit', sans-serif;
 		color: var(--primary-color);
 
@@ -96,10 +108,10 @@
 		font-size: var(--font-size-base);
 	}
 
-  :global(a) {
-    color: var(--primary-color);
-    text-decoration: underline;
-  }
+	:global(a) {
+		color: var(--primary-color);
+		text-decoration: underline;
+	}
 
 	main {
 		display: flex;

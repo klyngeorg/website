@@ -67,10 +67,11 @@
 		grid-template-columns: 1fr 3fr;
 		gap: var(--space-s);
 		margin: var(--space-m) 0;
-		background-color: var(--primary-muted);
+		background-color: var(--light-bg-color);
 		padding: var(--space-s);
-		box-shadow: 0px 0px 0px 0px rgba(100, 100, 111, 0.2);
+		box-shadow: 0px 0px 0px 0px var(--fade-y-color);
 		transition: box-shadow 0.1s ease-in-out;
+		border-radius: 10px;
 	}
 
 	@media (max-width: 600px) {
@@ -80,11 +81,11 @@
 	}
 
 	article:hover {
-		/* TODO: Move rgba to variable */
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+		box-shadow: var(--fade-y-color) 0px 13px 27px -5px, var(--fade-x-color) 0px 8px 16px -8px;
 	}
 
 	.date {
+		border-radius: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -93,7 +94,7 @@
 		padding: var(--space-s);
 
 		background-color: var(--primary-color);
-		color: var(--primary-muted);
+		color: var(--muted-color);
 
 		font-size: var(--font-size-sm);
 	}
