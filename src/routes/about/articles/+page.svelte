@@ -39,7 +39,7 @@
 	</article>
 
 	<article id="styret">
-		<h2><a href="#styred">Styret</a></h2>
+		<h2><a href="#styret">Styret</a></h2>
 
 		<p>
 			§5. Styret er det øverste organet i foreningen mellom årsmøtet. Styret består av fem
