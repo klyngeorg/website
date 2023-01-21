@@ -20,6 +20,22 @@
 		location: data.location,
 		description: data.description
 	};
+
+	const date = new Date(data.startDate).toLocaleDateString('no-NO', {
+		weekday: 'long',
+		month: 'long',
+		day: 'numeric'
+	});
+
+	const time = new Date(data.startDate).toLocaleTimeString('no-NO', {
+		hour: 'numeric',
+		minute: 'numeric'
+	});
+
+	const timeFinished = new Date(data.endDate).toLocaleTimeString('no-NO', {
+		hour: 'numeric',
+		minute: 'numeric'
+	});
 </script>
 
 <svelte:head>
@@ -28,35 +44,26 @@
 
 <article>
 	<aside class="date">
-		<p>
-			{new Date(data.startDate).toLocaleDateString('no-NO', {
-				weekday: 'long',
-				month: 'long',
-				day: 'numeric'
-			})}
-		</p>
-		<p class="time">
-			{new Date(data.startDate).toLocaleTimeString('no-NO', {
-				hour: 'numeric',
-				minute: 'numeric'
-			})}
-		</p>
+		{date}
+		<div class="time">
+			{time}
+		</div>
 	</aside>
 	<main>
 		<h2>{data.title}</h2>
 		<p class="location">
-			Sted: <a href={'https://www.google.com/maps/search/?api=1&query=' + data.location}
-				>{data.location}</a
+			Sted:
+			<a
+				href={'https://www.google.com/maps/search/?api=1&query=' + data.location}
+				rel="noreferrer"
+				target="_blank"
 			>
+				{data.location}
+			</a>
 		</p>
 		<p>{@html data.description.split('\n').join('<br />')}</p>
 		<p>
-			<small
-				>Anslått ferdig: {new Date(data.endDate).toLocaleTimeString('no-NO', {
-					hour: 'numeric',
-					minute: 'numeric'
-				})}</small
-			>
+			<small>Anslått ferdig: {timeFinished}</small>
 		</p>
 	</main>
 </article>
@@ -66,18 +73,10 @@
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 		gap: var(--space-s);
-		margin: var(--space-m) 0;
 		background-color: var(--light-bg-color);
-		padding: var(--space-s);
 		box-shadow: 0px 0px 0px 0px var(--fade-y-color);
 		transition: box-shadow 0.1s ease-in-out;
-		border-radius: 10px;
-	}
-
-	@media (max-width: 600px) {
-		article {
-			grid-template-columns: 1fr;
-		}
+		border-radius: 16px;
 	}
 
 	article:hover {
@@ -85,7 +84,7 @@
 	}
 
 	.date {
-		border-radius: 10px;
+		border-radius: 16px 0 0 16px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -103,15 +102,25 @@
 		font-size: var(--font-size-lg);
 	}
 
-	.date p {
-		margin: 0;
+	@media (max-width: 800px) {
+		article {
+			grid-template-columns: 1fr;
+		}
+
+		.date {
+			border-radius: 16px 16px 0 0;
+		}
 	}
 
 	main {
-		padding: var(--space-s);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		padding: var(--space-s);
+		padding-top: var(--space-l);
+		padding-bottom: var(--space-l);
+
 		gap: var(--space-xs);
 	}
 
@@ -122,9 +131,5 @@
 
 	.location {
 		font-size: var(--font-size-sm);
-	}
-
-	a {
-		color: inherit;
 	}
 </style>
