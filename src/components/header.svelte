@@ -15,6 +15,7 @@
 	.logo {
 		max-height: 18px;
 		padding: var(--space-xs);
+		margin-left: calc(var(--space-xs) * -1);
 	}
 
 	ul {
