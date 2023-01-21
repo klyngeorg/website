@@ -37,8 +37,13 @@
 		</slot>
 	</main>
 	<footer>
-		<b>Klynge Næringsforening</b><br />
-		Organisasjonsnummer: 930 334 693
+		<p>
+			<b>Klynge Næringsforening</b><br />
+			Organisasjonsnummer: 930 334 693
+		</p>
+		<p>
+			<a href="/about/articles">Våre vedtekter</a>
+		</p>
 	</footer>
 </div>
 
@@ -90,6 +95,11 @@
 
 		font-size: var(--font-size-base);
 	}
+
+  :global(a) {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
 
 	main {
 		display: flex;
