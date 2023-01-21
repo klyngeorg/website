@@ -4,11 +4,11 @@
 
 <nav>
 	<a href="/" class="logo" aria-label="Go back to home"><KlyngeLogo /></a>
-	<!-- <ul class="menu"> -->
-	<!-- <li><a href="/about">Om foreningen</a></li> -->
-	<!-- <li><a href="/contact">Aktiviteter</a></li>
-		<li class="focus"><a href="/contact">Bli medlem</a></li> -->
-	<!-- </ul> -->
+	<ul class="menu">
+		<!-- <li><a href="/about">Om foreningen</a></li> -->
+		<li><a href="/events">Aktiviteter</a></li>
+		<!-- <li class="focus"><a href="/contact">Bli medlem</a></li> -->
+	</ul>
 </nav>
 
 <style>
