@@ -88,6 +88,10 @@
 		--space-3xl: clamp(6.75rem, calc(6.49rem + 1.3vw), 7.5rem);
 	}
 
+	:global(html) {
+		overflow-y: scroll;
+	}
+
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
 			--primary-color: #f2f2f2;
