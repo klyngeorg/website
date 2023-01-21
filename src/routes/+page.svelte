@@ -27,7 +27,6 @@
 	.content {
 		max-width: 820px;
 		margin-top: var(--space-xl);
-		margin-bottom: var(--space-xl);
 	}
 
 	strong {

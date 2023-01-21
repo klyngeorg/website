@@ -109,6 +109,8 @@
 
 		.date {
 			border-radius: 16px 16px 0 0;
+			padding: var(--space-m);
+			font-size: var(--font-size-lg);
 		}
 	}
 
