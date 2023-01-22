@@ -10,7 +10,7 @@
 			uavhengig.
 		</p>
 		<p>
-			§2. Alle som har betalt kontigenten for inneværende medlemsår og godkjent av styret er regnet
+			§2. Alle som har betalt kontigenten for inneværende medlemsår og er godkjent av styret er regnet
 			som medlemmer av Klynge Næringsforening.
 		</p>
 	</article>
