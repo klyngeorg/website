@@ -15,7 +15,7 @@
 	</p>
 	<p>
 		Om du er nysjerrig, ta kontakt med oss på <a href="mailto:hei@klyngeorg.no">hei@klyngeorg.no</a>
-		eller ta kontakt med <a href="/about/members">en av oss</a>.
+		eller med <a href="/about/members">en av oss</a>.
 	</p>
 </div>
 
