@@ -24,7 +24,8 @@
 	const date = new Date(data.startDate).toLocaleDateString('no-NO', {
 		weekday: 'long',
 		month: 'long',
-		day: 'numeric'
+		day: 'numeric',
+		year: 'numeric'
 	});
 
 	const time = new Date(data.startDate).toLocaleTimeString('no-NO', {
@@ -50,17 +51,21 @@
 		</div>
 	</aside>
 	<main>
-		<h2>{data.title}</h2>
-		<p class="location">
-			Sted:
-			<a
-				href={'https://www.google.com/maps/search/?api=1&query=' + data.location}
-				rel="noreferrer"
-				target="_blank"
-			>
-				{data.location}
-			</a>
-		</p>
+		<h2>
+			<a href={data.url} rel="noreferrer" target="_blank">{data.title}</a>
+		</h2>
+		{#if data.location}
+			<p class="location">
+				Sted:
+				<a
+					href={'https://www.google.com/maps/search/?api=1&query=' + data.location}
+					rel="noreferrer"
+					target="_blank"
+				>
+					{data.location}
+				</a>
+			</p>
+		{/if}
 		<p>{@html data.description.split('\n').join('<br />')}</p>
 		<p>
 			<small>Anslått ferdig: {timeFinished}</small>

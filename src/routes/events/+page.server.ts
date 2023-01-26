@@ -16,13 +16,23 @@ export const load = async () => {
 	const events = await calendar.events.list({
 		calendarId: config.calendarId,
 		auth: config.googleApiKey,
-		maxResults: 10,
-		timeMin: new Date().toISOString()
+		maxResults: 100,
+		singleEvents: true,
+		orderBy: 'startTime',
+
+		// Get events that happened a week ago or later
+		timeMin: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+		// Get events that happen in the next 6 months
+		timeMax: new Date(Date.now() + 6 * 30 * 24 * 60 * 60 * 1000).toISOString(),
+
+		timeZone: 'Europe/Oslo'
 	});
 
 	if (!events.data.items) {
 		return {};
 	}
+
+	console.log({ events: events.data.items });
 
 	return {
 		events: events.data.items
