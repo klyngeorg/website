@@ -32,8 +32,6 @@ export const load = async () => {
 		return {};
 	}
 
-	console.log({ events: events.data.items });
-
 	return {
 		events: events.data.items
 			.filter((item) => item.summary)
