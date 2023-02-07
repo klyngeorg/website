@@ -20,8 +20,8 @@ export const load = async () => {
 		singleEvents: true,
 		orderBy: 'startTime',
 
-		// Get events that happened a week ago or later
-		timeMin: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+		// Get events that happened three days ago or later
+		timeMin: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
 		// Get events that happen in the next 6 months
 		timeMax: new Date(Date.now() + 6 * 30 * 24 * 60 * 60 * 1000).toISOString(),
 
@@ -29,10 +29,8 @@ export const load = async () => {
 	});
 
 	if (!events.data.items) {
-		return {};
+		return { events: [] };
 	}
-
-	console.log({ events: events.data.items });
 
 	return {
 		events: events.data.items
