@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Member from './member.svelte';
-	import { members } from './members';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	const { members } = data;
 </script>
 
 <grid>

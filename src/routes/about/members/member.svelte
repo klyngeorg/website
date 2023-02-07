@@ -23,9 +23,13 @@
 
 	const worksFor = Array.isArray(data.worksFor) ? data.worksFor : [];
 	const email = String(data.email) || '';
-	const defaultImage = encodeURIComponent('https://klyngeorg.no/assets/default-avatar.jpg');
-	const emailHash = md5(email.toLowerCase().trim());
-	const image = `https://www.gravatar.com/avatar/${emailHash}?d=${defaultImage}&s=200`;
+
+	if (!data.image) {
+		const defaultImage = encodeURIComponent('https://klyngeorg.no/assets/default-avatar.jpg');
+		const emailHash = md5(email.toLowerCase().trim());
+		data.image = `https://www.gravatar.com/avatar/${emailHash}?d=${defaultImage}&s=200`;
+	}
+
 	const name = [data.givenName, data.familyName].join(' ');
 </script>
 
@@ -34,7 +38,9 @@
 </svelte:head>
 
 <article>
-	<img src={image} alt={name} />
+	{#if typeof data.image === 'string'}
+		<img src={data.image} alt={name} />
+	{/if}
 	<section>
 		<header>
 			<h2>{name}</h2>

@@ -1024,7 +1024,28 @@ export type GetMembersQuery = {
 				} | null;
 				image?: {
 					__typename?: 'Image';
-					asset?: { __typename?: 'SanityImageAsset'; url?: string | null } | null;
+					hotspot?: {
+						__typename?: 'SanityImageHotspot';
+						x?: number | null;
+						y?: number | null;
+						height?: number | null;
+						width?: number | null;
+					} | null;
+					crop?: {
+						__typename?: 'SanityImageCrop';
+						top?: number | null;
+						bottom?: number | null;
+						left?: number | null;
+						right?: number | null;
+					} | null;
+					asset?: {
+						__typename?: 'SanityImageAsset';
+						_id?: string | null;
+						altText?: string | null;
+						assetId?: string | null;
+						extension?: string | null;
+						url?: string | null;
+					} | null;
 				} | null;
 				worksFor?: Array<{
 					__typename?: 'WorksFor';
@@ -1204,10 +1225,43 @@ export const GetMembersDocument = {
 																selections: [
 																	{
 																		kind: 'Field',
+																		name: { kind: 'Name', value: 'hotspot' },
+																		selectionSet: {
+																			kind: 'SelectionSet',
+																			selections: [
+																				{ kind: 'Field', name: { kind: 'Name', value: 'x' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'y' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'height' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'width' } }
+																			]
+																		}
+																	},
+																	{
+																		kind: 'Field',
+																		name: { kind: 'Name', value: 'crop' },
+																		selectionSet: {
+																			kind: 'SelectionSet',
+																			selections: [
+																				{ kind: 'Field', name: { kind: 'Name', value: 'top' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'bottom' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'left' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'right' } }
+																			]
+																		}
+																	},
+																	{
+																		kind: 'Field',
 																		name: { kind: 'Name', value: 'asset' },
 																		selectionSet: {
 																			kind: 'SelectionSet',
 																			selections: [
+																				{ kind: 'Field', name: { kind: 'Name', value: '_id' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'altText' } },
+																				{ kind: 'Field', name: { kind: 'Name', value: 'assetId' } },
+																				{
+																					kind: 'Field',
+																					name: { kind: 'Name', value: 'extension' }
+																				},
 																				{ kind: 'Field', name: { kind: 'Name', value: 'url' } }
 																			]
 																		}
