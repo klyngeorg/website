@@ -94,9 +94,9 @@
 
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
-			--primary-color: #f2f2f2;
+			--primary-color: #91dad6;
 			--muted-color: #1a2827;
-			--light-bg-color: #1a2827;
+			--light-bg-color: #365453;
 		}
 	}
 
