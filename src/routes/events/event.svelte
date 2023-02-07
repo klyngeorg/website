@@ -66,7 +66,7 @@
 				</a>
 			</p>
 		{/if}
-		<p>{@html data.description.split('\n').join('<br />')}</p>
+		<p>{@html data.description}</p>
 		<p>
 			<small>Anslått ferdig: {timeFinished}</small>
 		</p>
@@ -107,19 +107,9 @@
 		font-size: var(--font-size-lg);
 	}
 
-	@media (max-width: 800px) {
-		article {
-			grid-template-columns: 1fr;
-		}
-
-		.date {
-			border-radius: 16px 16px 0 0;
-			padding: var(--space-m);
-			font-size: var(--font-size-lg);
-		}
-	}
-
 	main {
+		word-wrap: break-word;
+		overflow: auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -138,5 +128,21 @@
 
 	.location {
 		font-size: var(--font-size-sm);
+	}
+
+	@media (max-width: 800px) {
+		article {
+			grid-template-columns: 1fr;
+		}
+
+		.date {
+			border-radius: 16px 16px 0 0;
+			padding: var(--space-m);
+			font-size: var(--font-size-m);
+		}
+
+		main {
+			padding-top: 0px;
+		}
 	}
 </style>

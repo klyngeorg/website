@@ -84,6 +84,11 @@
 		gap: var(--space-xs);
 	}
 
+	.roles {
+		word-wrap: break-word;
+		overflow: auto;
+	}
+
 	.roles,
 	.contact-details {
 		font-size: var(--font-size-sm);
