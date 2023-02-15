@@ -6,8 +6,12 @@
 	<a href="/" class="logo" aria-label="Go back to home"><KlyngeLogo /></a>
 	<ul class="menu">
 		<!-- <li><a href="/about">Om foreningen</a></li> -->
+		<li class="focus">
+			<a href="https://join.slack.com/t/klyngen/shared_invite/zt-1modeitmd-2OgaarItLsXACjunZQ~BHA">
+				Bli medlem i vår Slack
+			</a>
+		</li>
 		<li><a href="/events">Aktiviteter →</a></li>
-		<!-- <li class="focus"><a href="/contact">Bli medlem</a></li> -->
 	</ul>
 </nav>
 
