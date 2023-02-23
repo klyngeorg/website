@@ -1,6 +1,6 @@
-<h1>Vedtekter for Klynge Næringsforening</h1>
+<div class="content">
+	<h1>Vedtekter for Klynge Næringsforening</h1>
 
-<div>
 	<article id="formaal-og-medlemskap">
 		<h2><a href="#formaal-og-medlemskap">Formål og medlemskap</a></h2>
 		<p>
@@ -80,6 +80,11 @@
 </div>
 
 <style>
+	.content {
+		max-width: 60ch;
+		margin: 0 auto;
+	}
+
 	a {
 		color: inherit;
 		text-decoration: none;
