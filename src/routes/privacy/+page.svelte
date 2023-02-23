@@ -95,15 +95,15 @@
 	<h2>Kontakt oss</h2>
 
 	<p>
-		<strong>E-mail:</strong> hei@klyngeorg.no.
+		<strong>E-post:</strong> aleksander.ryan@wla.no.
 	</p>
-	<!-- <p>
+	<p>
 		<strong>Postadresse:</strong><br />
 		Wahl-Larsen Advokatfirma AS<br />
 		℅ Aleksander Ryan<br />
 		Fridtjof Nansens plass 5<br />
 		0160 OSLO
-	</p> -->
+	</p>
 </div>
 
 <style>
