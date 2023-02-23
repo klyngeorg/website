@@ -69,7 +69,7 @@
 	}
 
 	.focus a {
-		color: white;
+		color: var(--light-bg-color);
 	}
 
 	.focus {
