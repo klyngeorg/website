@@ -4,18 +4,18 @@
 
 <div class="content">
 	<strong>
-		Vi er en gruppe mennesker som har kommet sammen for å støtte og oppmuntre hverandres suksess.
-		Ved å dele våre erfaringer, nettverk og samarbeide, kan vi nå våre mål.
+		Vi er en gruppe menneske som deler erfaringer, nettverk, samarbeider og støtter hverandre.
 	</strong>
 
 	<p>
-		<em>Foreningen er nylig etablert</em> &mdash; foreløpig arrangerer vi kun
-		<a href="/events">månedlige møter</a>, og vi er i gang med å planlegge andre aktiviteter og
-		arrangementer.
+		Som en nylig etablert forening arrangerer foreløpig
+		<a href="/events"> månedlige møter og andre arrangementer </a>
+		for medlemmer og gjester. Om du er nysjerrig, ta kontakt med oss på
+		<a href="mailto:hei@klyngeorg.no">hei@klyngeorg.no</a>
+		eller med <a href="/about/members">en av oss</a>.
 	</p>
 	<p>
-		Om du er nysjerrig, ta kontakt med oss på <a href="mailto:hei@klyngeorg.no">hei@klyngeorg.no</a>
-		eller med <a href="/about/members">en av oss</a>. Sjekk gjerne ut
+		Sjekk ut
 		<a href="https://www.linkedin.com/company/klyngeorg">Linkedin-siden vår</a>.
 	</p>
 </div>
@@ -27,8 +27,12 @@
 
 <style>
 	.content {
-		max-width: 820px;
+		max-width: 60ch;
 		margin-top: var(--space-xl);
+	}
+
+	.content p {
+		line-height: 1.5;
 	}
 
 	strong {
