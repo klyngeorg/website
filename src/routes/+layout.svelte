@@ -43,6 +43,7 @@
 		</p>
 		<p>
 			<a href="/about/articles">Våre vedtekter</a>
+			<a href="/privacy">Personvernerklæring</a>
 		</p>
 	</footer>
 </div>
