@@ -41,10 +41,10 @@
 			<b>Klynge Næringsforening</b><br />
 			Organisasjonsnummer: 930 334 693
 		</p>
-		<p>
+		<section class="footer-links">
 			<a href="/about/articles">Våre vedtekter</a>
 			<a href="/privacy">Personvernerklæring</a>
-		</p>
+		</section>
 	</footer>
 </div>
 
@@ -135,5 +135,11 @@
 
 	footer {
 		margin-top: var(--space-xl);
+	}
+
+	.footer-links {
+		display: flex;
+		flex-direction: row;
+		gap: var(--space-s);
 	}
 </style>
