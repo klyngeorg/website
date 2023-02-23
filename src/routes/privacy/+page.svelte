@@ -97,13 +97,13 @@
 	<p>
 		<strong>E-mail:</strong> hei@klyngeorg.no.
 	</p>
-	<p>
+	<!-- <p>
 		<strong>Postadresse:</strong><br />
 		Wahl-Larsen Advokatfirma AS<br />
 		℅ Aleksander Ryan<br />
 		Fridtjof Nansens plass 5<br />
 		0160 OSLO
-	</p>
+	</p> -->
 </div>
 
 <style>
