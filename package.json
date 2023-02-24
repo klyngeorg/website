@@ -12,7 +12,7 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"postbuild": "svelte-sitemap --domain https://klyngeorg.no",
+		"postbuild": "svelte-sitemap --domain https://klyngeorg.no && pnpm generate-seo-images",
 		"prepare": "husky install",
 		"codegen": "graphql-codegen",
 		"generate-seo-images": "ts-node-esm src/bin/generate-seo-images.ts"
