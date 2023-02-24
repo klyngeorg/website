@@ -17,7 +17,14 @@
 			url: 'https://klyngeorg.no/'
 		},
 		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-		location: data.location,
+		location: {
+			'@type': 'Place',
+			address: data.location ?? 'Oslo, Norway'
+		},
+		image: new URL(
+			['assets', 'images', 'social', `${data.slug}.png`].join('/'),
+			'https://klyngeorg.no/'
+		).toString(),
 		description: data.description
 	};
 
