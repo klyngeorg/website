@@ -1,0 +1,59 @@
+<svg width="1200" height="627" viewBox="0 0 1200 627" fill="none" xmlns="http://www.w3.org/2000/svg"
+  class="social-image">
+
+  <defs>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css2?family=Outfit);
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .social-image {
+        font-family: 'Outfit', sans-serif;
+        color: #ffffff;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .social-image .content-container {
+        height: 100%;
+        padding: 64px;
+        color: #91DAD6;
+
+        display: flex;
+        max-width: 80ch;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        gap: 32px;
+      }
+
+      .social-image .content-container .header {
+        font-size: 48px;
+      }
+
+      .social-image .content-container .date-time,
+      .social-image .content-container .address {
+        font-size: 32px;
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#1A2828" />
+
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="content-container">
+      <h1 xmlns="http://www.w3.org/1999/xhtml" class="header">{{TITLE}}</h1>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="date-time">
+        {{DATE}}
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml" class="address">
+        {{LOCATION}}
+      </p>
+    </div>
+  </foreignObject>
+</svg>
