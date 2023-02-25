@@ -12,56 +12,54 @@ const getMembersDocument = graphql(`
 				status: {
 					in: ["pending", "pending-invoicing", "pending-payment", "active", "pending-expelled"]
 				}
-				member: { person: { privacy: { showPublicly: { eq: true } } } }
+				member: { privacy: { showPublicly: { eq: true } } }
 			}
 		) {
 			status
 			member {
-				person {
-					givenName
-					familyName
-					email
-					phone
-					address {
-						streetAddress
-						postalCode
-						addressLocality
+				givenName
+				familyName
+				email
+				phone
+				address {
+					streetAddress
+					postalCode
+					addressLocality
+				}
+				image {
+					hotspot {
+						x
+						y
+						height
+						width
 					}
-					image {
-						hotspot {
-							x
-							y
-							height
-							width
-						}
-						crop {
-							top
-							bottom
-							left
-							right
-						}
-						asset {
-							_id
-							altText
-							assetId
-							extension
-							url
-						}
+					crop {
+						top
+						bottom
+						left
+						right
 					}
+					asset {
+						_id
+						altText
+						assetId
+						extension
+						url
+					}
+				}
+				worksFor {
+					name
 					worksFor {
 						name
-						worksFor {
-							name
-							legalName
-							email
-							phone
-							address {
-								streetAddress
-								postalCode
-								addressLocality
-							}
-							sameAs
+						legalName
+						email
+						phone
+						address {
+							streetAddress
+							postalCode
+							addressLocality
 						}
+						sameAs
 					}
 				}
 			}
@@ -82,7 +80,7 @@ export const load = async (): Promise<LoadOutput> => {
 
 	const output = members
 		.map(({ member }) => {
-			const person = member?.person;
+      const person = member;
 
 			const image = person?.image
 				? imageUrlBuilder.image(person.image).auto('format').width(200).height(200).toString()

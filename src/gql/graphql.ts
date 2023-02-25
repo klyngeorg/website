@@ -121,6 +121,61 @@ export type DocumentSorting = {
 	_updatedAt?: InputMaybe<SortOrder>;
 };
 
+export type Event = Document & {
+	__typename?: 'Event';
+	/** Date the document was created */
+	_createdAt?: Maybe<Scalars['DateTime']>;
+	/** Document ID */
+	_id?: Maybe<Scalars['ID']>;
+	_key?: Maybe<Scalars['String']>;
+	/** Current document revision */
+	_rev?: Maybe<Scalars['String']>;
+	/** Document type */
+	_type?: Maybe<Scalars['String']>;
+	/** Date the document was last modified */
+	_updatedAt?: Maybe<Scalars['DateTime']>;
+	calendarId?: Maybe<Scalars['String']>;
+	date?: Maybe<Scalars['Date']>;
+	eventAttendanceMode?: Maybe<Scalars['String']>;
+	image?: Maybe<Image>;
+	name?: Maybe<Scalars['String']>;
+	offer?: Maybe<Offer>;
+	performer?: Maybe<Person>;
+};
+
+export type EventFilter = {
+	/** Apply filters on document level */
+	_?: InputMaybe<Sanity_DocumentFilter>;
+	_createdAt?: InputMaybe<DatetimeFilter>;
+	_id?: InputMaybe<IdFilter>;
+	_key?: InputMaybe<StringFilter>;
+	_rev?: InputMaybe<StringFilter>;
+	_type?: InputMaybe<StringFilter>;
+	_updatedAt?: InputMaybe<DatetimeFilter>;
+	calendarId?: InputMaybe<StringFilter>;
+	date?: InputMaybe<DateFilter>;
+	eventAttendanceMode?: InputMaybe<StringFilter>;
+	image?: InputMaybe<ImageFilter>;
+	name?: InputMaybe<StringFilter>;
+	offer?: InputMaybe<OfferFilter>;
+	performer?: InputMaybe<PersonFilter>;
+};
+
+export type EventSorting = {
+	_createdAt?: InputMaybe<SortOrder>;
+	_id?: InputMaybe<SortOrder>;
+	_key?: InputMaybe<SortOrder>;
+	_rev?: InputMaybe<SortOrder>;
+	_type?: InputMaybe<SortOrder>;
+	_updatedAt?: InputMaybe<SortOrder>;
+	calendarId?: InputMaybe<SortOrder>;
+	date?: InputMaybe<SortOrder>;
+	eventAttendanceMode?: InputMaybe<SortOrder>;
+	image?: InputMaybe<ImageSorting>;
+	name?: InputMaybe<SortOrder>;
+	offer?: InputMaybe<OfferSorting>;
+};
+
 export type File = {
 	__typename?: 'File';
 	_key?: Maybe<Scalars['String']>;
@@ -283,7 +338,9 @@ export type Membership = Document & {
 	_type?: Maybe<Scalars['String']>;
 	/** Date the document was last modified */
 	_updatedAt?: Maybe<Scalars['DateTime']>;
-	member?: Maybe<Member>;
+	member?: Maybe<Person>;
+	/** Navn på mottaker av faktura. Dersom ikke valgt, blir faktura sendt til medlemmet direkte */
+	payee?: Maybe<OrganizationOrPerson>;
 	status?: Maybe<Scalars['String']>;
 	year?: Maybe<MembershipYear>;
 };
@@ -297,7 +354,7 @@ export type MembershipFilter = {
 	_rev?: InputMaybe<StringFilter>;
 	_type?: InputMaybe<StringFilter>;
 	_updatedAt?: InputMaybe<DatetimeFilter>;
-	member?: InputMaybe<MemberFilter>;
+	member?: InputMaybe<PersonFilter>;
 	status?: InputMaybe<StringFilter>;
 	year?: InputMaybe<MembershipYearFilter>;
 };
@@ -350,6 +407,35 @@ export type MembershipYearSorting = {
 	year?: InputMaybe<SortOrder>;
 };
 
+export type Offer = {
+	__typename?: 'Offer';
+	_key?: Maybe<Scalars['String']>;
+	_type?: Maybe<Scalars['String']>;
+	availability?: Maybe<Scalars['String']>;
+	price?: Maybe<Scalars['Float']>;
+	priceCurrency?: Maybe<Scalars['String']>;
+	/** Eksempelvis til påmelding, kursside, etc. */
+	url?: Maybe<Scalars['String']>;
+};
+
+export type OfferFilter = {
+	_key?: InputMaybe<StringFilter>;
+	_type?: InputMaybe<StringFilter>;
+	availability?: InputMaybe<StringFilter>;
+	price?: InputMaybe<FloatFilter>;
+	priceCurrency?: InputMaybe<StringFilter>;
+	url?: InputMaybe<StringFilter>;
+};
+
+export type OfferSorting = {
+	_key?: InputMaybe<SortOrder>;
+	_type?: InputMaybe<SortOrder>;
+	availability?: InputMaybe<SortOrder>;
+	price?: InputMaybe<SortOrder>;
+	priceCurrency?: InputMaybe<SortOrder>;
+	url?: InputMaybe<SortOrder>;
+};
+
 export type Organization = Document & {
 	__typename?: 'Organization';
 	/** Date the document was created */
@@ -391,6 +477,8 @@ export type OrganizationFilter = {
 	vatID?: InputMaybe<StringFilter>;
 };
 
+export type OrganizationOrPerson = Organization | Person;
+
 export type OrganizationSorting = {
 	_createdAt?: InputMaybe<SortOrder>;
 	_id?: InputMaybe<SortOrder>;
@@ -407,8 +495,49 @@ export type OrganizationSorting = {
 	vatID?: InputMaybe<SortOrder>;
 };
 
-export type Person = {
+export type Person = Document & {
 	__typename?: 'Person';
+	/** Date the document was created */
+	_createdAt?: Maybe<Scalars['DateTime']>;
+	/** Document ID */
+	_id?: Maybe<Scalars['ID']>;
+	_key?: Maybe<Scalars['String']>;
+	/** Current document revision */
+	_rev?: Maybe<Scalars['String']>;
+	/** Document type */
+	_type?: Maybe<Scalars['String']>;
+	/** Date the document was last modified */
+	_updatedAt?: Maybe<Scalars['DateTime']>;
+	address?: Maybe<Address>;
+	email?: Maybe<Scalars['String']>;
+	familyName?: Maybe<Scalars['String']>;
+	givenName?: Maybe<Scalars['String']>;
+	image?: Maybe<Image>;
+	phone?: Maybe<Scalars['String']>;
+	privacy?: Maybe<PrivacyOptions>;
+	worksFor?: Maybe<Array<Maybe<WorksFor>>>;
+};
+
+export type PersonFilter = {
+	/** Apply filters on document level */
+	_?: InputMaybe<Sanity_DocumentFilter>;
+	_createdAt?: InputMaybe<DatetimeFilter>;
+	_id?: InputMaybe<IdFilter>;
+	_key?: InputMaybe<StringFilter>;
+	_rev?: InputMaybe<StringFilter>;
+	_type?: InputMaybe<StringFilter>;
+	_updatedAt?: InputMaybe<DatetimeFilter>;
+	address?: InputMaybe<AddressFilter>;
+	email?: InputMaybe<StringFilter>;
+	familyName?: InputMaybe<StringFilter>;
+	givenName?: InputMaybe<StringFilter>;
+	image?: InputMaybe<ImageFilter>;
+	phone?: InputMaybe<StringFilter>;
+	privacy?: InputMaybe<PrivacyOptionsFilter>;
+};
+
+export type PersonLegacy = {
+	__typename?: 'PersonLegacy';
 	_key?: Maybe<Scalars['String']>;
 	_type?: Maybe<Scalars['String']>;
 	address?: Maybe<Address>;
@@ -421,7 +550,7 @@ export type Person = {
 	worksFor?: Maybe<Array<Maybe<WorksFor>>>;
 };
 
-export type PersonFilter = {
+export type PersonLegacyFilter = {
 	_key?: InputMaybe<StringFilter>;
 	_type?: InputMaybe<StringFilter>;
 	address?: InputMaybe<AddressFilter>;
@@ -433,9 +562,25 @@ export type PersonFilter = {
 	privacy?: InputMaybe<PrivacyOptionsFilter>;
 };
 
-export type PersonSorting = {
+export type PersonLegacySorting = {
 	_key?: InputMaybe<SortOrder>;
 	_type?: InputMaybe<SortOrder>;
+	address?: InputMaybe<AddressSorting>;
+	email?: InputMaybe<SortOrder>;
+	familyName?: InputMaybe<SortOrder>;
+	givenName?: InputMaybe<SortOrder>;
+	image?: InputMaybe<ImageSorting>;
+	phone?: InputMaybe<SortOrder>;
+	privacy?: InputMaybe<PrivacyOptionsSorting>;
+};
+
+export type PersonSorting = {
+	_createdAt?: InputMaybe<SortOrder>;
+	_id?: InputMaybe<SortOrder>;
+	_key?: InputMaybe<SortOrder>;
+	_rev?: InputMaybe<SortOrder>;
+	_type?: InputMaybe<SortOrder>;
+	_updatedAt?: InputMaybe<SortOrder>;
 	address?: InputMaybe<AddressSorting>;
 	email?: InputMaybe<SortOrder>;
 	familyName?: InputMaybe<SortOrder>;
@@ -468,22 +613,30 @@ export type PrivacyOptionsSorting = {
 export type RootQuery = {
 	__typename?: 'RootQuery';
 	Document?: Maybe<Document>;
+	Event?: Maybe<Event>;
 	Member?: Maybe<Member>;
 	Membership?: Maybe<Membership>;
 	MembershipYear?: Maybe<MembershipYear>;
 	Organization?: Maybe<Organization>;
+	Person?: Maybe<Person>;
 	SanityFileAsset?: Maybe<SanityFileAsset>;
 	SanityImageAsset?: Maybe<SanityImageAsset>;
 	allDocument: Array<Document>;
+	allEvent: Array<Event>;
 	allMember: Array<Member>;
 	allMembership: Array<Membership>;
 	allMembershipYear: Array<MembershipYear>;
 	allOrganization: Array<Organization>;
+	allPerson: Array<Person>;
 	allSanityFileAsset: Array<SanityFileAsset>;
 	allSanityImageAsset: Array<SanityImageAsset>;
 };
 
 export type RootQueryDocumentArgs = {
+	id: Scalars['ID'];
+};
+
+export type RootQueryEventArgs = {
 	id: Scalars['ID'];
 };
 
@@ -503,6 +656,10 @@ export type RootQueryOrganizationArgs = {
 	id: Scalars['ID'];
 };
 
+export type RootQueryPersonArgs = {
+	id: Scalars['ID'];
+};
+
 export type RootQuerySanityFileAssetArgs = {
 	id: Scalars['ID'];
 };
@@ -516,6 +673,13 @@ export type RootQueryAllDocumentArgs = {
 	offset?: InputMaybe<Scalars['Int']>;
 	sort?: InputMaybe<Array<DocumentSorting>>;
 	where?: InputMaybe<DocumentFilter>;
+};
+
+export type RootQueryAllEventArgs = {
+	limit?: InputMaybe<Scalars['Int']>;
+	offset?: InputMaybe<Scalars['Int']>;
+	sort?: InputMaybe<Array<EventSorting>>;
+	where?: InputMaybe<EventFilter>;
 };
 
 export type RootQueryAllMemberArgs = {
@@ -544,6 +708,13 @@ export type RootQueryAllOrganizationArgs = {
 	offset?: InputMaybe<Scalars['Int']>;
 	sort?: InputMaybe<Array<OrganizationSorting>>;
 	where?: InputMaybe<OrganizationFilter>;
+};
+
+export type RootQueryAllPersonArgs = {
+	limit?: InputMaybe<Scalars['Int']>;
+	offset?: InputMaybe<Scalars['Int']>;
+	sort?: InputMaybe<Array<PersonSorting>>;
+	where?: InputMaybe<PersonFilter>;
 };
 
 export type RootQueryAllSanityFileAssetArgs = {
@@ -1009,63 +1180,60 @@ export type GetMembersQuery = {
 		__typename?: 'Membership';
 		status?: string | null;
 		member?: {
-			__typename?: 'Member';
-			person?: {
-				__typename?: 'Person';
-				givenName?: string | null;
-				familyName?: string | null;
-				email?: string | null;
-				phone?: string | null;
-				address?: {
-					__typename?: 'Address';
-					streetAddress?: string | null;
-					postalCode?: string | null;
-					addressLocality?: string | null;
-				} | null;
-				image?: {
-					__typename?: 'Image';
-					hotspot?: {
-						__typename?: 'SanityImageHotspot';
-						x?: number | null;
-						y?: number | null;
-						height?: number | null;
-						width?: number | null;
-					} | null;
-					crop?: {
-						__typename?: 'SanityImageCrop';
-						top?: number | null;
-						bottom?: number | null;
-						left?: number | null;
-						right?: number | null;
-					} | null;
-					asset?: {
-						__typename?: 'SanityImageAsset';
-						_id?: string | null;
-						altText?: string | null;
-						assetId?: string | null;
-						extension?: string | null;
-						url?: string | null;
-					} | null;
-				} | null;
-				worksFor?: Array<{
-					__typename?: 'WorksFor';
-					name?: string | null;
-					worksFor?: {
-						__typename?: 'Organization';
-						name?: string | null;
-						legalName?: string | null;
-						email?: string | null;
-						phone?: string | null;
-						sameAs?: Array<string | null> | null;
-						address?: {
-							__typename?: 'Address';
-							streetAddress?: string | null;
-							postalCode?: string | null;
-							addressLocality?: string | null;
-						} | null;
-					} | null;
-				} | null> | null;
+			__typename?: 'Person';
+			givenName?: string | null;
+			familyName?: string | null;
+			email?: string | null;
+			phone?: string | null;
+			address?: {
+				__typename?: 'Address';
+				streetAddress?: string | null;
+				postalCode?: string | null;
+				addressLocality?: string | null;
 			} | null;
+			image?: {
+				__typename?: 'Image';
+				hotspot?: {
+					__typename?: 'SanityImageHotspot';
+					x?: number | null;
+					y?: number | null;
+					height?: number | null;
+					width?: number | null;
+				} | null;
+				crop?: {
+					__typename?: 'SanityImageCrop';
+					top?: number | null;
+					bottom?: number | null;
+					left?: number | null;
+					right?: number | null;
+				} | null;
+				asset?: {
+					__typename?: 'SanityImageAsset';
+					_id?: string | null;
+					altText?: string | null;
+					assetId?: string | null;
+					extension?: string | null;
+					url?: string | null;
+				} | null;
+			} | null;
+			worksFor?: Array<{
+				__typename?: 'WorksFor';
+				name?: string | null;
+				worksFor?: {
+					__typename?: 'Organization';
+					name?: string | null;
+					legalName?: string | null;
+					email?: string | null;
+					phone?: string | null;
+					sameAs?: Array<string | null> | null;
+					address?: {
+						__typename?: 'Address';
+						streetAddress?: string | null;
+						postalCode?: string | null;
+						addressLocality?: string | null;
+					} | null;
+				} | null;
+			} | null> | null;
 		} | null;
 	}>;
 };
@@ -1145,29 +1313,20 @@ export const GetMembersDocument = {
 												fields: [
 													{
 														kind: 'ObjectField',
-														name: { kind: 'Name', value: 'person' },
+														name: { kind: 'Name', value: 'privacy' },
 														value: {
 															kind: 'ObjectValue',
 															fields: [
 																{
 																	kind: 'ObjectField',
-																	name: { kind: 'Name', value: 'privacy' },
+																	name: { kind: 'Name', value: 'showPublicly' },
 																	value: {
 																		kind: 'ObjectValue',
 																		fields: [
 																			{
 																				kind: 'ObjectField',
-																				name: { kind: 'Name', value: 'showPublicly' },
-																				value: {
-																					kind: 'ObjectValue',
-																					fields: [
-																						{
-																							kind: 'ObjectField',
-																							name: { kind: 'Name', value: 'eq' },
-																							value: { kind: 'BooleanValue', value: true }
-																						}
-																					]
-																				}
+																				name: { kind: 'Name', value: 'eq' },
+																				value: { kind: 'BooleanValue', value: true }
 																			}
 																		]
 																	}
@@ -1192,83 +1351,78 @@ export const GetMembersDocument = {
 									selectionSet: {
 										kind: 'SelectionSet',
 										selections: [
+											{ kind: 'Field', name: { kind: 'Name', value: 'givenName' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'familyName' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'email' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'phone' } },
 											{
 												kind: 'Field',
-												name: { kind: 'Name', value: 'person' },
+												name: { kind: 'Name', value: 'address' },
 												selectionSet: {
 													kind: 'SelectionSet',
 													selections: [
-														{ kind: 'Field', name: { kind: 'Name', value: 'givenName' } },
-														{ kind: 'Field', name: { kind: 'Name', value: 'familyName' } },
-														{ kind: 'Field', name: { kind: 'Name', value: 'email' } },
-														{ kind: 'Field', name: { kind: 'Name', value: 'phone' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'streetAddress' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'postalCode' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'addressLocality' } }
+													]
+												}
+											},
+											{
+												kind: 'Field',
+												name: { kind: 'Name', value: 'image' },
+												selectionSet: {
+													kind: 'SelectionSet',
+													selections: [
 														{
 															kind: 'Field',
-															name: { kind: 'Name', value: 'address' },
+															name: { kind: 'Name', value: 'hotspot' },
 															selectionSet: {
 																kind: 'SelectionSet',
 																selections: [
-																	{ kind: 'Field', name: { kind: 'Name', value: 'streetAddress' } },
-																	{ kind: 'Field', name: { kind: 'Name', value: 'postalCode' } },
-																	{
-																		kind: 'Field',
-																		name: { kind: 'Name', value: 'addressLocality' }
-																	}
+																	{ kind: 'Field', name: { kind: 'Name', value: 'x' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'y' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'height' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'width' } }
 																]
 															}
 														},
 														{
 															kind: 'Field',
-															name: { kind: 'Name', value: 'image' },
+															name: { kind: 'Name', value: 'crop' },
 															selectionSet: {
 																kind: 'SelectionSet',
 																selections: [
-																	{
-																		kind: 'Field',
-																		name: { kind: 'Name', value: 'hotspot' },
-																		selectionSet: {
-																			kind: 'SelectionSet',
-																			selections: [
-																				{ kind: 'Field', name: { kind: 'Name', value: 'x' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'y' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'height' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'width' } }
-																			]
-																		}
-																	},
-																	{
-																		kind: 'Field',
-																		name: { kind: 'Name', value: 'crop' },
-																		selectionSet: {
-																			kind: 'SelectionSet',
-																			selections: [
-																				{ kind: 'Field', name: { kind: 'Name', value: 'top' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'bottom' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'left' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'right' } }
-																			]
-																		}
-																	},
-																	{
-																		kind: 'Field',
-																		name: { kind: 'Name', value: 'asset' },
-																		selectionSet: {
-																			kind: 'SelectionSet',
-																			selections: [
-																				{ kind: 'Field', name: { kind: 'Name', value: '_id' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'altText' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'assetId' } },
-																				{
-																					kind: 'Field',
-																					name: { kind: 'Name', value: 'extension' }
-																				},
-																				{ kind: 'Field', name: { kind: 'Name', value: 'url' } }
-																			]
-																		}
-																	}
+																	{ kind: 'Field', name: { kind: 'Name', value: 'top' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'bottom' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'left' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'right' } }
 																]
 															}
 														},
+														{
+															kind: 'Field',
+															name: { kind: 'Name', value: 'asset' },
+															selectionSet: {
+																kind: 'SelectionSet',
+																selections: [
+																	{ kind: 'Field', name: { kind: 'Name', value: '_id' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'altText' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'assetId' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'extension' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'url' } }
+																]
+															}
+														}
+													]
+												}
+											},
+											{
+												kind: 'Field',
+												name: { kind: 'Name', value: 'worksFor' },
+												selectionSet: {
+													kind: 'SelectionSet',
+													selections: [
+														{ kind: 'Field', name: { kind: 'Name', value: 'name' } },
 														{
 															kind: 'Field',
 															name: { kind: 'Name', value: 'worksFor' },
@@ -1276,44 +1430,31 @@ export const GetMembersDocument = {
 																kind: 'SelectionSet',
 																selections: [
 																	{ kind: 'Field', name: { kind: 'Name', value: 'name' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'legalName' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'email' } },
+																	{ kind: 'Field', name: { kind: 'Name', value: 'phone' } },
 																	{
 																		kind: 'Field',
-																		name: { kind: 'Name', value: 'worksFor' },
+																		name: { kind: 'Name', value: 'address' },
 																		selectionSet: {
 																			kind: 'SelectionSet',
 																			selections: [
-																				{ kind: 'Field', name: { kind: 'Name', value: 'name' } },
 																				{
 																					kind: 'Field',
-																					name: { kind: 'Name', value: 'legalName' }
+																					name: { kind: 'Name', value: 'streetAddress' }
 																				},
-																				{ kind: 'Field', name: { kind: 'Name', value: 'email' } },
-																				{ kind: 'Field', name: { kind: 'Name', value: 'phone' } },
 																				{
 																					kind: 'Field',
-																					name: { kind: 'Name', value: 'address' },
-																					selectionSet: {
-																						kind: 'SelectionSet',
-																						selections: [
-																							{
-																								kind: 'Field',
-																								name: { kind: 'Name', value: 'streetAddress' }
-																							},
-																							{
-																								kind: 'Field',
-																								name: { kind: 'Name', value: 'postalCode' }
-																							},
-																							{
-																								kind: 'Field',
-																								name: { kind: 'Name', value: 'addressLocality' }
-																							}
-																						]
-																					}
+																					name: { kind: 'Name', value: 'postalCode' }
 																				},
-																				{ kind: 'Field', name: { kind: 'Name', value: 'sameAs' } }
+																				{
+																					kind: 'Field',
+																					name: { kind: 'Name', value: 'addressLocality' }
+																				}
 																			]
 																		}
-																	}
+																	},
+																	{ kind: 'Field', name: { kind: 'Name', value: 'sameAs' } }
 																]
 															}
 														}
