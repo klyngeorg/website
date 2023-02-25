@@ -1,22 +1,17 @@
 <script lang="ts">
-	import { serializeSchema } from '../../utils';
-	import type { WithContext, Event } from 'schema-dts';
-	import type { EventData } from './+page.server';
+	import { notEmpty, serializeSchema } from '../../utils';
+	import type { WithContext, Event, Offer, ItemAvailability } from 'schema-dts';
+	import { invariant } from 'ts-invariant';
+	import { defaultEventData } from '../../libs/events/default-event-data';
+	import type { EventData } from '../../libs/events/types';
 	export let data: EventData;
 
 	const event: WithContext<Event> = {
 		'@context': 'https://schema.org',
-		'@type': 'Event',
-		name: data.title,
-		startDate: data.startDate,
-		endDate: data.endDate,
-		eventStatus: 'https://schema.org/EventScheduled',
-		organizer: {
-			'@type': 'Organization',
-			name: 'Klynge Næringsforening',
-			url: 'https://klyngeorg.no/'
-		},
-		eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+		...defaultEventData,
+		name: data.name,
+		startDate: data.startDate.toISOString(),
+		endDate: data.endDate.toISOString(),
 		location: {
 			'@type': 'Place',
 			address: data.location ?? 'Oslo, Norway'
@@ -27,6 +22,33 @@
 		).toString(),
 		description: data.description
 	};
+
+	if (data.offers) {
+		event.offers = data.offers
+			.filter((offerItem) => offerItem && offerItem.url)
+			.map((offerItem) => {
+				invariant(offerItem && offerItem.url, 'Offer must have a url');
+				const offer: Offer = {
+					'@type': 'Offer',
+					url: offerItem.url
+				};
+
+				if (offerItem.price) {
+					offer.price = offerItem.price;
+				}
+
+				if (offerItem.priceCurrency) {
+					offer.priceCurrency = offerItem.priceCurrency;
+				}
+
+				if (offerItem.availability) {
+					// TODO: Parse to ItemAvailability
+					offer.availability = offerItem.availability as ItemAvailability;
+				}
+
+				return offer;
+			});
+	}
 
 	const date = new Date(data.startDate).toLocaleDateString('no-NO', {
 		weekday: 'long',
@@ -44,6 +66,9 @@
 		hour: 'numeric',
 		minute: 'numeric'
 	});
+
+	const offers = (data.offers ?? []).filter(notEmpty);
+	console.log({ offers });
 </script>
 
 <svelte:head>
@@ -59,7 +84,7 @@
 	</aside>
 	<main>
 		<h2>
-			<a href={data.url} rel="noreferrer" target="_blank">{data.title}</a>
+			<a href={data.url} rel="noreferrer" target="_blank">{data.name}</a>
 		</h2>
 		{#if data.location}
 			<p class="location">
@@ -77,6 +102,32 @@
 		<p>
 			<small>Anslått ferdig: {timeFinished}</small>
 		</p>
+		{#each offers as offer}
+			<div class="offer-box">
+				<div class="description">
+					{#if offer.price}
+						<p><strong>{offer.price} {offer.priceCurrency}</strong></p>
+					{/if}
+					{#if offer.description}
+						<p class="description-paragraph">
+							{@html offer.description.split('\n').join('<br />')}
+						</p>
+					{/if}
+					{#if offer.availability === 'LimitedAvailability'}
+						<p><strong>Merk:</strong> Det er begrensede plasser</p>
+					{/if}
+          {#if offer.availability === 'SoldOut'}
+						<p><strong>Varsel:</strong> Det er ikke flere plasser</p>
+					{/if}
+          {#if offer.availability === 'BackOrder'}
+						<p><strong>Varsel:</strong> Det er venteliste</p>
+					{/if}
+				</div>
+				<div class="actions">
+					<a href={offer.url} class="button" rel="noreferrer" target="_blank"> Påmelding → </a>
+				</div>
+			</div>
+		{/each}
 	</main>
 </article>
 
@@ -134,6 +185,37 @@
 	}
 
 	.location {
+		font-size: var(--font-size-sm);
+	}
+
+	.offer-box {
+		display: flex;
+		justify-content: space-between;
+		/* align-items: center; */
+
+		background-color: var(--muted-color);
+		padding: var(--space-s);
+		border-radius: 16px;
+
+		font-size: var(--font-size-sm);
+    gap: var(--space-l);
+	}
+
+  .offer-box .description {
+    flex: 1;
+  }
+
+  .offer-box .description .description-paragraph {
+    padding-bottom: var(--space-xs);
+  }
+
+	.offer-box .button {
+    display: block;
+		background-color: var(--primary-color);
+		color: var(--muted-color);
+		border-radius: 16px;
+		padding: var(--space-2xs);
+		text-decoration: none;
 		font-size: var(--font-size-sm);
 	}
 

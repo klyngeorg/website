@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+import type { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -135,12 +135,12 @@ export type Event = Document & {
 	/** Date the document was last modified */
 	_updatedAt?: Maybe<Scalars['DateTime']>;
 	calendarId?: Maybe<Scalars['String']>;
-	date?: Maybe<Scalars['Date']>;
+	date?: Maybe<Scalars['DateTime']>;
 	eventAttendanceMode?: Maybe<Scalars['String']>;
 	image?: Maybe<Image>;
 	name?: Maybe<Scalars['String']>;
-	offer?: Maybe<Offer>;
-	performer?: Maybe<Person>;
+	offers?: Maybe<Array<Maybe<Offer>>>;
+	performers?: Maybe<Array<Maybe<Person>>>;
 };
 
 export type EventFilter = {
@@ -153,12 +153,10 @@ export type EventFilter = {
 	_type?: InputMaybe<StringFilter>;
 	_updatedAt?: InputMaybe<DatetimeFilter>;
 	calendarId?: InputMaybe<StringFilter>;
-	date?: InputMaybe<DateFilter>;
+	date?: InputMaybe<DatetimeFilter>;
 	eventAttendanceMode?: InputMaybe<StringFilter>;
 	image?: InputMaybe<ImageFilter>;
 	name?: InputMaybe<StringFilter>;
-	offer?: InputMaybe<OfferFilter>;
-	performer?: InputMaybe<PersonFilter>;
 };
 
 export type EventSorting = {
@@ -173,7 +171,6 @@ export type EventSorting = {
 	eventAttendanceMode?: InputMaybe<SortOrder>;
 	image?: InputMaybe<ImageSorting>;
 	name?: InputMaybe<SortOrder>;
-	offer?: InputMaybe<OfferSorting>;
 };
 
 export type File = {
@@ -284,47 +281,6 @@ export type IntFilter = {
 	neq?: InputMaybe<Scalars['Int']>;
 };
 
-export type Member = Document & {
-	__typename?: 'Member';
-	/** Date the document was created */
-	_createdAt?: Maybe<Scalars['DateTime']>;
-	/** Document ID */
-	_id?: Maybe<Scalars['ID']>;
-	_key?: Maybe<Scalars['String']>;
-	/** Current document revision */
-	_rev?: Maybe<Scalars['String']>;
-	/** Document type */
-	_type?: Maybe<Scalars['String']>;
-	/** Date the document was last modified */
-	_updatedAt?: Maybe<Scalars['DateTime']>;
-	/** Navn på mottaker av faktura. Dersom ikke valgt, blir faktura sendt til medlemmet direkte */
-	payee?: Maybe<Organization>;
-	person?: Maybe<Person>;
-};
-
-export type MemberFilter = {
-	/** Apply filters on document level */
-	_?: InputMaybe<Sanity_DocumentFilter>;
-	_createdAt?: InputMaybe<DatetimeFilter>;
-	_id?: InputMaybe<IdFilter>;
-	_key?: InputMaybe<StringFilter>;
-	_rev?: InputMaybe<StringFilter>;
-	_type?: InputMaybe<StringFilter>;
-	_updatedAt?: InputMaybe<DatetimeFilter>;
-	payee?: InputMaybe<OrganizationFilter>;
-	person?: InputMaybe<PersonFilter>;
-};
-
-export type MemberSorting = {
-	_createdAt?: InputMaybe<SortOrder>;
-	_id?: InputMaybe<SortOrder>;
-	_key?: InputMaybe<SortOrder>;
-	_rev?: InputMaybe<SortOrder>;
-	_type?: InputMaybe<SortOrder>;
-	_updatedAt?: InputMaybe<SortOrder>;
-	person?: InputMaybe<PersonSorting>;
-};
-
 export type Membership = Document & {
 	__typename?: 'Membership';
 	/** Date the document was created */
@@ -412,6 +368,8 @@ export type Offer = {
 	_key?: Maybe<Scalars['String']>;
 	_type?: Maybe<Scalars['String']>;
 	availability?: Maybe<Scalars['String']>;
+	/** For å forklare hva tilbudet er. Eksempelvis, at det er kursavgift eller mat */
+	description?: Maybe<Scalars['String']>;
 	price?: Maybe<Scalars['Float']>;
 	priceCurrency?: Maybe<Scalars['String']>;
 	/** Eksempelvis til påmelding, kursside, etc. */
@@ -422,6 +380,7 @@ export type OfferFilter = {
 	_key?: InputMaybe<StringFilter>;
 	_type?: InputMaybe<StringFilter>;
 	availability?: InputMaybe<StringFilter>;
+	description?: InputMaybe<StringFilter>;
 	price?: InputMaybe<FloatFilter>;
 	priceCurrency?: InputMaybe<StringFilter>;
 	url?: InputMaybe<StringFilter>;
@@ -431,6 +390,7 @@ export type OfferSorting = {
 	_key?: InputMaybe<SortOrder>;
 	_type?: InputMaybe<SortOrder>;
 	availability?: InputMaybe<SortOrder>;
+	description?: InputMaybe<SortOrder>;
 	price?: InputMaybe<SortOrder>;
 	priceCurrency?: InputMaybe<SortOrder>;
 	url?: InputMaybe<SortOrder>;
@@ -614,7 +574,6 @@ export type RootQuery = {
 	__typename?: 'RootQuery';
 	Document?: Maybe<Document>;
 	Event?: Maybe<Event>;
-	Member?: Maybe<Member>;
 	Membership?: Maybe<Membership>;
 	MembershipYear?: Maybe<MembershipYear>;
 	Organization?: Maybe<Organization>;
@@ -623,7 +582,6 @@ export type RootQuery = {
 	SanityImageAsset?: Maybe<SanityImageAsset>;
 	allDocument: Array<Document>;
 	allEvent: Array<Event>;
-	allMember: Array<Member>;
 	allMembership: Array<Membership>;
 	allMembershipYear: Array<MembershipYear>;
 	allOrganization: Array<Organization>;
@@ -637,10 +595,6 @@ export type RootQueryDocumentArgs = {
 };
 
 export type RootQueryEventArgs = {
-	id: Scalars['ID'];
-};
-
-export type RootQueryMemberArgs = {
 	id: Scalars['ID'];
 };
 
@@ -680,13 +634,6 @@ export type RootQueryAllEventArgs = {
 	offset?: InputMaybe<Scalars['Int']>;
 	sort?: InputMaybe<Array<EventSorting>>;
 	where?: InputMaybe<EventFilter>;
-};
-
-export type RootQueryAllMemberArgs = {
-	limit?: InputMaybe<Scalars['Int']>;
-	offset?: InputMaybe<Scalars['Int']>;
-	sort?: InputMaybe<Array<MemberSorting>>;
-	where?: InputMaybe<MemberFilter>;
 };
 
 export type RootQueryAllMembershipArgs = {
@@ -1172,6 +1119,54 @@ export type WorksForSorting = {
 	name?: InputMaybe<SortOrder>;
 };
 
+export type GetEventsQueryVariables = Exact<{
+	dateFrom: Scalars['DateTime'];
+	dateTo: Scalars['DateTime'];
+}>;
+
+export type GetEventsQuery = {
+	__typename?: 'RootQuery';
+	events: Array<{
+		__typename?: 'Event';
+		date?: any | null;
+		calendarId?: string | null;
+		eventAttendanceMode?: string | null;
+		offers?: Array<{
+			__typename?: 'Offer';
+			price?: number | null;
+			priceCurrency?: string | null;
+			url?: string | null;
+			availability?: string | null;
+			description?: string | null;
+		} | null> | null;
+		image?: {
+			__typename?: 'Image';
+			hotspot?: {
+				__typename?: 'SanityImageHotspot';
+				x?: number | null;
+				y?: number | null;
+				height?: number | null;
+				width?: number | null;
+			} | null;
+			crop?: {
+				__typename?: 'SanityImageCrop';
+				top?: number | null;
+				bottom?: number | null;
+				left?: number | null;
+				right?: number | null;
+			} | null;
+			asset?: {
+				__typename?: 'SanityImageAsset';
+				_id?: string | null;
+				altText?: string | null;
+				assetId?: string | null;
+				extension?: string | null;
+				url?: string | null;
+			} | null;
+		} | null;
+	}>;
+};
+
 export type GetMembersQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetMembersQuery = {
@@ -1238,6 +1233,145 @@ export type GetMembersQuery = {
 	}>;
 };
 
+export const GetEventsDocument = {
+	kind: 'Document',
+	definitions: [
+		{
+			kind: 'OperationDefinition',
+			operation: 'query',
+			name: { kind: 'Name', value: 'GetEvents' },
+			variableDefinitions: [
+				{
+					kind: 'VariableDefinition',
+					variable: { kind: 'Variable', name: { kind: 'Name', value: 'dateFrom' } },
+					type: {
+						kind: 'NonNullType',
+						type: { kind: 'NamedType', name: { kind: 'Name', value: 'DateTime' } }
+					}
+				},
+				{
+					kind: 'VariableDefinition',
+					variable: { kind: 'Variable', name: { kind: 'Name', value: 'dateTo' } },
+					type: {
+						kind: 'NonNullType',
+						type: { kind: 'NamedType', name: { kind: 'Name', value: 'DateTime' } }
+					}
+				}
+			],
+			selectionSet: {
+				kind: 'SelectionSet',
+				selections: [
+					{
+						kind: 'Field',
+						alias: { kind: 'Name', value: 'events' },
+						name: { kind: 'Name', value: 'allEvent' },
+						arguments: [
+							{
+								kind: 'Argument',
+								name: { kind: 'Name', value: 'where' },
+								value: {
+									kind: 'ObjectValue',
+									fields: [
+										{
+											kind: 'ObjectField',
+											name: { kind: 'Name', value: 'date' },
+											value: {
+												kind: 'ObjectValue',
+												fields: [
+													{
+														kind: 'ObjectField',
+														name: { kind: 'Name', value: 'lte' },
+														value: { kind: 'Variable', name: { kind: 'Name', value: 'dateTo' } }
+													},
+													{
+														kind: 'ObjectField',
+														name: { kind: 'Name', value: 'gte' },
+														value: { kind: 'Variable', name: { kind: 'Name', value: 'dateFrom' } }
+													}
+												]
+											}
+										}
+									]
+								}
+							}
+						],
+						selectionSet: {
+							kind: 'SelectionSet',
+							selections: [
+								{ kind: 'Field', name: { kind: 'Name', value: 'date' } },
+								{ kind: 'Field', name: { kind: 'Name', value: 'calendarId' } },
+								{ kind: 'Field', name: { kind: 'Name', value: 'eventAttendanceMode' } },
+								{
+									kind: 'Field',
+									name: { kind: 'Name', value: 'offers' },
+									selectionSet: {
+										kind: 'SelectionSet',
+										selections: [
+											{ kind: 'Field', name: { kind: 'Name', value: 'price' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'priceCurrency' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'url' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'availability' } },
+											{ kind: 'Field', name: { kind: 'Name', value: 'description' } }
+										]
+									}
+								},
+								{
+									kind: 'Field',
+									name: { kind: 'Name', value: 'image' },
+									selectionSet: {
+										kind: 'SelectionSet',
+										selections: [
+											{
+												kind: 'Field',
+												name: { kind: 'Name', value: 'hotspot' },
+												selectionSet: {
+													kind: 'SelectionSet',
+													selections: [
+														{ kind: 'Field', name: { kind: 'Name', value: 'x' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'y' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'height' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'width' } }
+													]
+												}
+											},
+											{
+												kind: 'Field',
+												name: { kind: 'Name', value: 'crop' },
+												selectionSet: {
+													kind: 'SelectionSet',
+													selections: [
+														{ kind: 'Field', name: { kind: 'Name', value: 'top' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'bottom' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'left' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'right' } }
+													]
+												}
+											},
+											{
+												kind: 'Field',
+												name: { kind: 'Name', value: 'asset' },
+												selectionSet: {
+													kind: 'SelectionSet',
+													selections: [
+														{ kind: 'Field', name: { kind: 'Name', value: '_id' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'altText' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'assetId' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'extension' } },
+														{ kind: 'Field', name: { kind: 'Name', value: 'url' } }
+													]
+												}
+											}
+										]
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+} as unknown as DocumentNode<GetEventsQuery, GetEventsQueryVariables>;
 export const GetMembersDocument = {
 	kind: 'Document',
 	definitions: [

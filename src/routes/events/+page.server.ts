@@ -1,4 +1,4 @@
-import { getEventsFromGoogleCalendar } from '../../libs/get-events';
+import { getEventsFromGoogleCalendar } from '../../libs/events/get-events';
 
 export const prerender = true;
 

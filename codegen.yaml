@@ -9,4 +9,6 @@ hooks:
 generates:
   src/gql/:
     preset: 'client'
+    config:
+      useTypeImports: true
     plugins: []

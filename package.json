@@ -14,7 +14,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"postbuild": "svelte-sitemap --domain https://klyngeorg.no && pnpm generate-seo-images",
 		"prepare": "husky install",
-		"codegen": "graphql-codegen",
+		"codegen": "graphql-codegen-esm",
 		"generate-seo-images": "ts-node-esm --experimental-specifier-resolution=node src/bin/generate-seo-images.ts"
 	},
 	"lint-staged": {
@@ -65,6 +65,7 @@
 		"md5": "^2.3.0",
 		"puppeteer-core": "^19.7.2",
 		"schema-dts": "^1.1.0",
-		"slugify": "^1.6.5"
+		"slugify": "^1.6.5",
+		"ts-invariant": "^0.10.3"
 	}
 }

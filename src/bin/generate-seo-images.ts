@@ -2,15 +2,14 @@ import { format, isValid, subYears } from 'date-fns';
 import { nb } from 'date-fns/locale';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import puppeteer from 'puppeteer-core';
-import { getEventsFromGoogleCalendar } from '../libs/get-events.js';
+import { getEventsFromGoogleCalendar } from '../libs/events/get-events.js';
 
-function formatDateTime(dateString: string): string | undefined {
-	if (!isValid(new Date(dateString))) {
-		console.log({ dateString }, 'not valid datestring');
+function formatDateTime(date: Date): string | undefined {
+	if (!isValid(date)) {
+		console.log({ date }, 'not valid datestring');
 		return undefined;
 	}
 
-	const date = new Date(dateString);
 	return [format(date, 'd. MMM yyyy', { locale: nb }), 'kl.', format(date, 'k:M')].join(' ');
 }
 
@@ -35,7 +34,7 @@ async function generateSeoImages() {
 		events.map(async (event) => {
 			const svg = (await template)
 				.toString()
-				.replace('{{TITLE}}', event.title ?? '')
+				.replace('{{TITLE}}', event.name ?? '')
 				.replace('{{DATE}}', formatDateTime(event.startDate) ?? '')
 				.replace('{{LOCATION}}', event.location ? parseLocation(event.location) : '');
 
