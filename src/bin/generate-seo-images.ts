@@ -14,6 +14,10 @@ function formatDateTime(dateString: string): string | undefined {
 	return [format(date, 'd. MMM yyyy', { locale: nb }), 'kl.', format(date, 'k:M')].join(' ');
 }
 
+function parseLocation(location: string): string {
+	return location.replaceAll(', Norge', '').split(', ').join('<br />');
+}
+
 async function generateSeoImages() {
 	const events = await getEventsFromGoogleCalendar({
 		timeMin: subYears(new Date(), 3)
@@ -33,7 +37,7 @@ async function generateSeoImages() {
 				.toString()
 				.replace('{{TITLE}}', event.title ?? '')
 				.replace('{{DATE}}', formatDateTime(event.startDate) ?? '')
-				.replace('{{LOCATION}}', event.location ?? '');
+				.replace('{{LOCATION}}', event.location ? parseLocation(event.location) : '');
 
 			await writeFile(`build/assets/images/social/${event.slug}.svg`, svg);
 
