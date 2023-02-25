@@ -67,11 +67,11 @@ export async function getEventsFromGoogleCalendar(
 
 			const sanityEvent = sanityEvents.find((sanityEvent) => sanityEvent.calendarId === item.id);
 
-      if (sanityEvent) {
-        event.image = sanityEvent.image;
-        event.offers = sanityEvent.offers;
-        event.eventAttendanceMode = sanityEvent.eventAttendanceMode ?? undefined;
-      }
+			if (sanityEvent) {
+				event.image = sanityEvent.image;
+				event.offers = sanityEvent.offers;
+				event.eventAttendanceMode = sanityEvent.eventAttendanceMode ?? undefined;
+			}
 
 			return event;
 		})

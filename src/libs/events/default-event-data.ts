@@ -1,8 +1,8 @@
-import type { Event } from "schema-dts";
+import type { Event } from 'schema-dts';
 
 export const defaultEventData: Event = {
-  '@type': 'Event',
-  // TODO: Move this to Sanity
+	'@type': 'Event',
+	// TODO: Move this to Sanity
 	eventStatus: 'https://schema.org/EventScheduled',
 	organizer: {
 		'@type': 'Organization',

@@ -80,7 +80,7 @@ export const load = async (): Promise<LoadOutput> => {
 
 	const output = members
 		.map(({ member }) => {
-      const person = member;
+			const person = member;
 
 			const image = person?.image
 				? imageUrlBuilder.image(person.image).auto('format').width(200).height(200).toString()

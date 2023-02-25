@@ -116,10 +116,10 @@
 					{#if offer.availability === 'LimitedAvailability'}
 						<p><strong>Merk:</strong> Det er begrensede plasser</p>
 					{/if}
-          {#if offer.availability === 'SoldOut'}
+					{#if offer.availability === 'SoldOut'}
 						<p><strong>Varsel:</strong> Det er ikke flere plasser</p>
 					{/if}
-          {#if offer.availability === 'BackOrder'}
+					{#if offer.availability === 'BackOrder'}
 						<p><strong>Varsel:</strong> Det er venteliste</p>
 					{/if}
 				</div>
@@ -198,19 +198,19 @@
 		border-radius: 16px;
 
 		font-size: var(--font-size-sm);
-    gap: var(--space-l);
+		gap: var(--space-l);
 	}
 
-  .offer-box .description {
-    flex: 1;
-  }
+	.offer-box .description {
+		flex: 1;
+	}
 
-  .offer-box .description .description-paragraph {
-    padding-bottom: var(--space-xs);
-  }
+	.offer-box .description .description-paragraph {
+		padding-bottom: var(--space-xs);
+	}
 
 	.offer-box .button {
-    display: block;
+		display: block;
 		background-color: var(--primary-color);
 		color: var(--muted-color);
 		border-radius: 16px;
