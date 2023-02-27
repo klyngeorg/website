@@ -10,7 +10,7 @@ function formatDateTime(date: Date): string | undefined {
 		return undefined;
 	}
 
-	return [format(date, 'd. MMM yyyy', { locale: nb }), 'kl.', format(date, 'k:M')].join(' ');
+	return [format(date, 'd. MMM yyyy', { locale: nb }), 'kl.', format(date, 'H:m')].join(' ');
 }
 
 function parseLocation(location: string): string {
