@@ -83,9 +83,11 @@
 		</div>
 	</aside>
 	<main>
-		<h2>
-			<a href={data.url} rel="noreferrer" target="_blank">{data.name}</a>
-		</h2>
+		<a href={data.url} rel="noreferrer" target="_blank" class="heading">
+			<h2>
+				{data.name}
+			</h2>
+		</a>
 		{#if data.location}
 			<p class="location">
 				Sted:
@@ -145,6 +147,10 @@
 	article:hover {
 		box-shadow: var(--fade-y-color) 0px 13px 27px -5px, var(--fade-x-color) 0px 8px 16px -8px;
 	}
+
+  .heading {
+    text-decoration: none;
+  }
 
 	.date {
 		border-radius: 16px 0 0 16px;
