@@ -77,6 +77,21 @@
 		lagres kun i kontrollerte filområder, hvor nedlasting og annen distribusjon er sperret.
 	</p>
 
+	<p>
+		Vi benytter også Github for å lagre kode og dokumentasjon. Github er en tjeneste som tilbyr
+		git-lagring i skyen. Github er eid av Microsoft. Les mer om Githubs personvernerklæring her:
+		<a href="https://docs.github.com/en/github/site-policy/github-privacy-statement">
+			https://docs.github.com/en/github/site-policy/github-privacy-statement
+		</a>
+	</p>
+
+	<p>
+		Vi sletter varsler fra forskjellige systemer sendt til e-post, som kan inneholde
+		personopplysninger, automatisk. Dette gjør vi gjennom programvare fra Digital Inspiration. Deres
+		personvernerklæring kan leses her:
+		<a href="https://www.labnol.org/privacy">https://www.labnol.org/privacy</a>
+	</p>
+
 	<h2>Slack</h2>
 
 	<p>
