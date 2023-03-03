@@ -72,7 +72,7 @@
 	</p>
 
 	<p>
-		E-post sammen med kontaktopplysninger på mottatte og sendte e-poster kan lagret opptil tre år.
+		E-post sammen med kontaktopplysninger på mottatte og sendte e-poster kan lagres opptil tre år.
 		E-post vil automatisk slettes ved avslutting av kontoer eller etter tre år.
 	</p>
 
