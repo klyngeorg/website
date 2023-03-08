@@ -4,7 +4,7 @@
 
 <div class="content">
 	<strong>
-		Vi er en gruppe menneske som deler erfaringer, nettverk, samarbeider og støtter hverandre.
+		Vi er en gruppe mennesker som deler erfaringer, nettverk, samarbeider og støtter hverandre.
 	</strong>
 
 	<p>
