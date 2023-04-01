@@ -91,6 +91,17 @@
 		<a href="https://www.labnol.org/privacy">https://www.labnol.org/privacy</a>
 	</p>
 
+	<h2>Hoopla</h2>
+
+	<p>
+		Vi benytter billettsystemet Hoopla i forbindelse med enkelte arrangementer. Hoopla er en
+		tjeneste som tilbyr salg av billetter og organisering av arrangementer. Vi sletter opplysninger
+		så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Les mer om Hooplas
+		personvernerklæring her: <a href="https://www.hoopla.no/arranger/personvern">
+			https://www.hoopla.no/arranger/personvern</a
+		>
+	</p>
+
 	<h2>Slack</h2>
 
 	<p>
