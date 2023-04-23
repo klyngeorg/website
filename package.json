@@ -65,7 +65,7 @@
 		"convert-svg-to-png": "^0.6.4",
 		"date-fns": "^2.29.3",
 		"graphql": "^16.6.0",
-		"graphql-request": "^5.1.0",
+		"graphql-request": "^6.0.0",
 		"md5": "^2.3.0",
 		"puppeteer-core": "^19.7.2",
 		"schema-dts": "^1.1.0",
