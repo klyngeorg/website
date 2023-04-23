@@ -5,8 +5,8 @@ dependencies:
     specifier: ^4.5.10
     version: 4.5.10
   '@googleapis/calendar':
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^6.0.0
+    version: 6.0.0
   '@graphql-typed-document-node/core':
     specifier: ^3.1.1
     version: 3.1.1(graphql@16.6.0)
@@ -950,8 +950,8 @@ packages:
     resolution: {integrity: sha512-wT8hmcueW5okOS8BQGARL0zdJOe032FctWr9df/0ixXpAiZ4WfnigRd3/ThhmmRwFgNxbjwqZ9bmO+5QDjaTbA==}
     dev: false
 
-  /@googleapis/calendar@3.0.0:
-    resolution: {integrity: sha512-seYirlYY94OgTdwsIR7Ig7BdOQAqjOoVnWaxYMy63HpC61vTzxhlhfQWIVvwPH6yMaeztXLndsJZJK9Gxm4WSQ==}
+  /@googleapis/calendar@6.0.0:
+    resolution: {integrity: sha512-jjAw2td2nakra74gwQD7rygdKQc0tj3+c8+9eDg5U0GWDfhZOnw9Ubg0MGkwHsJ2WfkNgnXezJ7ExRJXKEAw2g==}
     engines: {node: '>=12.0.0'}
     dependencies:
       googleapis-common: 6.0.4
