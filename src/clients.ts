@@ -1,4 +1,4 @@
-import createClient from '@sanity/client';
+import { createClient } from '@sanity/client';
 import sanityImageUrlBuilder from '@sanity/image-url';
 import { GraphQLClient } from 'graphql-request';
 
