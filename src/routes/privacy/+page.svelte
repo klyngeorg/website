@@ -91,6 +91,17 @@
 		<a href="https://www.labnol.org/privacy">https://www.labnol.org/privacy</a>
 	</p>
 
+	<h2>Checkin</h2>
+
+	<p>
+		Vi benytter arrangementsystemet Checkin i forbindelse med enkelte arrangementer. Checkin er en
+		tjeneste som tilbyr salg og betaling av billetter og organisering av arrangementer. Vi sletter
+		opplysninger så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Les mer om
+		Checkins personvernerklæring her: <a href="https://www.checkin.no/personvernerklaering">
+			https://www.checkin.no/personvernerklaering</a
+		>
+	</p>
+
 	<h2>Hoopla</h2>
 
 	<p>
