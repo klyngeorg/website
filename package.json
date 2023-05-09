@@ -61,7 +61,7 @@
 		"@resvg/resvg-js": "^2.4.1",
 		"@sanity/client": "^6.0.0",
 		"@sanity/image-url": "^1.0.2",
-		"@sveltejs/adapter-static": "^1.0.0",
+		"@sveltejs/adapter-static": "^2.0.0",
 		"convert-svg-to-png": "^0.6.4",
 		"date-fns": "^2.29.3",
 		"graphql": "^16.6.0",
