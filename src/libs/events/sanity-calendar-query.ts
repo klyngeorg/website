@@ -5,6 +5,9 @@ const getEventsDocument = graphql(`
 	query GetEvents($dateFrom: DateTime!, $dateTo: DateTime!) {
 		events: allEvent(where: { date: { lte: $dateTo, gte: $dateFrom } }) {
 			date
+			slug {
+				current
+			}
 			calendarId
 			eventAttendanceMode
 			offers {

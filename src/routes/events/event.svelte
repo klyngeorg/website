@@ -83,7 +83,7 @@
 		</div>
 	</aside>
 	<main>
-		<a href={data.url} rel="noreferrer" target="_blank" class="heading">
+		<a href={`/events/${data.slug}`} rel="noreferrer" target="_blank" class="heading">
 			<h2>
 				{data.name}
 			</h2>
