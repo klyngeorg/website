@@ -5,7 +5,7 @@
 	import { defaultEventData } from '../../../libs/events/default-event-data';
 	import type { EventData } from '../../../libs/events/types';
 	export let data: EventData;
-  
+
 	const event: WithContext<Event> = {
 		'@context': 'https://schema.org',
 		...defaultEventData,
