@@ -138,9 +138,11 @@ export type Event = Document & {
 	date?: Maybe<Scalars['DateTime']>;
 	eventAttendanceMode?: Maybe<Scalars['String']>;
 	image?: Maybe<Image>;
+	/** Arrangementer opprettes i felles kalender, og synkroniseres til Sanity. Opplysninger som navn, beskrivelse, sted og tidspunkter legges derfor inn der Dersom du ønsker å endre noe av dette, må du endre det i kalenderen. */
 	name?: Maybe<Scalars['String']>;
 	offers?: Maybe<Array<Maybe<Offer>>>;
 	performers?: Maybe<Array<Maybe<Person>>>;
+	slug?: Maybe<Slug>;
 };
 
 export type EventFilter = {
@@ -157,6 +159,7 @@ export type EventFilter = {
 	eventAttendanceMode?: InputMaybe<StringFilter>;
 	image?: InputMaybe<ImageFilter>;
 	name?: InputMaybe<StringFilter>;
+	slug?: InputMaybe<SlugFilter>;
 };
 
 export type EventSorting = {
@@ -171,6 +174,7 @@ export type EventSorting = {
 	eventAttendanceMode?: InputMaybe<SortOrder>;
 	image?: InputMaybe<ImageSorting>;
 	name?: InputMaybe<SortOrder>;
+	slug?: InputMaybe<SlugSorting>;
 };
 
 export type File = {
@@ -1131,6 +1135,7 @@ export type GetEventsQuery = {
 		date?: any | null;
 		calendarId?: string | null;
 		eventAttendanceMode?: string | null;
+		slug?: { __typename?: 'Slug'; current?: string | null } | null;
 		offers?: Array<{
 			__typename?: 'Offer';
 			price?: number | null;
@@ -1299,6 +1304,14 @@ export const GetEventsDocument = {
 							kind: 'SelectionSet',
 							selections: [
 								{ kind: 'Field', name: { kind: 'Name', value: 'date' } },
+								{
+									kind: 'Field',
+									name: { kind: 'Name', value: 'slug' },
+									selectionSet: {
+										kind: 'SelectionSet',
+										selections: [{ kind: 'Field', name: { kind: 'Name', value: 'current' } }]
+									}
+								},
 								{ kind: 'Field', name: { kind: 'Name', value: 'calendarId' } },
 								{ kind: 'Field', name: { kind: 'Name', value: 'eventAttendanceMode' } },
 								{

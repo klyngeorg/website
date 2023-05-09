@@ -10,7 +10,7 @@ export interface EventData {
 	endDate: Date;
 	location?: string;
 	url: string;
-	slug: string;
+	slug?: string | null;
 	image?: string | SanityEventImage;
 	offers?: SanityEventOffer;
 	eventAttendanceMode?: string;

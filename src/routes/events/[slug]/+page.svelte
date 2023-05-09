@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { notEmpty, serializeSchema } from '../../utils';
+	import { notEmpty, serializeSchema } from '../../../utils';
 	import type { WithContext, Event, Offer, ItemAvailability } from 'schema-dts';
 	import { invariant } from 'ts-invariant';
-	import { defaultEventData } from '../../libs/events/default-event-data';
-	import type { EventData } from '../../libs/events/types';
+	import { defaultEventData } from '../../../libs/events/default-event-data';
+	import type { EventData } from '../../../libs/events/types';
 	export let data: EventData;
 
 	const event: WithContext<Event> = {
@@ -144,10 +144,6 @@
 		border-radius: 16px;
 	}
 
-	article:hover {
-		box-shadow: var(--fade-y-color) 0px 13px 27px -5px, var(--fade-x-color) 0px 8px 16px -8px;
-	}
-
 	.heading {
 		text-decoration: none;
 	}
@@ -176,7 +172,7 @@
 		overflow: auto;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: top;
 
 		padding: var(--space-s);
 		padding-top: var(--space-l);

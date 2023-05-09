@@ -71,6 +71,9 @@ export async function getEventsFromGoogleCalendar(
 				event.image = sanityEvent.image;
 				event.offers = sanityEvent.offers;
 				event.eventAttendanceMode = sanityEvent.eventAttendanceMode ?? undefined;
+				if (sanityEvent.slug?.current) {
+					event.slug = sanityEvent.slug?.current;
+				}
 			}
 
 			return event;
