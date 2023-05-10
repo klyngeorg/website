@@ -36,16 +36,16 @@
 
 	<p>
 		Når du melder deg på et av våre arrangementer vil opplysninger som fornavn, etternavn, e-post,
-		telefonnummer, arbeidssted og andre nødvendige opplysninger lagres hos vår databehandler Google.
-		Opplysningene lagres kun midlertidig og kan deles med våre samarbeidspartnere, slik som
-		restauranter, arrangører og utleiere. Alle opplysninger som deles videre anonymiseres om det er
-		mulig.
+		telefonnummer, arbeidssted og andre nødvendige opplysninger lagres hos vår databehandler Google
+		eller/og arrangementsystem. Opplysningene lagres kun midlertidig og kan deles med våre
+		samarbeidspartnere, slik som restauranter, arrangører og utleiere. Alle opplysninger som deles
+		videre anonymiseres så mye som mulig.
 	</p>
 
 	<p>
 		I forkant og etterkant av arrangementet kan opplysningene også brukes til å kommunisere til de
-		påmeldte via e-post. Vi sletter opplysningene etter senest 60 dager etter arrangementet er
-		gjennomført eller avlyst.
+		påmeldte via e-post og telefon, avgrenset til dette arrangementet. Vi sletter opplysningene
+		senest etter 60 dager etter arrangementet er gjennomført eller avlyst.
 	</p>
 
 	<h2>Folk i Klynge</h2>
@@ -96,10 +96,19 @@
 	<p>
 		Vi benytter arrangementsystemet Checkin i forbindelse med enkelte arrangementer. Checkin er en
 		tjeneste som tilbyr salg og betaling av billetter og organisering av arrangementer. Vi sletter
-		opplysninger så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Les mer om
-		Checkins personvernerklæring her: <a href="https://www.checkin.no/personvernerklaering">
-			https://www.checkin.no/personvernerklaering</a
-		>
+		opplysninger så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Noen
+		opplysninger kan være nødvendig å lagre lengre for å oppfylle regnskapslovens krav.
+	</p>
+	<p>
+		Opplysningene lagres hos Checkin AS (og deres underleverandører) og av den grunn vår
+		databehandler. Egen databehandleravtale er inngått. Informasjon er avgrenset til de
+		arrangementer som er gjennomført ved bruk av Checkins system.
+	</p>
+	<p>
+		Les mer om Checkins personvernerklæring her:
+		<a href="https://www.checkin.no/personvernerklaering">
+			https://www.checkin.no/personvernerklaering
+		</a>
 	</p>
 
 	<h2>Hoopla</h2>
@@ -107,7 +116,8 @@
 	<p>
 		Vi benytter billettsystemet Hoopla i forbindelse med enkelte arrangementer. Hoopla er en
 		tjeneste som tilbyr salg av billetter og organisering av arrangementer. Vi sletter opplysninger
-		så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Les mer om Hooplas
+		så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Noen opplysninger kan være
+		nødvendig å lagre lengre for å oppfylle regnskapslovens krav. Les mer om Hooplas
 		personvernerklæring her: <a href="https://www.hoopla.no/arranger/personvern">
 			https://www.hoopla.no/arranger/personvern</a
 		>
