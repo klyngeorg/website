@@ -121,6 +121,10 @@
 	</p>
 
 	<p>
+		Informasjon er avgrenset til de arrangementer som er gjennomført ved bruk av Hooplas system.
+	</p>
+
+	<p>
 		Opplysninger som lagres av Klynge slettes så snart arrangementet er avsluttet, men ikke senere
 		enn 60 dager.
 	</p>
