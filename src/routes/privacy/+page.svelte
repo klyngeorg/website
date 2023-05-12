@@ -115,12 +115,21 @@
 
 	<p>
 		Vi benytter billettsystemet Hoopla i forbindelse med enkelte arrangementer. Hoopla er en
-		tjeneste som tilbyr salg av billetter og organisering av arrangementer. Vi sletter opplysninger
-		så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Noen opplysninger kan være
-		nødvendig å lagre lengre for å oppfylle regnskapslovens krav. Les mer om Hooplas
-		personvernerklæring her: <a href="https://www.hoopla.no/arranger/personvern">
-			https://www.hoopla.no/arranger/personvern</a
-		>
+		tjeneste som tilbyr salg av billetter og organisering av arrangementer. De lagrer
+		personopplysninger blant annet for å gi støtte og for å oppfylle regnskapslovens krav, Hoopla er
+		behandlingsansvarlig for forhold til enkelte opplysninger som lagres i forbindelse med kjøp.
+	</p>
+
+	<p>
+		Opplysninger som lagres av Klynge slettes så snart arrangementet er avsluttet, men ikke senere
+		enn 60 dager.
+	</p>
+
+	<p>
+		Les mer i Hooplas personvernerklæring her:
+		<a href="https://www.hoopla.no/arranger/personvern">
+			https://www.hoopla.no/arranger/personvern
+		</a>
 	</p>
 
 	<h2>Slack</h2>
