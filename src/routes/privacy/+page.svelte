@@ -95,9 +95,9 @@
 
 	<p>
 		Vi benytter arrangementsystemet Checkin i forbindelse med enkelte arrangementer. Checkin er en
-		tjeneste som tilbyr salg og betaling av billetter og organisering av arrangementer. Vi sletter
-		opplysninger så snart arrangementet er avsluttet, men ikke senere enn 60 dager. Noen
-		opplysninger kan være nødvendig å lagre lengre for å oppfylle regnskapslovens krav.
+		tjeneste som tilbyr salg og betaling av billetter og organisering av arrangementer. Vi
+		anonymiserer opplysninger så snart arrangementet er avsluttet, men ikke senere enn 180 dager.
+		Noen opplysninger kan være nødvendig å lagre lengre for å oppfylle regnskapslovens krav.
 	</p>
 	<p>
 		Opplysningene lagres hos Checkin AS (og deres underleverandører) og av den grunn vår
