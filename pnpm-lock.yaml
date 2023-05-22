@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@fontsource/outfit':
-    specifier: ^4.5.10
-    version: 4.5.10
+    specifier: ^5.0.0
+    version: 5.0.0
   '@googleapis/calendar':
     specifier: ^6.0.0
     version: 6.0.0
@@ -948,8 +948,8 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/outfit@4.5.10:
-    resolution: {integrity: sha512-wT8hmcueW5okOS8BQGARL0zdJOe032FctWr9df/0ixXpAiZ4WfnigRd3/ThhmmRwFgNxbjwqZ9bmO+5QDjaTbA==}
+  /@fontsource/outfit@5.0.0:
+    resolution: {integrity: sha512-soMfS9zj+3TrSgcwehHXXq9Vn0fqQgbkjF/BWxtSb7SIREsJtsYSlWycjyDgFFUHmHN4lcjnpKP1cltPfb9JoQ==}
     dev: false
 
   /@googleapis/calendar@6.0.0:
