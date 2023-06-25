@@ -68,7 +68,6 @@
 	});
 
 	const offers = (data.offers ?? []).filter(notEmpty);
-	console.log({ offers });
 </script>
 
 <svelte:head>
