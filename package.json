@@ -26,9 +26,9 @@
 		"*.{js,ts}": "eslint --fix"
 	},
 	"devDependencies": {
-		"@graphql-codegen/cli": "3.3.1",
-		"@graphql-codegen/client-preset": "3.0.1",
-		"@graphql-codegen/introspection": "3.0.1",
+		"@graphql-codegen/cli": "5.0.0",
+		"@graphql-codegen/client-preset": "4.1.0",
+		"@graphql-codegen/introspection": "4.0.0",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.0.0",
