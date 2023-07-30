@@ -2,7 +2,7 @@
 	import '@fontsource/outfit';
 	import '@fontsource/outfit/600.css';
 	import Header from '../components/header.svelte';
-  import { JsonLd } from 'svelte-meta-tags';
+	import { JsonLd } from 'svelte-meta-tags';
 </script>
 
 <JsonLd

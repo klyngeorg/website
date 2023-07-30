@@ -14,15 +14,15 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write .",
+		"lint": "prettier --plugin prettier-plugin-svelte --check . && eslint .",
+		"format": "prettier --write --plugin prettier-plugin-svelte .",
 		"postbuild": "svelte-sitemap --domain https://klyngeorg.no && pnpm generate-seo-images",
 		"prepare": "husky install",
 		"codegen": "graphql-codegen-esm",
 		"generate-seo-images": "tsx src/bin/generate-seo-images.ts"
 	},
 	"lint-staged": {
-		"*.{js,ts,css,md,json,svelte}": "prettier --plugin-search-dir . --write",
+		"*.{js,ts,css,md,json,svelte}": "prettier --plugin prettier-plugin-svelte --write",
 		"*.{js,ts}": "eslint --fix"
 	},
 	"devDependencies": {

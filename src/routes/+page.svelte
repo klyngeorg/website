@@ -47,8 +47,8 @@
 	}
 
 	:global(.oslo-hero) {
-    height: 100%;
-    width: 100%;
+		height: 100%;
+		width: 100%;
 		border-radius: 16px 16px 0 0;
 	}
 

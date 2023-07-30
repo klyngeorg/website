@@ -1,5 +1,5 @@
 <script>
-  import aboutImage from '$assets/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg?w=1240&h=462';
+	import aboutImage from '$assets/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg?w=1240&h=462';
 	import Image from '$components/image.svelte';
 </script>
 

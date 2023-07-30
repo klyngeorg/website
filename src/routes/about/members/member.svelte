@@ -29,10 +29,12 @@
 	const name = [data.givenName, data.familyName].join(' ');
 </script>
 
-<JsonLd schema={{
-  '@type': 'Person',
-  ...person,
-}} />
+<JsonLd
+	schema={{
+		'@type': 'Person',
+		...person
+	}}
+/>
 
 <article>
 	{#if typeof data.image === 'string'}

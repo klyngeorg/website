@@ -1,5 +1,5 @@
 <script lang="ts">
-  import StructuredText from '$components/structured-text.svelte';
+	import StructuredText from '$components/structured-text.svelte';
 	import { notEmpty } from '../../utils';
 	import { invariant } from 'ts-invariant';
 	import { defaultEventData } from '../../libs/events/default-event-data';
@@ -25,11 +25,12 @@
 	});
 
 	const offers = (data.offers ?? [])
-    .filter((offerItem) => offerItem && offerItem.url)
-    .filter(notEmpty);
+		.filter((offerItem) => offerItem && offerItem.url)
+		.filter(notEmpty);
 </script>
 
-<JsonLd schema={{
+<JsonLd
+	schema={{
 		...defaultEventData,
 		name: data.name,
 		startDate: data.startDate.toISOString(),
@@ -43,18 +44,18 @@
 			'https://klyngeorg.no/'
 		).toString(),
 		description: data.description,
-    offers: offers
-			.map((offerItem) => {
-				invariant(offerItem && offerItem.url, 'Offer must have a url');
-				return {
-					'@type': 'Offer',
-					url: offerItem.url,
-          price: offerItem.price,
-          priceCurrency: offerItem.priceCurrency,
-          availability: offerItem.availability,
-				};
-			})
-	}} />
+		offers: offers.map((offerItem) => {
+			invariant(offerItem && offerItem.url, 'Offer must have a url');
+			return {
+				'@type': 'Offer',
+				url: offerItem.url,
+				price: offerItem.price,
+				priceCurrency: offerItem.priceCurrency,
+				availability: offerItem.availability
+			};
+		})
+	}}
+/>
 
 <article>
 	<aside class="date">
@@ -81,7 +82,9 @@
 				</a>
 			</p>
 		{/if}
-		<p><StructuredText data={data.description} /></p>
+		{#if data.description}
+			<p><StructuredText data={data.description} /></p>
+		{/if}
 		<p>
 			<small>Anslått ferdig: {timeFinished}</small>
 		</p>
@@ -93,7 +96,7 @@
 					{/if}
 					{#if offer.description}
 						<p class="description-paragraph">
-              <StructuredText data={offer.description.split('\n').join('<br />')} />
+							<StructuredText data={offer.description.split('\n').join('<br />')} />
 						</p>
 					{/if}
 					{#if offer.availability === 'LimitedAvailability'}
