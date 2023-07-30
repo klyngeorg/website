@@ -56,7 +56,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/outfit": "^5.0.0",
-		"@googleapis/calendar": "^6.0.0",
+		"@googleapis/calendar": "^9.0.0",
 		"@graphql-typed-document-node/core": "^3.1.1",
 		"@resvg/resvg-js": "^2.4.1",
 		"@sanity/client": "^6.0.0",
