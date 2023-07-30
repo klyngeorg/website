@@ -82,9 +82,11 @@
 				</a>
 			</p>
 		{/if}
+    {#if data.description}
 		<p>
 			<StructuredText data={data.description} />
 		</p>
+    {/if}
 		<p>
 			<small>Anslått ferdig: {timeFinished}</small>
 		</p>

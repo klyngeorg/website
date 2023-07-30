@@ -28,6 +28,7 @@
 		margin: 0;
 
 		display: flex;
+    flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: var(--space-s);
@@ -35,6 +36,7 @@
 
 	nav {
 		display: flex;
+    flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		justify-content: space-between;
