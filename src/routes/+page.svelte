@@ -1,5 +1,6 @@
 <script>
-	import Image from 'svimg';
+	import osloHero from '$assets/oslo-hero.jpg?w=1240&h=462';
+	import Image from '$components/image.svelte';
 </script>
 
 <div class="content">
@@ -21,7 +22,7 @@
 </div>
 
 <div class="hero">
-	<Image class="oslo-hero" src="oslo-hero.jpg" alt="Oslo" />
+	<Image class="oslo-hero" src={osloHero} alt="Oslo" />
 	<p>Vi er organisert som en frivillig, demokratisk åpen organisasjon.</p>
 </div>
 
@@ -46,6 +47,8 @@
 	}
 
 	:global(.oslo-hero) {
+    height: 100%;
+    width: 100%;
 		border-radius: 16px 16px 0 0;
 	}
 

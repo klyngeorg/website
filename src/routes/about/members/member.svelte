@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { WithContext, Person } from 'schema-dts';
 	import md5 from 'md5';
-	import { serializeSchema } from '../../../utils';
+	import { JsonLd } from 'svelte-meta-tags';
 	export let person: Omit<Person, '@type'>;
 
 	if (typeof person === 'string') {
@@ -17,10 +17,6 @@
 		...person
 	};
 
-	const schema = {
-		...data
-	};
-
 	const worksFor = Array.isArray(data.worksFor) ? data.worksFor : [];
 	const email = String(data.email) || '';
 
@@ -33,9 +29,10 @@
 	const name = [data.givenName, data.familyName].join(' ');
 </script>
 
-<svelte:head>
-	{@html serializeSchema(schema)}
-</svelte:head>
+<JsonLd schema={{
+  '@type': 'Person',
+  ...person,
+}} />
 
 <article>
 	{#if typeof data.image === 'string'}

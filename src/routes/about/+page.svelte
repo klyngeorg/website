@@ -1,5 +1,6 @@
 <script>
-	import Image from 'svimg';
+  import aboutImage from '$assets/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg?w=1240&h=462';
+	import Image from '$components/image.svelte';
 </script>
 
 <p class="highlight">
@@ -9,7 +10,7 @@
 </p>
 <p>Vår organisasjon er frivillig, demokratisk og åpen for alle.</p>
 
-<Image src="priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg" alt="Oslo" />
+<Image src={aboutImage} alt="Oslo" />
 
 <style>
 	p {

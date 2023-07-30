@@ -1,54 +1,10 @@
 <script lang="ts">
-	import { notEmpty, serializeSchema } from '../../../utils';
-	import type { WithContext, Event, Offer, ItemAvailability } from 'schema-dts';
+	import { notEmpty } from '../../../utils';
 	import { invariant } from 'ts-invariant';
+  import { JsonLd } from 'svelte-meta-tags';
 	import { defaultEventData } from '../../../libs/events/default-event-data';
 	import type { EventData } from '../../../libs/events/types';
 	export let data: EventData;
-
-	const event: WithContext<Event> = {
-		'@context': 'https://schema.org',
-		...defaultEventData,
-		name: data.name,
-		startDate: data.startDate.toISOString(),
-		endDate: data.endDate.toISOString(),
-		location: {
-			'@type': 'Place',
-			address: data.location ?? 'Oslo, Norway'
-		},
-		image: new URL(
-			['assets', 'images', 'social', `${data.slug}.png`].join('/'),
-			'https://klyngeorg.no/'
-		).toString(),
-		description: data.description
-	};
-
-	if (data.offers) {
-		event.offers = data.offers
-			.filter((offerItem) => offerItem && offerItem.url)
-			.map((offerItem) => {
-				invariant(offerItem && offerItem.url, 'Offer must have a url');
-				const offer: Offer = {
-					'@type': 'Offer',
-					url: offerItem.url
-				};
-
-				if (offerItem.price) {
-					offer.price = offerItem.price;
-				}
-
-				if (offerItem.priceCurrency) {
-					offer.priceCurrency = offerItem.priceCurrency;
-				}
-
-				if (offerItem.availability) {
-					// TODO: Parse to ItemAvailability
-					offer.availability = offerItem.availability as ItemAvailability;
-				}
-
-				return offer;
-			});
-	}
 
 	const date = new Date(data.startDate).toLocaleDateString('no-NO', {
 		weekday: 'long',
@@ -67,12 +23,37 @@
 		minute: 'numeric'
 	});
 
-	const offers = (data.offers ?? []).filter(notEmpty);
+	const offers = (data.offers ?? [])
+    .filter((offerItem) => offerItem && offerItem.url)
+    .filter(notEmpty);
 </script>
 
-<svelte:head>
-	{@html serializeSchema(event)}
-</svelte:head>
+<JsonLd schema={{
+		...defaultEventData,
+		name: data.name,
+		startDate: data.startDate.toISOString(),
+		endDate: data.endDate.toISOString(),
+		location: {
+			'@type': 'Place',
+			address: data.location ?? 'Oslo, Norway'
+		},
+		image: new URL(
+			['assets', 'images', 'social', `${data.slug}.png`].join('/'),
+			'https://klyngeorg.no/'
+		).toString(),
+		description: data.description,
+    offers: offers
+			.map((offerItem) => {
+				invariant(offerItem && offerItem.url, 'Offer must have a url');
+				return {
+					'@type': 'Offer',
+					url: offerItem.url,
+          price: offerItem.price,
+          priceCurrency: offerItem.priceCurrency,
+          availability: offerItem.availability,
+				};
+			})
+	}} />
 
 <article>
 	<aside class="date">

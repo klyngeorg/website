@@ -2,10 +2,11 @@
 	import '@fontsource/outfit';
 	import '@fontsource/outfit/600.css';
 	import Header from '../components/header.svelte';
-	import type { WithContext, LocalBusiness } from 'schema-dts';
-	import { serializeSchema } from '../utils';
+  import { JsonLd } from 'svelte-meta-tags';
+</script>
 
-	const localBusiness: WithContext<LocalBusiness> = {
+<JsonLd
+	schema={{
 		'@context': 'https://schema.org',
 		'@type': 'LocalBusiness',
 		name: 'Klynge Næringsforening',
@@ -22,12 +23,8 @@
 			postalCode: '0151',
 			addressCountry: 'NO'
 		}
-	};
-</script>
-
-<svelte:head>
-	{@html serializeSchema(localBusiness)}
-</svelte:head>
+	}}
+/>
 
 <div class="container">
 	<Header />
