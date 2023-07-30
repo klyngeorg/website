@@ -2,6 +2,7 @@
 	import { notEmpty } from '../../../utils';
 	import { invariant } from 'ts-invariant';
   import { JsonLd } from 'svelte-meta-tags';
+  import StructuredText from '$components/structured-text.svelte';
 	import { defaultEventData } from '../../../libs/events/default-event-data';
 	import type { EventData } from '../../../libs/events/types';
 	export let data: EventData;
@@ -80,7 +81,9 @@
 				</a>
 			</p>
 		{/if}
-		<p>{@html data.description}</p>
+		<p>
+      <StructuredText data={data.description} />
+    </p>
 		<p>
 			<small>Anslått ferdig: {timeFinished}</small>
 		</p>
@@ -92,7 +95,7 @@
 					{/if}
 					{#if offer.description}
 						<p class="description-paragraph">
-							{@html offer.description.split('\n').join('<br />')}
+              <StructuredText data={offer.description.split('\n').join('<br />')} />
 						</p>
 					{/if}
 					{#if offer.availability === 'LimitedAvailability'}

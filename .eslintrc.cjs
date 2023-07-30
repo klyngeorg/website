@@ -28,7 +28,7 @@ module.exports = {
 			}
 		},
 		{
-			files: ['src/components/metadata.svelte'],
+			files: ['src/components/structured-text.svelte'],
 			rules: {
 				'svelte/no-at-html-tags': 'off'
 			}
