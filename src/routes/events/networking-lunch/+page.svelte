@@ -1,6 +1,6 @@
 <script>
 	import aboutImage from '$assets/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg?w=1240&h=400';
-	import graphImage from '$assets/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg?w=1200&h=627';
+	import graphImage from '$assets/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg?w=1200&h=627&format=jpg';
 	import Image from '$components/image.svelte';
 	import MetaTags from '$components/meta-tags.svelte';
 </script>
