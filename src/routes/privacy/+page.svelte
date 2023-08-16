@@ -3,7 +3,7 @@
 </script>
 
 <MetaTags
-  path="/privacy"
+	path="/privacy"
 	title="Personvernerklæring"
 	description="Les om hvordan Klynge Næringsforening samler inn og bruker personvernopplysninger"
 />
