@@ -39,7 +39,7 @@
 			type: 'website',
 			url: 'https://klyngeorg.no/',
 			description,
-			images: parsedImages,
+			images: parsedImages
 		},
 		twitter: {
 			cardType: 'summary_large_image',
