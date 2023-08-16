@@ -1,3 +1,9 @@
+<script>
+	import MetaTags from '$components/meta-tags.svelte';
+</script>
+
+<MetaTags title="Vedtektene" description="Vedtektene til Klynge Næringsforening" />
+
 <div class="content">
 	<h1>Vedtekter for Klynge Næringsforening</h1>
 
