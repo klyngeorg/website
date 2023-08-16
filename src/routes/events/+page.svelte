@@ -8,7 +8,8 @@
 </script>
 
 <div class="broadcast">
-  Siste nytt: Nå setter vi gang med <a href="/events/networking-lunch">månedlige nettverkslunsjer</a> 🙌.
+	Siste nytt: Nå setter vi gang med <a href="/events/networking-lunch">månedlige nettverkslunsjer</a
+	> 🙌.
 </div>
 
 <MetaTags
@@ -26,23 +27,23 @@
 {/if}
 
 <style>
-  .broadcast {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: center;
-  }
+	.broadcast {
+		background-color: var(--color-primary);
+		color: var(--color-white);
+		font-size: 1.2rem;
+		padding: 1rem;
+		text-align: center;
+	}
 
-  .broadcast a {
-    color: var(--color-white);
-    font-weight: bold;
-    text-decoration: underline;
-  }
+	.broadcast a {
+		color: var(--color-white);
+		font-weight: bold;
+		text-decoration: underline;
+	}
 
-  @media (min-width: 768px) {
-    .broadcast {
-      font-size: 1.4rem;
-    }
-  }
+	@media (min-width: 768px) {
+		.broadcast {
+			font-size: 1.4rem;
+		}
+	}
 </style>
