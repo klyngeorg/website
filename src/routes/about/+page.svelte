@@ -1,7 +1,10 @@
 <script>
 	import aboutImage from '$assets/priscilla-du-preez-Q7wGvnbuwj0-unsplash.jpg?w=1240&h=462';
 	import Image from '$components/image.svelte';
+	import MetaTags from '$components/meta-tags.svelte';
 </script>
+
+<MetaTags title="Om oss" />
 
 <p class="highlight">
 	Vi er en gruppe mennesker med interesse for forretningsliv, som har kommet sammen for å støtte og

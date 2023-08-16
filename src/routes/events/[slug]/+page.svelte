@@ -3,8 +3,9 @@
 	import { invariant } from 'ts-invariant';
 	import { JsonLd } from 'svelte-meta-tags';
 	import StructuredText from '$components/structured-text.svelte';
-	import { defaultEventData } from '../../../libs/events/default-event-data';
-	import type { EventData } from '../../../libs/events/types';
+	import MetaTags from '$components/meta-tags.svelte';
+	import { defaultEventData } from '$libs/events/default-event-data';
+	import type { EventData } from '$libs/events/types';
 	export let data: EventData;
 
 	const date = new Date(data.startDate).toLocaleDateString('no-NO', {
@@ -28,6 +29,8 @@
 		.filter((offerItem) => offerItem && offerItem.url)
 		.filter(notEmpty);
 </script>
+
+<MetaTags title={data.name} description={data.description} />
 
 <JsonLd
 	schema={{

@@ -1,7 +1,22 @@
 <script>
 	import aboutImage from '$assets/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg?w=1240&h=400';
+	import graphImage from '$assets/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg?w=1200&h=627';
 	import Image from '$components/image.svelte';
+	import MetaTags from '$components/meta-tags.svelte';
 </script>
+
+<MetaTags
+	title="Klynge starter med fast nettverkslunsj"
+	description="Vi vil bygge sterke relasjoner, dele kunnskap og inspirere hverandre – derfor starter vi nå med nettverkslunsjer."
+	images={[
+		{
+			url: graphImage.img.src,
+			width: graphImage.img.w,
+			height: graphImage.img.h,
+			alt: 'Oslo'
+		}
+	]}
+/>
 
 <h1 class="pitch">
 	Vi vil bygge sterke relasjoner, dele kunnskap og inspirere hverandre – derfor starter vi nå med

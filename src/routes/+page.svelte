@@ -1,7 +1,10 @@
 <script>
 	import osloHero from '$assets/oslo-hero.jpg?w=1240&h=462';
 	import Image from '$components/image.svelte';
+	import MetaTags from '$components/meta-tags.svelte';
 </script>
+
+<MetaTags useTitleTemplate={false} />
 
 <div class="content">
 	<strong>

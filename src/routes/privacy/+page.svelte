@@ -1,3 +1,12 @@
+<script>
+	import MetaTags from '$components/meta-tags.svelte';
+</script>
+
+<MetaTags
+	title="Personvernerklæring"
+	description="Les om hvordan Klynge Næringsforening samler inn og bruker personvernopplysninger"
+/>
+
 <div class="content">
 	<h1>Personvern­erklæring</h1>
 
