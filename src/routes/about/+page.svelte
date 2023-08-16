@@ -4,7 +4,7 @@
 	import MetaTags from '$components/meta-tags.svelte';
 </script>
 
-<MetaTags title="Om oss" />
+<MetaTags path="/about" title="Om oss" />
 
 <p class="highlight">
 	Vi er en gruppe mennesker med interesse for forretningsliv, som har kommet sammen for å støtte og

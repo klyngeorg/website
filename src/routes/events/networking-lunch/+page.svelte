@@ -6,6 +6,7 @@
 </script>
 
 <MetaTags
+  path="/events/networking-lunch"
 	title="Klynge starter med fast nettverkslunsj"
 	description="Vi vil bygge sterke relasjoner, dele kunnskap og inspirere hverandre – derfor starter vi nå med nettverkslunsjer."
 	images={[

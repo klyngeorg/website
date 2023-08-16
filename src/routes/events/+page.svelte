@@ -8,6 +8,7 @@
 </script>
 
 <MetaTags
+	path="/events"
 	title="Arrangementer"
 	description="Klynge arrangerer flere arrangementer i løpet av året. Her finner du en oversikt over kommende arrangementer."
 />

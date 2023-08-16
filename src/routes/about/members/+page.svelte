@@ -8,6 +8,7 @@
 </script>
 
 <MetaTags
+	path="/about/members"
 	title="Medlemmer"
 	description="En liste av enkelte offentlige medlemmer og styremedlemmer av Klynge Næringsforening"
 />

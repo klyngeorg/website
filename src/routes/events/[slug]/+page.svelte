@@ -30,7 +30,7 @@
 		.filter(notEmpty);
 </script>
 
-<MetaTags title={data.name} description={data.description} />
+<MetaTags path={`/events/${data.slug}`} title={data.name} description={data.description} />
 
 <JsonLd
 	schema={{

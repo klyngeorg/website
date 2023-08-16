@@ -7,6 +7,7 @@
 		'Klynge er en gruppe menneske som deler erfaringer, nettverk, samarbeider og støtter hverandre.';
 
 	export let useTitleTemplate = true;
+	export let path = '/';
 	export let images: Image[] = [
 		{
 			url: 'https://klyngeorg.no/assets/klynge-default-seo.jpg',
@@ -30,10 +31,12 @@
 		};
 	});
 
-	const defaultTags: MetaTagsProps = {
+	const cononicalUrl = new URL(path, 'https://klyngeorg.no');
+
+	const tags: MetaTagsProps = {
 		title,
 		titleTemplate: useTitleTemplate ? '%s | Klynge Næringsforening' : undefined,
-		canonical: 'https://klyngeorg.no/',
+		canonical: cononicalUrl.toString(),
 		description,
 		openGraph: {
 			type: 'website',
@@ -48,4 +51,4 @@
 	};
 </script>
 
-<MetaTags {...defaultTags} />
+<MetaTags {...tags} />
