@@ -43,11 +43,11 @@
 			url: cononicalUrl.toString(),
 			description,
 			images: parsedImages,
-      site_name: 'Klynge Næringsforening',
+			site_name: 'Klynge Næringsforening'
 		},
 		twitter: {
 			cardType: 'summary_large_image',
-			image: images.length > 0 ? parsedImages[0].url : undefined,
+			image: images.length > 0 ? parsedImages[0].url : undefined
 		}
 	};
 </script>
