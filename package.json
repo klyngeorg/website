@@ -69,7 +69,7 @@
 		"graphql": "^16.6.0",
 		"graphql-request": "^6.0.0",
 		"md5": "^2.3.0",
-		"puppeteer-core": "^20.0.0",
+		"puppeteer-core": "^21.0.0",
 		"slugify": "^1.6.5",
 		"svelte-meta-tags": "^2.8.0",
 		"ts-invariant": "^0.10.3"
