@@ -3,21 +3,21 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: [vitePreprocess()],
+  // Consult https://kit.svelte.dev/docs/integrations#preprocessors
+  // for more information about preprocessors
+  preprocess: [vitePreprocess()],
 
-	kit: {
-		adapter: adapter(),
+  kit: {
+    adapter: adapter(),
 
-		alias: {
-			$assets: './src/assets',
-			$components: './src/components',
-			$styles: './src/styles',
-			$data: './src/data',
-			$libs: './src/libs'
-		}
-	}
+    alias: {
+      $assets: './src/assets',
+      $components: './src/components',
+      $styles: './src/styles',
+      $data: './src/data',
+      $libs: './src/libs'
+    }
+  }
 };
 
 export default config;

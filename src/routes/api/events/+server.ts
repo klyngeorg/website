@@ -4,6 +4,6 @@ import { getEventsFromGoogleCalendar } from '../../../libs/events/get-events.js'
 export const prerender = true;
 
 export async function GET() {
-	const events = await getEventsFromGoogleCalendar();
-	return json(events);
+  const events = await getEventsFromGoogleCalendar();
+  return json(events);
 }
