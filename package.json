@@ -18,7 +18,6 @@
     "format": "prettier --write --plugin prettier-plugin-svelte .",
     "postbuild": "svelte-sitemap --domain https://klyngeorg.no && pnpm generate-seo-images",
     "prepare": "husky install",
-    "codegen": "graphql-codegen-esm",
     "generate-seo-images": "tsx src/bin/generate-seo-images.ts"
   },
   "lint-staged": {
@@ -26,9 +25,6 @@
     "*.{js,ts}": "eslint --fix"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "5.0.0",
-    "@graphql-codegen/client-preset": "4.1.0",
-    "@graphql-codegen/introspection": "4.0.0",
     "@playwright/test": "^1.28.1",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.22.3",
@@ -59,15 +55,13 @@
   "dependencies": {
     "@fontsource/outfit": "^5.0.0",
     "@googleapis/calendar": "^9.0.0",
-    "@graphql-typed-document-node/core": "^3.1.1",
     "@resvg/resvg-js": "^2.4.1",
     "@sanity/client": "^6.0.0",
     "@sanity/image-url": "^1.0.2",
     "@sveltejs/adapter-static": "^2.0.0",
     "convert-svg-to-png": "^0.6.4",
     "date-fns": "^2.29.3",
-    "graphql": "^16.6.0",
-    "graphql-request": "^6.0.0",
+    "groqd": "^0.15.9",
     "md5": "^2.3.0",
     "puppeteer-core": "^21.0.0",
     "slugify": "^1.6.5",

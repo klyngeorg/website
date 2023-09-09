@@ -1,7 +1,5 @@
-import type { GetEventsQuery } from '../../gql/graphql';
-
-export type SanityEventImage = GetEventsQuery['events'][number]['image'];
-export type SanityEventOffer = GetEventsQuery['events'][number]['offers'];
+import type { Offer } from 'schema-dts';
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 export interface EventData {
   name: string;
@@ -11,8 +9,8 @@ export interface EventData {
   location?: string;
   url: string;
   slug?: string | null;
-  image?: string | SanityEventImage;
-  offers?: SanityEventOffer;
+  image?: SanityImageSource;
+  offers?: Offer[];
   eventAttendanceMode?: string;
 }
 

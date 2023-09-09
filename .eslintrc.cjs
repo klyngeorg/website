@@ -18,7 +18,6 @@ module.exports = {
     es2017: true,
     node: true
   },
-  ignorePatterns: ['src/gql/**'],
   overrides: [
     {
       files: ['*.svelte'],
