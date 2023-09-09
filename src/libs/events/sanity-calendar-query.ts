@@ -1,52 +1,36 @@
-import { graphQlClient } from '../../clients';
-import { graphql } from '../../gql';
+import { q, sanityImage } from 'groqd';
+import { sanityClient } from '../../clients';
 
-const getEventsDocument = graphql(`
-  query GetEvents($dateFrom: DateTime!, $dateTo: DateTime!) {
-    events: allEvent(where: { date: { lte: $dateTo, gte: $dateFrom } }) {
-      date
-      slug {
-        current
-      }
-      calendarId
-      eventAttendanceMode
-      offers {
-        price
-        priceCurrency
-        url
-        availability
-        description
-      }
-      image {
-        hotspot {
-          x
-          y
-          height
-          width
-        }
-        crop {
-          top
-          bottom
-          left
-          right
-        }
-        asset {
-          _id
-          altText
-          assetId
-          extension
-          url
-        }
-      }
-    }
-  }
-`);
-
-export async function getSanityEvents(dateFrom: Date, dateTo: Date) {
-  const { events } = await graphQlClient.request(getEventsDocument, {
-    dateFrom: dateFrom.toISOString(),
-    dateTo: dateTo.toISOString()
+const eventsQuery = q(
+  `*[
+      _type == 'event' &&
+    date >= $dateFrom &&
+    date <= $dateTo
+  ]`,
+  { isArray: true }
+)
+  .filter()
+  .grab$({
+    _id: q.string(),
+    date: q.date(),
+    slug: ['slug.current', q.string().optional()],
+    calendarId: q.string(),
+    eventAttendanceMode: q.string(),
+    offers: q
+      .array(
+        q.object({
+          price: q.number().optional(),
+          priceCurrency: q.string().optional(),
+          url: q.string().url().optional(),
+          availability: q.string(),
+          description: q.string().optional()
+        })
+      )
+      .optional(),
+    image: sanityImage('image', { withCrop: true, withHotspot: true }).nullable()
   });
 
-  return events;
+export async function getSanityEvents(dateFrom: Date, dateTo: Date) {
+  const { schema, query } = eventsQuery;
+  return schema.parse(await sanityClient.fetch(query, { dateFrom, dateTo }));
 }

@@ -68,12 +68,20 @@ export async function getEventsFromGoogleCalendar(
       const sanityEvent = sanityEvents.find((sanityEvent) => sanityEvent.calendarId === item.id);
 
       if (sanityEvent) {
-        event.image = sanityEvent.image;
-        event.offers = sanityEvent.offers;
-        event.eventAttendanceMode = sanityEvent.eventAttendanceMode ?? undefined;
-        if (sanityEvent.slug?.current) {
-          event.slug = sanityEvent.slug?.current;
+        if (sanityEvent.image) {
+          event.image = sanityEvent.image;
         }
+        if (sanityEvent.offers) {
+          event.offers =
+            sanityEvent.offers.map((offer) => ({
+              '@type': 'Offer',
+              url: offer.url,
+              price: offer.price,
+              priceCurrency: offer.priceCurrency
+            })) ?? undefined;
+        }
+        event.eventAttendanceMode = sanityEvent.eventAttendanceMode ?? undefined;
+        event.slug = sanityEvent.slug;
       }
 
       return event;
