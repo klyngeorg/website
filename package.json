@@ -65,7 +65,7 @@
     "md5": "^2.3.0",
     "puppeteer-core": "^21.0.0",
     "slugify": "^1.6.5",
-    "svelte-meta-tags": "^2.8.0",
+    "svelte-meta-tags": "^3.0.0",
     "ts-invariant": "^0.10.3"
   }
 }
