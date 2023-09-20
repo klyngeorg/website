@@ -7,11 +7,6 @@
   const { events = [] } = data;
 </script>
 
-<div class="broadcast">
-  Siste nytt: Nå setter vi gang med <a href="/events/networking-lunch">månedlige nettverkslunsjer</a
-  > 🙌.
-</div>
-
 <MetaTags
   path="/events"
   title="Arrangementer"
@@ -25,25 +20,3 @@
 {#if events.length === 0}
   <p>Ingen kommende arrangementer planlagt.</p>
 {/if}
-
-<style>
-  .broadcast {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .broadcast a {
-    color: var(--color-white);
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  @media (min-width: 768px) {
-    .broadcast {
-      font-size: 1.4rem;
-    }
-  }
-</style>
