@@ -8,19 +8,22 @@
   import type { EventData } from '$libs/events/types';
   export let data: EventData;
 
-  const date = new Date(data.startDate).toLocaleDateString('no-NO', {
+  const startDate = new Date(data.startDate);
+  const endDate = new Date(data.endDate ?? data.startDate);
+
+  const date = startDate.toLocaleDateString('no-NO', {
     weekday: 'long',
     month: 'long',
     day: 'numeric',
     year: 'numeric'
   });
 
-  const time = new Date(data.startDate).toLocaleTimeString('no-NO', {
+  const time = startDate.toLocaleTimeString('no-NO', {
     hour: 'numeric',
     minute: 'numeric'
   });
 
-  const timeFinished = new Date(data.endDate).toLocaleTimeString('no-NO', {
+  const timeFinished = endDate.toLocaleTimeString('no-NO', {
     hour: 'numeric',
     minute: 'numeric'
   });
@@ -36,8 +39,8 @@
   schema={{
     ...defaultEventData,
     name: data.name,
-    startDate: new Date(data.startDate).toISOString(),
-    endDate: new Date(data.endDate).toISOString(),
+    startDate: startDate.toISOString(),
+    endDate: endDate.toISOString(),
     location: {
       '@type': 'Place',
       address: data.location ?? 'Oslo, Norway'

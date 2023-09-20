@@ -65,11 +65,17 @@
     </div>
   </aside>
   <main>
-    <a href={`/events/${data.slug}`} rel="noreferrer" target="_blank" class="heading">
+    {#if data.slug}
+      <a href={`/events/${data.slug}`} rel="noreferrer" target="_blank" class="heading">
+        <h2>
+          {data.name}
+        </h2>
+      </a>
+    {:else}
       <h2>
         {data.name}
       </h2>
-    </a>
+    {/if}
     {#if data.location}
       <p class="location">
         Sted:
