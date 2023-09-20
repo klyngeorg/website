@@ -36,8 +36,8 @@
   schema={{
     ...defaultEventData,
     name: data.name,
-    startDate: data.startDate.toISOString(),
-    endDate: data.endDate.toISOString(),
+    startDate: new Date(data.startDate).toISOString(),
+    endDate: new Date(data.endDate).toISOString(),
     location: {
       '@type': 'Place',
       address: data.location ?? 'Oslo, Norway'
