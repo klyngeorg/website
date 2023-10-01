@@ -77,7 +77,8 @@ export async function getEventsFromGoogleCalendar(
               '@type': 'Offer',
               url: offer.url,
               price: offer.price,
-              priceCurrency: offer.priceCurrency
+              priceCurrency: offer.priceCurrency,
+              description: offer.description
             })) ?? undefined;
         }
         event.eventAttendanceMode = sanityEvent.eventAttendanceMode ?? undefined;
