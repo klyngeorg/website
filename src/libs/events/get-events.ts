@@ -20,8 +20,8 @@ export async function getEventsFromGoogleCalendar(
   opts: GetEventsFromGoogleCalendarOptions = {}
 ): Promise<EventData[]> {
   const {
-    // Get events that happened three days ago or later
-    timeMin = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000)
+    // Get events that happened one day ago or later
+    timeMin = new Date(Date.now() - 1 * 24 * 60 * 60 * 1000)
   } = opts;
 
   // Get events that happen in the next 6 months
