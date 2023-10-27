@@ -46,8 +46,8 @@ jobs:
 
       - name: Build 🔨
         run: pnpm build
-        env:
-          SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
+        # env:
+        #  SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
 
       - name: Upload GitHub Pages assets 📦️
         uses: actions/upload-pages-artifact@v2
