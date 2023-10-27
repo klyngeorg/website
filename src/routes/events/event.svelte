@@ -27,6 +27,8 @@
   const offers = (data.offers ?? [])
     .filter((offerItem) => offerItem && offerItem.url)
     .filter(notEmpty);
+
+  const [description] = data.description.split('--');
 </script>
 
 <JsonLd
@@ -88,38 +90,40 @@
         </a>
       </p>
     {/if}
-    {#if data.description}
-      <p><StructuredText data={data.description} /></p>
+    {#if description}
+      <p><StructuredText data={description} /></p>
     {/if}
     <p>
       <small>Anslått ferdig: {timeFinished}</small>
     </p>
-    {#each offers as offer}
-      <div class="offer-box">
-        <div class="description">
-          {#if offer.price}
-            <p><strong>{offer.price} {offer.priceCurrency}</strong></p>
-          {/if}
-          {#if offer.description}
-            <p class="description-paragraph">
-              <StructuredText data={offer.description.split('\n').join('<br />')} />
-            </p>
-          {/if}
-          {#if offer.availability === 'LimitedAvailability'}
-            <p><strong>Merk:</strong> Det er begrensede plasser</p>
-          {/if}
-          {#if offer.availability === 'SoldOut'}
-            <p><strong>Varsel:</strong> Det er ikke flere plasser</p>
-          {/if}
-          {#if offer.availability === 'BackOrder'}
-            <p><strong>Varsel:</strong> Det er venteliste</p>
-          {/if}
+    {#if new Date(data.startDate) > new Date()}
+      {#each offers as offer}
+        <div class="offer-box">
+          <div class="description">
+            {#if offer.price}
+              <p><strong>{offer.price} {offer.priceCurrency}</strong></p>
+            {/if}
+            {#if offer.description}
+              <p class="description-paragraph">
+                <StructuredText data={offer.description.split('\n').join('<br />')} />
+              </p>
+            {/if}
+            {#if offer.availability === 'LimitedAvailability'}
+              <p><strong>Merk:</strong> Det er begrensede plasser</p>
+            {/if}
+            {#if offer.availability === 'SoldOut'}
+              <p><strong>Varsel:</strong> Det er ikke flere plasser</p>
+            {/if}
+            {#if offer.availability === 'BackOrder'}
+              <p><strong>Varsel:</strong> Det er venteliste</p>
+            {/if}
+          </div>
+          <div class="actions">
+            <a href={offer.url} class="button" rel="noreferrer" target="_blank"> Påmelding → </a>
+          </div>
         </div>
-        <div class="actions">
-          <a href={offer.url} class="button" rel="noreferrer" target="_blank"> Påmelding → </a>
-        </div>
-      </div>
-    {/each}
+      {/each}
+    {/if}
   </main>
 </article>
 
