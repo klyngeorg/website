@@ -43,7 +43,6 @@ jobs:
 
       # - name: Test 🧪
       #   run: yarn test --passWithNoTests
-
       - name: Build 🔨
         run: pnpm build
         # env:
