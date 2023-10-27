@@ -45,7 +45,7 @@ jobs:
       #   run: yarn test --passWithNoTests
       - name: Build 🔨
         run: pnpm build
-         env:
+        env:
           SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
 
       - name: Upload GitHub Pages assets 📦️
