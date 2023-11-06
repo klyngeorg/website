@@ -17,44 +17,39 @@ const address = q.object({
 });
 
 const membershipQuery = q(
-  `*[
-    _type == 'membership' &&
-    year->year == 2023 &&
-    status in ['pending', 'pending-invoicing', 'pending-payment', 'active', 'pending-expelled'] &&
-    member->privacy.showPublicly
-  ]`,
-  { isArray: true }
+  `*[ _type == "person" && !(_id in path("drafts.**")) && privacy.showPublicly == true ]`,
+  {
+    isArray: true
+  }
 )
-  .filter()
   .grab$({
-    status: statusUnion,
-    member: q('member')
-      .deref()
-      .grab$({
-        givenName: q.string(),
-        familyName: q.string(),
-        email: q.string().email().optional(),
-        phone: q.string().optional(),
-        address: address.optional(),
-        image: sanityImage('image', { withCrop: true, withHotspot: true }).nullable(),
+    givenName: q.string(),
+    familyName: q.string(),
+    email: q.string().email().optional(),
+    phone: q.string().optional(),
+    address: address.optional(),
+    image: sanityImage('image', { withCrop: true, withHotspot: true }).nullable(),
 
-        worksFor: q('worksFor[]', { isArray: true })
-          // .deref()
+    memberships: q('*[_type == "membership" && references(^._id)]', { isArray: true }),
+    worksFor: q('worksFor[]', { isArray: true })
+      .grab$({
+        name: q.string(),
+        worksFor: q('worksFor')
+          .deref()
           .grab$({
+            _id: q.string(),
             name: q.string(),
-            worksFor: q('worksFor')
-              .deref()
-              .grab$({
-                name: q.string(),
-                email: q.string().email().optional(),
-                phone: q.string().optional(),
-                address: address.optional(),
-                sameAs: q.array(q.string().url()).or(q.string().url()).optional()
-              })
+            email: q.string().email().optional(),
+            phone: q.string().optional(),
+            address: address.optional(),
+            sameAs: q.array(q.string().url()).or(q.string().url()).optional()
           })
-          .nullable()
       })
-  });
+      .nullable()
+  })
+  .filter(
+    'count(memberships) > 0 || "be371197-3960-4240-9fe2-2e34ed476b1d" in worksFor[].worksFor._id'
+  );
 
 interface LoadOutput {
   members: Omit<Person, '@type'>[];
@@ -66,13 +61,13 @@ function notEmpty<T>(value: T | null | undefined): value is T {
 
 export const load = async (): Promise<LoadOutput> => {
   const { schema, query } = membershipQuery;
-  const members = schema.parse(await sanityClient.fetch(query));
+  const people = schema.parse(await sanityClient.fetch(query));
+
+  console.log({ query, people });
 
   return {
-    members: members
-      .map(({ member }) => {
-        const person = member;
-
+    members: people
+      .map((person) => {
         const image = person?.image
           ? imageUrlBuilder.image(person.image).auto('format').width(200).height(200).toString()
           : undefined;
