@@ -2,14 +2,6 @@ import type { Person } from 'schema-dts';
 import { q, sanityImage } from 'groqd';
 import { sanityClient, imageUrlBuilder } from '../../../clients.js';
 
-const statusUnion = q.union([
-  q.literal('pending'),
-  q.literal('pending-invoicing'),
-  q.literal('pending-payment'),
-  q.literal('active'),
-  q.literal('pending-expelled')
-]);
-
 const address = q.object({
   streetAddress: q.string(),
   postalCode: q.string().length(4),
