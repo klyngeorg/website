@@ -55,7 +55,8 @@
   <p>
     I forkant og etterkant av arrangementet kan opplysningene også brukes til å kommunisere til de
     påmeldte via e-post og telefon, avgrenset til dette arrangementet. Vi sletter opplysningene
-    senest etter 60 dager etter arrangementet er gjennomført eller avlyst.
+    senest etter 60 dager etter arrangementet er gjennomført eller avlyst, med unntak av
+    arrangementer som er arrangert gjennom Checkin. Les mer om Checkin under.
   </p>
 
   <h2>Folk i Klynge</h2>
@@ -106,43 +107,26 @@
   <p>
     Vi benytter arrangementsystemet Checkin i forbindelse med enkelte arrangementer. Checkin er en
     tjeneste som tilbyr salg og betaling av billetter og organisering av arrangementer. Vi
-    anonymiserer opplysninger så snart arrangementet er avsluttet, men ikke senere enn 180 dager.
-    Noen opplysninger kan være nødvendig å lagre lengre for å oppfylle regnskapslovens krav.
+    anonymiserer eller fjerner opplysninger så snart det er mulig i henhold til regnskapslovens
+    krav.
   </p>
+
   <p>
     Opplysningene lagres hos Checkin AS (og deres underleverandører) og av den grunn vår
     databehandler. Egen databehandleravtale er inngått. Informasjon er avgrenset til de
     arrangementer som er gjennomført ved bruk av Checkins system.
   </p>
+
+  <p>
+    I forbindelse med vår hovedaktivitet, nettverkslunsjer på Vaaghals, er restauranten Vaaghals
+    (Paulsenkaia Drift AS med organisasjonsnummer 913 509 625) gitt tilgang til opplysninger om
+    påmeldte. Dette er nødvendig for å kunne gjennomføre arrangementet.
+  </p>
+
   <p>
     Les mer om Checkins personvernerklæring her:
     <a href="https://www.checkin.no/personvernerklaering">
       https://www.checkin.no/personvernerklaering
-    </a>
-  </p>
-
-  <h2>Hoopla</h2>
-
-  <p>
-    Vi benytter billettsystemet Hoopla i forbindelse med enkelte arrangementer. Hoopla er en
-    tjeneste som tilbyr salg av billetter og organisering av arrangementer. De lagrer
-    personopplysninger blant annet for å gi støtte og for å oppfylle regnskapslovens krav, Hoopla er
-    behandlingsansvarlig for forhold til enkelte opplysninger som lagres i forbindelse med kjøp.
-  </p>
-
-  <p>
-    Informasjon er avgrenset til de arrangementer som er gjennomført ved bruk av Hooplas system.
-  </p>
-
-  <p>
-    Opplysninger som lagres av Klynge slettes så snart arrangementet er avsluttet, men ikke senere
-    enn 60 dager.
-  </p>
-
-  <p>
-    Les mer i Hooplas personvernerklæring her:
-    <a href="https://www.hoopla.no/arranger/personvern">
-      https://www.hoopla.no/arranger/personvern
     </a>
   </p>
 
