@@ -22,6 +22,12 @@
     ikke har adgang til å behandle blir rettet, slettet eller supplert.
   </p>
   <p>Krav fra den registrerte skal besvares kostnadsfritt og senest innen 30 dager.</p>
+  <p>
+    Du kan se når personvernerklæringen er sist oppdatert og historikken
+    <a href="https://github.com/klyngeorg/website/commits/main/src/routes/privacy/%2Bpage.svelte">
+      på GitHub.
+    </a>
+  </p>
 
   <h2>Medlemsregisteret</h2>
   <p>
