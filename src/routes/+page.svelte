@@ -12,15 +12,12 @@
   </strong>
 
   <p>
-    Som en nylig etablert forening arrangerer foreløpig
-    <a href="/events"> månedlige møter og andre arrangementer </a>
-    for medlemmer og gjester. Om du er nysjerrig, ta kontakt med oss på
-    <a href="mailto:hei@klyngeorg.no">hei@klyngeorg.no</a>
-    eller med <a href="/about/members">en av oss</a>.
+    Vi lager møteplasser og arenaer hvor spennende mennesker møtes, blant annet spiser vi lunsj på
+    restaurant Vaaghals annenhver torsdag!
   </p>
   <p>
     Sjekk ut
-    <a href="https://www.linkedin.com/company/klyngeorg">Linkedin-siden vår</a>.
+    <a href="https://www.linkedin.com/company/klyngeorg" target="_blank">Linkedin-siden vår</a>.
   </p>
 </div>
 

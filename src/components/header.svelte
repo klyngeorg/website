@@ -11,6 +11,7 @@
         Bli medlem i vår Slack
       </a>
     </li>
+    <li><a href="/medlem">Medlemskap</a></li>
     <li><a href="/events">Aktiviteter →</a></li>
   </ul>
 </nav>
