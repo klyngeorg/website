@@ -3,5 +3,5 @@ export const prices = {
   monthly: 1490,
   monthlyWithoutContract: 1940,
   membership: 450,
-  guest: 575,
+  guest: 575
 };

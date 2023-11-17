@@ -69,12 +69,7 @@
   <h2>Klar for å bli medlem?</h2>
   <p>Alle medlemmer må godkjennes av styret i Klynge Næringsforening.</p>
 
-  <a
-    class="signup"
-    href="https://forms.gle/wNBShrE6oNr8nXyy9"
-  >
-    Gå til innmeldingsskjema
-  </a>
+  <a class="signup" href="https://forms.gle/wNBShrE6oNr8nXyy9"> Gå til innmeldingsskjema </a>
 </div>
 
 <style>
