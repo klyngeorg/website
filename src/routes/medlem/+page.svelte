@@ -71,7 +71,7 @@
 
   <a
     class="signup"
-    href="https://docs.google.com/forms/d/1edrFVZGKO2dqAb_2jqwvDd7-fT5iuB4N34BKVA-piNA/edit"
+    href="https://forms.gle/wNBShrE6oNr8nXyy9"
   >
     Gå til innmeldingsskjema
   </a>
