@@ -39,6 +39,7 @@
       Organisasjonsnummer: 930 334 693
     </p>
     <section class="footer-links">
+      <a href="/betingelser">Medlemsbetingelser</a>
       <a href="/about/articles">Våre vedtekter</a>
       <a href="/privacy">Personvernerklæring</a>
     </section>
