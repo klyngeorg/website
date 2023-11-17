@@ -137,6 +137,7 @@
 
   .footer-links {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: var(--space-s);
   }
