@@ -20,8 +20,8 @@
   <h1>Bli medlem av Klynge Næringsforening</h1>
 
   Klynge Næringforening er en forening for bedrifter og enkeltpersoner som ønsker å samarbeide og
-  innovere med andre. Vi arrangerer nettverkslunsjer, kurs og andre aktiviteter for å hjelpe våre
-  medlemmer med å utvide sitt nettverk, dele erfaringer og få støtte fra andre likesinnede
+  innovere med andre. Vi arrangerer nettverkslunsjer, kurs og andre aktiviteter i Oslo for å hjelpe
+  våre medlemmer med å utvide sitt nettverk, dele erfaringer og få støtte fra andre likesinnede
   individer.
 
   <h2>Hvorfor bli medlem?</h2>
