@@ -12,8 +12,8 @@
 
 <MetaTags
   path="/betingelser"
-  title="Personvernerklæring"
-  description="Les om hvordan Klynge Næringsforening samler inn og bruker personvernopplysninger"
+  title="Medlemsbetingelser"
+  description="Les betingelsene for å bli medlem av foreningen."
 />
 
 <div class="content">
