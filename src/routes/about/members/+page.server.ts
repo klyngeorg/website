@@ -55,8 +55,6 @@ export const load = async (): Promise<LoadOutput> => {
   const { schema, query } = membershipQuery;
   const people = schema.parse(await sanityClient.fetch(query));
 
-  console.log({ query, people });
-
   return {
     members: people
       .map((person) => {
