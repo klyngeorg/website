@@ -1,18 +1,12 @@
-# Astro Starter Kit: Minimal
+# Klynge Næringsforening – Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+We are a group of individuals with a passion for the business world, who have come together to support and encourage each other's success. We believe that by sharing our experiences and collaborating, we can all achieve our goals.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Our organization is voluntary, democratic, and open to all. We are dedicated to helping our members succeed in their business endeavors, and we hope that you will find valuable resources and information within this repository and our website.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+This project is built with [Astro](https://astro.build), a modern static site generator.
 
 ```text
 /
@@ -44,7 +38,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 👀 Want to help?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into
-our [Discord server](https://astro.build/chat).
+Join our [Slack community](https://join.slack.com/t/klyngen/shared_invite/zt-1modeitmd-2OgaarItLsXACjunZQ~BHA).
