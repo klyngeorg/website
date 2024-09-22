@@ -60,5 +60,5 @@ jobs:
 <<<<<<< HEAD
         uses: actions/deploy-pages@v4
 =======
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 >>>>>>> a1f5496 (refactor to astro)
