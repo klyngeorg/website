@@ -3,6 +3,7 @@ import type { WithContext, Thing } from "schema-dts";
 import "@fontsource-variable/outfit";
 import { jsonLd } from "../json-ld";
 import Header from "./header.astro";
+import Footer from "./footer.astro";
 
 export type Props = {
   /**
@@ -164,12 +165,14 @@ const canonical = new URL(path, Astro.site);
     <meta property="og:type" content={type} />
     <meta property="og:title" content={socialMediaTitle} />
     <meta property="og:description" content={socialMediaDescription} />
-    {images.map((img) => <meta property="og:image" content={img} />)}
+    {images.map(img => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Klynge Næringsforening" />
     <script
       data-goatcounter="https://klynge.goatcounter.com/count"
       async
-      src="//gc.zgo.at/count.js"></script>
+      src="//gc.zgo.at/count.js"
+    >
+    </script>
 
     {
       type == "article" && articleAuthor && (
@@ -197,6 +200,7 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
+    <Footer />
     <style is:global>
       :root {
         --container-width: 1240px;
