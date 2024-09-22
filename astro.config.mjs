@@ -6,6 +6,8 @@ export default defineConfig({
   redirects: {
     "/about/articles": "/vedtekter",
     "/privacy": "/personvern",
+    "/events/": "/aktiviteter",
+    "/arrangementer": "/aktiviteter",
   },
   integrations: [sitemap()],
 });
