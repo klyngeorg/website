@@ -3,7 +3,7 @@ name: Deploy
 on:
   schedule:
     # Schedule for every day at 12:00 CEST
-    - cron: '0 10 * * *'
+    - cron: "0 10 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -33,25 +33,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: pnpm
 
       - name: Install dependencies 📦️
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
-      - name: Lint 💅
-        run: pnpm lint
-
-      # - name: Test 🧪
-      #   run: yarn test --passWithNoTests
       - name: Build 🔨
-        run: pnpm build
+        run: npm run build
         env:
           SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
 
       - name: Upload GitHub Pages assets 📦️
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
 
   deploy:
     name: Deployment
@@ -63,4 +57,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages 🚀
         id: deployment
+<<<<<<< HEAD
         uses: actions/deploy-pages@v4
+=======
+        uses: actions/deploy-pages@v2
+>>>>>>> a1f5496 (refactor to astro)

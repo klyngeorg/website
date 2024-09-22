@@ -1,0 +1,111 @@
+---
+import Layout from "./layout.astro";
+
+export type Props = {
+  frontmatter: FrontmatterProps;
+};
+export type FrontmatterProps = {
+  /**
+   * The title of the page. The ideal length is approximately 60 characters.
+   * When exceeding this limit, search engines will truncate the title.
+   *
+   * @default Klynge Næringsforening
+   */
+  title?: string;
+
+  /**
+   * The description of the page. The ideal length is between 70 and 155 characters.
+   * Minimum length is 70 characters. When exceeding this limit, search engines will
+   * truncate the description.
+   *
+   * @default Default description
+   */
+  description?: string;
+
+  /**
+   * The headline on the page. The ideal length is approximately 47 characters.
+   *
+   * @default title
+   */
+  headline?: string;
+
+  /**
+   * The heading on the page next to headline. Should be longer than headline.
+   *
+   * @default title
+   */
+  heading?: string;
+
+  /**
+   * The title for social media platforms. The ideal length is approximately 47 characters.
+   * When exceeding this limit, platforms will truncate the title. LinkedIn will truncate
+   * the title at 119 characters.
+   *
+   * @default Uses the title prop
+   */
+  socialMediaTitle?: string;
+
+  /**
+   * The description for social media platforms. Should not exceed 85 characters to fit most platforms.
+   *
+   * @default Uses the description prop
+   */
+  socialMediaDescription?: string;
+
+  /**
+   * Images for social media platforms. The ideal size is 1200 x 630 pixels.
+   * When providing more than one image, the first image will be used, but some
+   * platforms will allow the user to choose which image to use.
+   *
+   * @default ['/images/social-media-image.png']
+   */
+  images?: string[];
+
+  /**
+   * The type of the page.
+   *
+   * @default website
+   */
+  type?: "website" | "article";
+
+  /**
+   * The path of the page. Used to generate the canonical URL.
+   */
+  path?: string;
+
+  /**
+   * The date the page was published. Only used with type = 'article'.
+   */
+  articlePublishDate?: Date;
+
+  /**
+   * The date the page was last modified. Only used with type = 'article'.
+   */
+  articleAuthor?: string;
+};
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <main class="container">
+    <slot />
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  :global(.btn) {
+    display: inline-block;
+    background-color: var(--color-focus-bg);
+    --link-color: var(--color-focus-text);
+    color: var(--color-focus-text);
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+</style>

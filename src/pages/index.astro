@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../components/Layout.astro";
+import HeroImg from "../assets/hero.jpg";
+
+const slackUrl =
+  "https://join.slack.com/t/klyngen/shared_invite/zt-1modeitmd-2OgaarItLsXACjunZQ~BHA";
+const linkedinUrl = "https://www.linkedin.com/company/klyngeorg";
+---
+
+<Layout
+  title="Klynge Næringsforening"
+  description="Klynge Næringsforening: Nettverksbygging og erfaringsdeling for bedrifter og gründere i Oslo. Bli medlem for inspirerende lunsjer, kurs og muligheter for innovativt samarbeid."
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Klynge Næringsforening",
+    description:
+      "Nettverksforening for bedrifter og gründere i Oslo, fokusert på erfaringsdeling, innovasjon og samarbeid.",
+    url: "https://klynge.org",
+    logo: "https://klynge.no/assets/logo.svg",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Oslo",
+      addressCountry: "NO",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "styret@klyngeorg.no",
+      contactType: "support",
+    },
+    sameAs: ["https://www.linkedin.com/company/klyngeorg"],
+    event: {
+      "@type": "Event",
+      name: "Nettverkslunsj",
+      description:
+        "Annenhver torsdag møtes vi for lunsj, nettverksbygging og erfaringsdeling",
+      location: {
+        "@type": "Place",
+        name: "Grand Hotel",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Oslo",
+          addressCountry: "NO",
+        },
+      },
+      offers: {
+        "@type": "Offer",
+        price: "575",
+        priceCurrency: "NOK",
+      },
+    },
+  }}
+>
+  <main>
+    <h1>
+      Vi er en gruppe mennesker som deler erfaringer, nettverk, samarbeider og
+      støtter hverandre.
+    </h1>
+    <p>
+      Vi lager møteplasser og arenaer hvor spennende mennesker møtes, blant
+      annet spiser vi lunsj annenhver torsdag!
+    </p>
+    <p>
+      Sjekk ut <a href="/aktiviteter">arrangementene våre</a> for å se hva som skjer,
+      koble med oss på <a href={slackUrl}>Slack</a> eller <a href={linkedinUrl}>
+        LinkedIn
+      </a> for å bli med i samtalen.
+    </p>
+    <Image
+      class="hero"
+      src={HeroImg}
+      alt="Klynge Næringsforening"
+      height={700}
+    />
+  </main>
+</Layout>
+<style>
+  main {
+    margin-inline: auto;
+    max-width: var(--container-width);
+    padding: 2rem;
+  }
+
+  h1,
+  p {
+    max-width: 45ch;
+  }
+  .hero {
+    border-radius: 8px;
+    margin-block: 2rem;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+  }
+</style>
