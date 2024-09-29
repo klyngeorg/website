@@ -168,10 +168,26 @@ const canonical = new URL(path, Astro.site);
     {images.map(img => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Klynge Næringsforening" />
     <script
+      type="text/partydown"
       data-goatcounter="https://klynge.goatcounter.com/count"
+      is:inline
       async
       src="//gc.zgo.at/count.js"
     >
+    </script>
+    <script
+      async
+      is:inline
+      type="text/partydown"
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16719606815"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-16719606815");
     </script>
 
     {

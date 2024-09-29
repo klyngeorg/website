@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
+import partytown from "@astrojs/partytown";
+
 export default defineConfig({
   site: "https://klynge.org",
   redirects: {
@@ -10,5 +12,11 @@ export default defineConfig({
     "/events/": "/aktiviteter",
     "/arrangementer": "/aktiviteter",
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      config: { forward: ["dataLayer.push"] },
+    }),
+    partytown(),
+  ],
 });
+
