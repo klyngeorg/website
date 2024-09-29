@@ -13,10 +13,10 @@ export default defineConfig({
     "/arrangementer": "/aktiviteter",
   },
   integrations: [
-    sitemap({
-      config: { forward: ["dataLayer.push"] },
+    sitemap(),
+    partytown({
+      config: { debug: true, forward: ["dataLayer.push"] },
     }),
-    partytown(),
   ],
 });
 
