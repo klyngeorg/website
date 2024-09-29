@@ -125,11 +125,6 @@ const canonical = new URL(path, Astro.site);
 
 <html lang="nb">
   <head>
-    <link
-      rel="preload"
-      href="https://static.checkin.no/loaders/eventindex/loader.js"
-      as="script"
-    />
     <meta charset="utf-8" />
     <link
       rel="icon"
@@ -187,7 +182,7 @@ const canonical = new URL(path, Astro.site);
       type="text/partydown"
       src="https://www.googletagmanager.com/gtag/js?id=AW-16719606815"
     ></script>
-    <script>
+    <script type="text/partydown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         window.dataLayer.push(arguments);
