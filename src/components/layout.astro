@@ -174,14 +174,14 @@ const canonical = new URL(path, Astro.site);
       is:inline
       async
       src="//gc.zgo.at/count.js"
-    >
-    </script>
+    ></script>
     <script
       async
       is:inline
       type="text/partydown"
       src="https://www.googletagmanager.com/gtag/js?id=AW-16719606815"
-    ></script>
+    >
+    </script>
     <script type="text/partydown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -191,11 +191,6 @@ const canonical = new URL(path, Astro.site);
       gtag("config", "AW-16719606815");
     </script>
 
-    <script
-      type="text/partydown"
-      async
-      src="https://static.checkin.no/loaders/eventindex/loader.js"
-    ></script>
     {
       type == "article" && articleAuthor && (
         <meta property="article:author" content={articleAuthor} />
