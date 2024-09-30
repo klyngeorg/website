@@ -5,7 +5,6 @@ import Layout from "../components/layout.astro";
 <Layout>
   <div id="checkin_event_index"></div>
   <script>
-    import "https://static.checkin.no/loaders/eventindex/loader.js";
     document.customerId = 14482;
     document.calendarConfig = {
       openRegistrationModal: false,
@@ -29,5 +28,7 @@ import Layout from "../components/layout.astro";
         eventTileColor: "rgba(28, 43, 57, 0)",
       },
     };
+  </script>
+  <script async src="https://static.checkin.no/loaders/eventindex/loader.js">
   </script>
 </Layout>
