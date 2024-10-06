@@ -60,7 +60,7 @@ import HeroImg from "../assets/hero.jpg";
         Vi styrker norsk næringsliv gjennom innovativt samarbeid og
         kompetansedeling.
       </h1>
-      <!-- <a href="/om">Les mer →</a> -->
+      <a href="/om">Les mer →</a>
     </div>
     <div class="cards">
       <a href="/aktiviteter" class="card">
@@ -71,6 +71,21 @@ import HeroImg from "../assets/hero.jpg";
         </p>
         <span class="sr-only">Les mer om hva som skjer</span>
       </a>
+      <a href="/om" class="card">
+        <h2>Dette gjør Klynge Næringsforening</h2>
+        <p>
+          Vi deler kunnskap, bygger nettverk og driver frem innovasjon på tvers.
+        </p>
+        <span class="sr-only">Les mer om Klynge Næringsforening</span>
+      </a>
+      <!--<a href="/om/who" class="card">
+        <h2>Hvem er vi</h2>
+        <p>
+          Et felleskap av innovative mennesker - fra første startups til
+          etablerte selskaper.
+        </p>
+        <span class="sr-only">Les mer om hvem vi er</span>
+</a>-->
       <a href="/medlem" class="card">
         <h2>Bli medlem</h2>
         <p>
@@ -81,114 +96,117 @@ import HeroImg from "../assets/hero.jpg";
       </a>
     </div>
   </main>
-</Layout>
-<style>
-  main {
-    display: grid;
-    gap: 2rem;
-    margin-inline: auto;
-    max-width: var(--container-width);
-    padding-inline: 2rem;
-  }
 
-  .hero {
-    object-fit: cover;
-    border-radius: 8px;
-    margin-block: 2rem;
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    margin-top: 3rem;
-    aspect-ratio: 2 / 1;
-  }
+  <style>
+    main {
+      display: grid;
+      gap: 2rem;
+      margin-inline: auto;
+      max-width: var(--container-width);
+      padding-inline: 2rem;
+    }
 
-  @media (max-width: 692px) {
     .hero {
-      display: none;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-block: 2rem;
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      margin-top: 3rem;
+      aspect-ratio: 2 / 1;
     }
-  }
 
-  .pitch h1 {
-    text-wrap: pretty;
-    max-width: 25ch;
-    font-size: 2.3rem;
-    font-weight: 500;
-    padding-bottom: 1.5rem;
-  }
+    @media (max-width: 692px) {
+      .hero {
+        display: none;
+      }
+    }
 
-  .pitch a {
-    text-decoration: none;
-  }
+    .pitch h1 {
+      text-wrap: pretty;
+      max-width: 25ch;
+      font-size: 2.3rem;
+      font-weight: 500;
+      padding-bottom: 1.5rem;
+    }
 
-  .pitch a:hover {
-    text-decoration: underline;
-  }
+    .pitch a {
+      text-decoration: none;
+    }
 
-  h1,
-  p {
-    max-width: 45ch;
-  }
+    .pitch a:hover {
+      text-decoration: underline;
+    }
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-  }
+    h1,
+    p {
+      max-width: 45ch;
+    }
 
-  .card {
-    padding: 2rem;
-    text-decoration: none;
-    color: var(--color-focus-text);
-    background: var(--color-focus-bg);
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    position: relative;
-  }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
 
-  .card h2 {
-    font-size: 1rem;
-  }
-
-  .card:focus-visible {
-    outline-offset: 0.4em;
-    border-radius: 0.225em;
-  }
-
-  .card:hover {
-    background: var(--color-focus-bg-hover);
-  }
-
-  .read-more::after,
-  .card::after {
-    content: "→";
-    display: inline-block;
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-  }
-
-  .card::after {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  .read-more:hover::after,
-  .read-more:focus::after,
-  .card:hover::after,
-  .card:focus::after {
-    transform: translateX(5px);
-  }
-
-  /* On desktop, let the card be square */
-  @media (min-width: 693px) {
     .card {
-      aspect-ratio: 1 / 1;
+      padding: 2rem;
+      text-decoration: none;
+      color: var(--color-focus-text);
+      background: var(--color-focus-bg);
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      position: relative;
     }
+
+    .card h2 {
+      font-size: 1rem;
+    }
+
+    .card:focus-visible {
+      outline-offset: 0.4em;
+      border-radius: 0.225em;
+    }
+
+    .card:hover {
+      background: var(--color-focus-bg-hover);
+      text-decoration: none;
+    }
+
+    .read-more::after,
     .card::after {
-      right: auto;
-      left: 1rem;
+      content: "→";
+      display: inline-block;
+      margin-left: 5px;
+      transition: transform 0.3s ease;
     }
-  }
-</style>
+
+    .card::after {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .read-more:hover::after,
+    .read-more:focus::after,
+    .card:hover::after,
+    .card:focus::after {
+      transform: translateX(5px);
+    }
+
+    /* On desktop, let the card be square */
+    @media (min-width: 693px) {
+      .card {
+        aspect-ratio: 1 / 1;
+      }
+      .card::after {
+        right: auto;
+        left: 1rem;
+      }
+    }
+  </style>
+  </Layout
+</Layout>

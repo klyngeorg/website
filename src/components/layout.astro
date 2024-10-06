@@ -173,13 +173,13 @@ const canonical = new URL(path, Astro.site);
       is:inline
       async
       src="//gc.zgo.at/count.js"
-    >
-    </script>
+    ></script>
     <script
       async
       is:inline
       src="https://www.googletagmanager.com/gtag/js?id=AW-16719606815"
-    ></script>
+    >
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -348,13 +348,14 @@ const canonical = new URL(path, Astro.site);
 
         a:not([class]) {
           --link-color: hsl(var(--color-primary-base) 90%);
-
+          text-decoration: none;
           color: var(--link-color);
         }
 
         @media (hover) {
           a:hover {
             --link-color: hsl(var(--color-primary-base) 100%);
+            text-decoration: underline;
           }
         }
 
