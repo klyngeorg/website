@@ -30,8 +30,8 @@ import ReadMore from "../components/read-more.astro";
       },
     };
   </script>
-  <script async src="https://static.checkin.no/loaders/eventindex/loader.js">
-  </script>
+  <script async src="https://static.checkin.no/loaders/eventindex/loader.js"
+  ></script>
   <aside>
     <ReadMore />
   </aside>
@@ -42,7 +42,7 @@ import ReadMore from "../components/read-more.astro";
     padding-inline: 1rem;
   }
   aside {
-    width: var(--container-width);
+    max-width: var(--container-width);
     padding: 2rem;
     margin-inline: auto;
   }

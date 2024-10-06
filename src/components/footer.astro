@@ -13,8 +13,32 @@
 <style>
   footer {
     max-width: var(--container-width);
+    margin-block: 3rem;
     margin-inline: auto;
     padding-inline: 2rem;
     padding-bottom: 1rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 740px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links > a::before {
+      content: "→";
+      margin-inline-end: 0.5rem;
+      text-decoration: none;
+    }
+
+    .footer-links > a:hover {
+      text-decoration: none;
+    }
   }
 </style>
