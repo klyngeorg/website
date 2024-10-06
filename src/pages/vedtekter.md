@@ -1,5 +1,10 @@
 ---
 layout: ../components/md.astro
+path: /vedtekter
+title: Vedtekter for Klynge Næringsforening
+description: |
+  Les om reglene og retningslinjene som styrer Klynge Næringsforening.
+  Hvordan vi tar beslutninger, hvem som kan være medlem og hva som kreves av styret.
 ---
 
 # Vedtekter for Klynge Næringsforening

@@ -1,5 +1,6 @@
 ---
 layout: ../components/md.astro
+path: /bekreftelse
 ---
 
 # Vi gleder oss til å se deg!

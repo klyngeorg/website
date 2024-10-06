@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Disallow: /bekreftelse
+
 Sitemap: https://klynge.org/sitemap-index.xml

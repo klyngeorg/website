@@ -24,20 +24,6 @@ export type FrontmatterProps = {
   description?: string;
 
   /**
-   * The headline on the page. The ideal length is approximately 47 characters.
-   *
-   * @default title
-   */
-  headline?: string;
-
-  /**
-   * The heading on the page next to headline. Should be longer than headline.
-   *
-   * @default title
-   */
-  heading?: string;
-
-  /**
    * The title for social media platforms. The ideal length is approximately 47 characters.
    * When exceeding this limit, platforms will truncate the title. LinkedIn will truncate
    * the title at 119 characters.
@@ -72,7 +58,7 @@ export type FrontmatterProps = {
   /**
    * The path of the page. Used to generate the canonical URL.
    */
-  path?: string;
+  path: string;
 
   /**
    * The date the page was published. Only used with type = 'article'.
@@ -88,7 +74,13 @@ export type FrontmatterProps = {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description}>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  path={frontmatter.path}
+  socialMediaTitle={frontmatter.socialMediaTitle}
+  socialMediaDescription={frontmatter.socialMediaDescription}
+>
   <div class="container">
     <main>
       <slot />

@@ -1,5 +1,14 @@
 ---
 layout: ../../components/page-md.astro
+path: /om
+title: Om Klynge Næringsforening
+description: |
+    Et felleskap for bedrifter og enkeltpersoner som vil lære og støtte hverandre,
+    samarbeide og skape innovasjon sammen.
+socialMediaTitle: Om Klynge Næringsforening
+socialMediaDescription: |
+    Bli med i vårt innovative nettverk for bedrifter som løfter hverandre og skaper
+    verdi sammen.
 ---
 
 # Vi deler erfaringer, hjelper hverandre gjennom utfordringer, finner nye samarbeidspartnere og skaper innovasjon sammen.

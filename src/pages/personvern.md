@@ -1,5 +1,10 @@
 ---
 layout: ../components/md.astro
+path: /personvern
+title: Personvernerklæring
+description: |
+    Les om hvordan Klynge Næringsforening samler inn og bruker personopplysninger.
+    Dine rettigheter og hvordan du kan kontakte oss.
 ---
 
 # Personvern­erklæring

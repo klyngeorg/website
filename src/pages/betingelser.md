@@ -1,5 +1,10 @@
 ---
 layout: ../components/md.astro
+path: /betingelser
+title: Medlemsbetingelser
+description: |
+    Les om medlemsbetingelsene for Klynge Næringsforening.
+    Forpliktelser, rettigheter og personvern.
 ---
 
 # Medlemsbetingelser

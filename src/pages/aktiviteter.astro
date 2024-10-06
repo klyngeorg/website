@@ -3,7 +3,13 @@ import Layout from "../components/layout.astro";
 import ReadMore from "../components/read-more.astro";
 ---
 
-<Layout>
+<Layout
+  title="Aktiviteter i Klynge Næringsforening"
+  description="Finn arrangementer og aktiviteter i Klynge Næringsforening"
+  socialMediaTitle="Aktiviteter i Klynge Næringsforening"
+  socialMediaDescription="Finn arrangementer og aktiviteter i Klynge Næringsforening"
+  path="/aktiviteter"
+>
   <div id="checkin_event_index"></div>
   <script>
     document.customerId = 14482;
@@ -30,8 +36,8 @@ import ReadMore from "../components/read-more.astro";
       },
     };
   </script>
-  <script async src="https://static.checkin.no/loaders/eventindex/loader.js"
-  ></script>
+  <script async src="https://static.checkin.no/loaders/eventindex/loader.js">
+  </script>
   <aside>
     <ReadMore />
   </aside>
