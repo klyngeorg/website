@@ -1,5 +1,5 @@
 ---
-layout: ../components/page-md.astro
+layout: ../../components/page-md.astro
 ---
 
 # Vi deler erfaringer, hjelper hverandre gjennom utfordringer, finner nye samarbeidspartnere og skaper innovasjon sammen.

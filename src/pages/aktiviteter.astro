@@ -1,5 +1,6 @@
 ---
 import Layout from "../components/layout.astro";
+import ReadMore from "../components/read-more.astro";
 ---
 
 <Layout>
@@ -31,4 +32,18 @@ import Layout from "../components/layout.astro";
   </script>
   <script async src="https://static.checkin.no/loaders/eventindex/loader.js">
   </script>
+  <aside>
+    <ReadMore />
+  </aside>
 </Layout>
+
+<style>
+  #checkin_event_index {
+    padding-inline: 1rem;
+  }
+  aside {
+    width: var(--container-width);
+    padding: 2rem;
+    margin-inline: auto;
+  }
+</style>

@@ -1,5 +1,5 @@
 ---
-layout: ../components/md.astro
+layout: ../components/page-md.astro
 ---
 
 # Bli medlem av Klynge Næringsforening

@@ -1,0 +1,33 @@
+<nav aria-labelby="nav-heading">
+  <h2 id="nav-heading">Les videre</h2>
+  <ul>
+    <li><a href="/aktiviteter">Hva skjer</a></li>
+    <li><a href="/om">Dette gjør Klynge Næringsforening</a></li>
+    <li><a href="/om/hvem">Hvem er vi</a></li>
+    <li><a href="/medlem">Bli medlem</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    margin-top: 2rem;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li::before {
+    content: "→";
+    margin-inline-end: 0.5rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+</style>
