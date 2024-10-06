@@ -1,6 +1,7 @@
 ---
 layout: ../components/md.astro
 ---
+
 # Personvern­erklæring
 
 Her kan du lese om hvordan Klynge Næringsforening samler inn og bruker

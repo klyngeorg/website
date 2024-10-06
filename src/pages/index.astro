@@ -1,11 +1,7 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Layout from "../components/layout.astro";
 import HeroImg from "../assets/hero.jpg";
-
-const slackUrl =
-  "https://join.slack.com/t/klyngen/shared_invite/zt-1modeitmd-2OgaarItLsXACjunZQ~BHA";
-const linkedinUrl = "https://www.linkedin.com/company/klyngeorg";
 ---
 
 <Layout
@@ -53,44 +49,145 @@ const linkedinUrl = "https://www.linkedin.com/company/klyngeorg";
   }}
 >
   <main>
-    <h1>
-      Vi er en gruppe mennesker som deler erfaringer, nettverk, samarbeider og
-      støtter hverandre.
-    </h1>
-    <p>
-      Vi lager møteplasser og arenaer hvor spennende mennesker møtes, blant
-      annet spiser vi lunsj annenhver torsdag!
-    </p>
-    <p>
-      Sjekk ut <a href="/aktiviteter">arrangementene våre</a> for å se hva som skjer,
-      koble med oss på <a href={slackUrl}>Slack</a> eller <a href={linkedinUrl}>
-        LinkedIn
-      </a> for å bli med i samtalen.
-    </p>
-    <Image
+    <Picture
       class="hero"
       src={HeroImg}
       alt="Klynge Næringsforening"
-      height={700}
+      height={500}
     />
+    <div class="pitch">
+      <h1>
+        Vi styrker norsk næringsliv gjennom innovativt samarbeid og
+        kompetansedeling.
+      </h1>
+      <a href="/om">Les mer →</a>
+    </div>
+    <div class="cards">
+      <a href="/aktiviteter" class="card">
+        <h2>Hva skjer</h2>
+        <p>
+          Møteplasser for innovasjon og vekst. Månedlige nettverkstreff,
+          workshops og foredrag.
+        </p>
+        <span class="sr-only">Les mer om hva som skjer</span>
+      </a>
+      <a href="/medlem" class="card">
+        <h2>Bli medlem</h2>
+        <p>
+          Få tilgang til et unikt nettverk, verdifull kompetansedeling og
+          spennende samarbeid. Voks sammen med andre fremoverlente bedrifter.
+        </p>
+        <span class="sr-only">Les mer om medlemskap</span>
+      </a>
+    </div>
   </main>
 </Layout>
 <style>
   main {
+    display: grid;
+    gap: 2rem;
     margin-inline: auto;
     max-width: var(--container-width);
-    padding: 2rem;
+    padding-inline: 2rem;
+  }
+
+  .hero {
+    object-fit: cover;
+    border-radius: 8px;
+    margin-block: 2rem;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 692px) {
+    .hero {
+      aspect-ratio: 2 / 1;
+    }
+  }
+
+  .pitch h1 {
+    text-wrap: pretty;
+    max-width: 25ch;
+    font-size: 2.3rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+  }
+
+  .pitch a {
+    text-decoration: none;
+  }
+
+  .pitch a:hover {
+    text-decoration: underline;
   }
 
   h1,
   p {
     max-width: 45ch;
   }
-  .hero {
-    border-radius: 8px;
-    margin-block: 2rem;
-    width: 100%;
-    height: auto;
-    margin-top: 3rem;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--color-focus-text);
+    background: var(--color-focus-bg);
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card:focus-visible {
+    outline-offset: 0.4em;
+    border-radius: 0.225em;
+  }
+
+  .card:hover {
+    background: var(--color-focus-bg-hover);
+  }
+
+  .read-more::after,
+  .card::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .card::after {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .read-more:hover::after,
+  .read-more:focus::after,
+  .card:hover::after,
+  .card:focus::after {
+    transform: translateX(5px);
+  }
+
+  /* On desktop, let the card be square */
+  @media (min-width: 693px) {
+    .card {
+      aspect-ratio: 1 / 1;
+    }
+    .card::after {
+      right: auto;
+      left: 1rem;
+    }
   }
 </style>

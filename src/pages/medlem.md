@@ -1,6 +1,7 @@
 ---
 layout: ../components/md.astro
 ---
+
 # Bli medlem av Klynge Næringsforening
 
 Klynge Næringforening er en forening for bedrifter og enkeltpersoner som ønsker
@@ -42,4 +43,5 @@ binding koster det 1 940 NOK per måned.
 
 Alle medlemmer må godkjennes av styret i Klynge Næringsforening.
 
-<a href="https://forms.gle/wNBShrE6oNr8nXyy9" class="btn">Gå til innmeldingsskjema</a>
+<a href="https://forms.gle/wNBShrE6oNr8nXyy9" class="btn">Gå til
+innmeldingsskjema</a>

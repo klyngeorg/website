@@ -1,6 +1,7 @@
 ---
 layout: ../components/md.astro
 ---
+
 # Medlemsbetingelser
 
 1.  For å bli medlem av Klynge Næringsforening må du være interessert i å

@@ -1,6 +1,7 @@
 ---
 layout: ../components/md.astro
 ---
+
 # Vedtekter for Klynge Næringsforening
 
 ## Formål og medlemskap

@@ -10,8 +10,5 @@ export default defineConfig({
     "/events/": "/aktiviteter",
     "/arrangementer": "/aktiviteter",
   },
-  integrations: [
-    sitemap(),
-  ],
+  integrations: [sitemap()],
 });
-

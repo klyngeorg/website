@@ -1,12 +1,18 @@
 # Klynge Næringsforening – Website
 
-We are a group of individuals with a passion for the business world, who have come together to support and encourage each other's success. We believe that by sharing our experiences and collaborating, we can all achieve our goals.
+We are a group of individuals with a passion for the business world, who have
+come together to support and encourage each other's success. We believe that by
+sharing our experiences and collaborating, we can all achieve our goals.
 
-Our organization is voluntary, democratic, and open to all. We are dedicated to helping our members succeed in their business endeavors, and we hope that you will find valuable resources and information within this repository and our website.
+Our organization is voluntary, democratic, and open to all. We are dedicated to
+helping our members succeed in their business endeavors, and we hope that you
+will find valuable resources and information within this repository and our
+website.
 
 ## 🚀 Project Structure
 
-This project is built with [Astro](https://astro.build), a modern static site generator.
+This project is built with [Astro](https://astro.build), a modern static site
+generator.
 
 ```text
 /
@@ -40,4 +46,5 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to help?
 
-Join our [Slack community](https://join.slack.com/t/klyngen/shared_invite/zt-1modeitmd-2OgaarItLsXACjunZQ~BHA).
+Join our
+[Slack community](https://join.slack.com/t/klyngen/shared_invite/zt-1modeitmd-2OgaarItLsXACjunZQ~BHA).
