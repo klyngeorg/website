@@ -98,8 +98,8 @@ Opplysningene lagres hos Checkin AS (og deres underleverandører) og av den grun
 vår databehandler. Egen databehandleravtale er inngått. Informasjon er avgrenset
 til de arrangementer som er gjennomført ved bruk av Checkins system.
 
-I forbindelse med vår hovedaktivitet, nettverkslunsjer på Vaaghals, er
-restauranten Vaaghals (Paulsenkaia Drift AS med organisasjonsnummer 913 509 625)
+I forbindelse med vår hovedaktivitet, nettverkslunsjer på Grand Hotel, er
+restauranten Restaurant Palmen (organisasjonsnummer 953149117)
 gitt tilgang til opplysninger om påmeldte. Dette er nødvendig for å kunne
 gjennomføre arrangementet.
 

@@ -23,12 +23,12 @@ dele erfaringer og få støtte fra andre likesinnede individer.
   dine egne innsikter.
 - **Nettverksbygging:** Knytt bånd med mennesker i ulike faser av karriere eller
   livsreise, og skape verdifulle forbindelser.
-- **Lunsj annenhver torsdag:** Vi møtes på Vaaghals annenhver torsdag for et
+- **Lunsj annenhver torsdag:** Vi møtes på Grand Hotel annenhver torsdag for et
   skikkelig godt måltid.
 
 ## Hva kan du forvente som medlem?
 
-Alle medlemmer av Klynge Næringsforening møtes på Vaaghals annenhver torsdag for
+Alle medlemmer av Klynge Næringsforening møtes på Grand Hotel annenhver torsdag for
 å samles, diskutere, lære og dele erfaringer, bygge nettverk, samarbeide og
 støtte hverandre.
 
