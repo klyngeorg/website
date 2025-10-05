@@ -10,34 +10,16 @@ import ReadMore from "../components/read-more.astro";
   socialMediaDescription="Finn arrangementer og aktiviteter i Klynge Næringsforening"
   path="/aktiviteter"
 >
-  <div id="checkin_event_index"></div>
-  <script>
-    document.customerId = 14482;
-    document.calendarConfig = {
-      openRegistrationModal: false,
-      view: "TILE",
-      showSearch: true,
-      showTopics: true,
-      showViewToggle: true,
-      showOnlyForm: false,
-      language: "nb",
-      topics: null,
-      style: {
-        searchButtonBgColor: "var(--color-focus-bg)",
-        searchButtonTextColor: "var(--color-focus-text)",
-        searchButtonBorderRadius: 99,
-        topicBadgeBgColor: "rgba(85, 96, 106, 1)",
-        topicBadgeTextColor: "rgba(255, 255, 255, 1)",
-        topicBadgeBorderRadius: 3,
-        headerTextColor: "var(--color-text)",
-        bodyTextColor: "var(--color-text)",
-        backgroundColor: "var(--color-bg)",
-        eventTileColor: "rgba(28, 43, 57, 0)",
-      },
-    };
-  </script>
-  <script async src="https://static.checkin.no/loaders/eventindex/loader.js">
-  </script>
+  <iframe
+  src="https://luma.com/embed/calendar/cal-2o5jHMIY18pNdu4/events"
+  width="600"
+  height="450"
+  frameborder="0"
+  style="border: 1px solid #bfcbda88; border-radius: 4px;"
+  allowfullscreen=""
+  aria-hidden="false"
+  tabindex="0"
+></iframe>
   <aside>
     <ReadMore />
   </aside>
