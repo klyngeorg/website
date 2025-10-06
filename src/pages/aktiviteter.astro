@@ -10,24 +10,37 @@ import ReadMore from "../components/read-more.astro";
   socialMediaDescription="Finn arrangementer og aktiviteter i Klynge Næringsforening"
   path="/aktiviteter"
 >
-  <iframe
-  src="https://luma.com/embed/calendar/cal-2o5jHMIY18pNdu4/events"
-  width="100%"
-  height="450"
-  frameborder="0"
-  style="border: 1px solid #bfcbda88; border-radius: 4px;"
-  allowfullscreen=""
-  aria-hidden="false"
-  tabindex="0"
-></iframe>
+  <main>
+    <h1>Aktiviteter i Klynge Næringsforening</h1>
+    <iframe
+      src="https://luma.com/embed/calendar/cal-2o5jHMIY18pNdu4/events/"
+      class="event-frame"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+    ></iframe>
+  </main>
   <aside>
     <ReadMore />
   </aside>
 </Layout>
 
 <style>
-  #checkin_event_index {
-    padding-inline: 1rem;
+  main {
+    max-width: var(--container-width);
+    padding: 2rem;
+    margin-inline: auto;
+  }
+  h1 {
+    margin-bottom: 2rem;
+  }
+  .event-frame {
+    width: 100%;
+    height: 800px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
   }
   aside {
     max-width: var(--container-width);
