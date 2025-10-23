@@ -37,15 +37,14 @@ temaer og andre samlinger.
 
 ## Hva koster det?
 
-Medlemmer av Klynge Næringsforening betaler 14 900 NOK per tolv måneder. Lunsjen
+Medlemmer av Klynge Næringsforening betaler 15 490 NOK per tolv måneder. Lunsjen
 er inkludert i medlemskapet.
 
-For å senke terskelen for at folk besøker oss, betaler gjester en redusert pris
-på 575 NOK per gang. I løpet av en 12 måneders periode kan gjester kun være med
-4 ganger.
+For å senke terskelen for at folk besøker oss, betaler gjester en redusert pris.
+I løpet av en 12 måneders periode kan gjester kun være med 4 ganger.
 
-Om du vil betale månedlig koster det 1 490 NOK per måned. Om du ikke ønsker
-binding koster det 1 940 NOK per måned.
+Om du vil betale månedlig koster det 1 599 NOK per måned. Om du ikke ønsker
+binding koster det 2 100 NOK per måned.
 
 ## Klar for å bli medlem?
 
