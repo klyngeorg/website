@@ -18,37 +18,37 @@ description: |
     forskuddsvis medlemsavgift, stor 15 490 NOK. Hvis du ønsker å betale
     forskuddsvis månedlig koster det 1 599 NOK per. Hvis du ikke ønsker å binde
     deg til et år, kan du betale 2 100 NOK per måned uten binding. Prisene
-    justeres årlig av styret i henhold til konsumprisindeksen og eventuelle
-    endringer i foreningens kostnader.
-4.  Medlemsavgiften inkluderer medlemskontingenten på 490 NOK, som gir deg
+    justeres av styret minst én gang i året i henhold til konsumprisindeksen og
+    eventuelle endringer i foreningens kostnader.
+5.  Medlemsavgiften inkluderer medlemskontingenten på 490 NOK, som gir deg
     stemmerett på årsmøtet, og et abonnement som definert over, som dekker
     kostnadene for Klynge nettverkslunsjer og eventuelle andre aktiviteter.
     Medlemsavgiften settes på årsmøtet og kan justeres årlig.
-5.  Som medlem av Klynge Næringsforening har du rett til å delta på alle møter,
+6.  Som medlem av Klynge Næringsforening har du rett til å delta på alle møter,
     aktiviteter, kurs og samlinger som foreningen arrangerer. Enkelte
     arrangementer kan ha egne billettkostnader. Du har også tilgang til et
     nettverk av likesinnede individer som du kan dele erfaringer, utvide ditt
     nettverk, samarbeide og få støtte fra. Det er opp til styret å bestemme
     innhold og frekvens på foreningens møter, aktiviteter, kurs og samlinger.
-6.  Som medlem av Klynge Næringsforening forventes du å bidra til foreningens
+7.  Som medlem av Klynge Næringsforening forventes du å bidra til foreningens
     formål og verdier, og å oppføre deg på en respektfull og profesjonell måte
     overfor andre medlemmer og samarbeidspartnere. Du forventes også å overholde
     foreningens vedtekter og retningslinjer, som du kan finne på foreningens
     nettside.
-7.  Hvis du ønsker å si opp ditt medlemskap, må du gi skriftlig beskjed til
+8.  Hvis du ønsker å si opp ditt medlemskap, må du gi skriftlig beskjed til
     styret i Klynge Næringsforening minst én måned før utgangen av den aktuelle
     betalingsperioden. Hvis du har betalt for et helt år, vil du ikke få
     refundert medlemsavgiften. Hvis du har betalt månedlig, vil du ikke bli
     belastet for neste måned etter oppsigelsen.
-8.  Styret i Klynge Næringsforening forbeholder seg retten til å avslutte ditt
+9.  Styret i Klynge Næringsforening forbeholder seg retten til å avslutte ditt
     medlemskap hvis du bryter med foreningens vedtekter, retningslinjer, formål
     eller verdier, eller hvis du ikke betaler medlemsavgiften innen forfall. Du
     vil få skriftlig varsel om oppsigelsen og en mulighet til å uttale deg før
     styret fatter sitt endelige vedtak.
-9.  Ved eventuell avvikling, oppløsning eller sletting av Klynge Næringsforening
+10.  Ved eventuell avvikling, oppløsning eller sletting av Klynge Næringsforening
     vil innbetalt medlemsavgift, inkludert kontingent, ikke bli refundert. Dette
     gjelder uavhengig av valgt betalingsmodell.
-10. Ved å akseptere disse medlemsbetingelsene samtykker du til at Klynge
+11. Ved å akseptere disse medlemsbetingelsene samtykker du til at Klynge
     Næringsforening kan behandle dine personopplysninger i henhold til
     personvernloven og foreningens personvernerklæring. Du samtykker også til at
     Klynge Næringsforening kan sende deg informasjon om foreningens aktiviteter,
