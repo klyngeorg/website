@@ -15,12 +15,15 @@ description: |
     vurdere din søknad og gi deg beskjed om du er godkjent eller ikke innen 14
     dager.
 3.  Som medlem av Klynge Næringsforening forplikter du deg til å betale en årlig
-    forskuddsvis medlemsavgift, stor 14 900 NOK. Hvis du ønsker å betale
-    forskuddsvis månedlig koster det 1 490 NOK per. Hvis du ikke ønsker å binde
-    deg til et år, kan du betale 1 940 NOK per måned uten binding.
-4.  Medlemsavgiften inkluderer medlemskontingenten på 450 NOK, som gir deg
+    forskuddsvis medlemsavgift, stor 15 490 NOK. Hvis du ønsker å betale
+    forskuddsvis månedlig koster det 1 599 NOK per. Hvis du ikke ønsker å binde
+    deg til et år, kan du betale 2 100 NOK per måned uten binding. Prisene
+    justeres årlig av styret i henhold til konsumprisindeksen og eventuelle
+    endringer i foreningens kostnader.
+4.  Medlemsavgiften inkluderer medlemskontingenten på 490 NOK, som gir deg
     stemmerett på årsmøtet, og et abonnement som definert over, som dekker
     kostnadene for Klynge nettverkslunsjer og eventuelle andre aktiviteter.
+    Medlemsavgiften settes på årsmøtet og kan justeres årlig.
 5.  Som medlem av Klynge Næringsforening har du rett til å delta på alle møter,
     aktiviteter, kurs og samlinger som foreningen arrangerer. Enkelte
     arrangementer kan ha egne billettkostnader. Du har også tilgang til et
@@ -42,7 +45,10 @@ description: |
     eller verdier, eller hvis du ikke betaler medlemsavgiften innen forfall. Du
     vil få skriftlig varsel om oppsigelsen og en mulighet til å uttale deg før
     styret fatter sitt endelige vedtak.
-9.  Ved å akseptere disse medlemsbetingelsene samtykker du til at Klynge
+9.  Ved eventuell avvikling, oppløsning eller sletting av Klynge Næringsforening
+    vil innbetalt medlemsavgift, inkludert kontingent, ikke bli refundert. Dette
+    gjelder uavhengig av valgt betalingsmodell.
+10. Ved å akseptere disse medlemsbetingelsene samtykker du til at Klynge
     Næringsforening kan behandle dine personopplysninger i henhold til
     personvernloven og foreningens personvernerklæring. Du samtykker også til at
     Klynge Næringsforening kan sende deg informasjon om foreningens aktiviteter,

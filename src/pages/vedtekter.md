@@ -18,7 +18,7 @@ er partipolitisk og religiøst uavhengig.
 
 §2. Alle som har betalt kontigenten for inneværende medlemsår og er godkjent av
 styret er regnet som medlemmer av Klynge Næringsforening. Alle medlemmer skal
-være abonnenter i foreningens hovedaktivitet, nettverkslunsj annenhver torsdag.
+være abonnenter i foreningens hovedaktivitet, nettverkslunsj.
 
 ## Årsmøtet
 
