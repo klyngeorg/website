@@ -55,18 +55,6 @@ arrangementet. Vi sletter opplysningene senest etter 60 dager etter
 arrangementet er gjennomført eller avlyst, med unntak av arrangementer som er
 arrangert gjennom Checkin. Les mer om Checkin under.
 
-## Folk i Klynge
-
-Alle som er interessert i Klynge, som ønsker å holde seg oppdatert og engasjert
-i foreningen, både medlemmer og tidligere gjester kan registrere seg i _Folk i
-Klynge_. Vi sender e-post ut til registrerte i Folk i Klynge ca. 2-3 ganger hver
-måned.
-
-Avregistrering gjøres ved å sende e-post til
-[folk+unsubscribe@klyngeorg.no](mailto:folk+unsubscribe@klyngeorg.no) eller ved
-henvendelse hos personvernombudet. Ved registrering vil e-postadresse lagres hos
-vår databehandler Google.
-
 ## Github og Google
 
 I forbindelse med drift av foreningens e-post og kontorverktøy benyttes Google
@@ -87,24 +75,37 @@ personopplysninger, automatisk. Dette gjør vi gjennom programvare fra Digital
 Inspiration. Deres personvernerklæring kan leses her:
 [https://www.labnol.org/privacy](https://www.labnol.org/privacy)
 
-## Checkin
+## Folk i Klynge
 
-Vi benytter arrangementsystemet Checkin i forbindelse med enkelte arrangementer.
-Checkin er en tjeneste som tilbyr salg og betaling av billetter og organisering
+Alle som er interessert i Klynge, som ønsker å holde seg oppdatert og engasjert
+i foreningen, både medlemmer og tidligere gjester kan registrere seg i _Folk i
+Klynge_. Vi sender e-post ut til registrerte i Folk i Klynge ca. 2-3 ganger hver
+måned.
+
+Avregistrering gjøres ved å sende e-post til
+[folk+unsubscribe@klyngeorg.no](mailto:folk+unsubscribe@klyngeorg.no) eller ved
+henvendelse hos personvernombudet. Ved registrering vil e-postadresse lagres hos
+vår databehandler Google. Foreningen kan også bruke Luma til nyhetsbrev.
+
+## Luma
+
+Vi benytter arrangementsystemet Luma i forbindelse med enkelte arrangementer.
+Luma er en tjeneste som tilbyr salg og betaling av billetter og organisering
 av arrangementer. Vi anonymiserer eller fjerner opplysninger så snart det er
-mulig i henhold til regnskapslovens krav.
+mulig i henhold til regnskapslovens krav, du kan selv fjerne deg som abonnent
+i Luma.
 
-Opplysningene lagres hos Checkin AS (og deres underleverandører) og av den grunn
-vår databehandler. Egen databehandleravtale er inngått. Informasjon er avgrenset
-til de arrangementer som er gjennomført ved bruk av Checkins system.
+Opplysningene lagres hos Luma, Inc. (og deres underleverandører) og av den grunn
+vår databehandler. [Egen databehandleravtale er inngått](https://luma.com/dpa).
+Informasjon er avgrenset til de arrangementer som er gjennomført ved bruk av
+Lumas system.
 
-I forbindelse med vår hovedaktivitet, nettverkslunsjer på Grand Hotel, er
-restauranten Restaurant Palmen (organisasjonsnummer 953149117)
+I forbindelse med vår hovedaktivitet, nettverkslunsjer, er restauranten/medarrangør
 gitt tilgang til opplysninger om påmeldte. Dette er nødvendig for å kunne
 gjennomføre arrangementet.
 
-Les mer om Checkins personvernerklæring her:
-[https://www.checkin.no/personvernerklaering](https://www.checkin.no/personvernerklaering)
+Les mer om Lumas personvernerklæring her:
+[https://luma.com/privacy-policy](https://luma.com/privacy-policy)
 
 ## Slack
 
